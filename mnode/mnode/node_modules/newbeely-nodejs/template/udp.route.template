@@ -1,0 +1,14 @@
+'use strict';
+
+var Handler = module.exports = {};
+
+
+/**
+ *
+ * @param msg
+ * @param rinfo
+ */
+Handler.handle = function (msg, rinfo) {
+
+};
+

@@ -1,0 +1,32 @@
+{
+    "development": {
+        "dao-mongoRedisCache": {
+            "bean": "mongooseRedisCacheComponent",
+            "host": "127.0.0.1",
+            "port": 27017,
+            "user": "",
+            "password": "",
+            "dbname": "HelloRedisCache",
+            "redis": {
+                "host": "127.0.0.1",
+                "port": 6379,
+                "pass": ""
+            }
+        }
+    },
+    "production": {
+        "dao-mongoRedisCache": {
+            "bean": "mongooseRedisCacheComponent",
+            "host": "127.0.0.1",
+            "port": 27017,
+            "user": "",
+            "password": "",
+            "dbname": "HelloRedisCache",
+            "redis": {
+                "host": "127.0.0.1",
+                "port": 6379,
+                "pass": ""
+            }
+        }
+    }
+}

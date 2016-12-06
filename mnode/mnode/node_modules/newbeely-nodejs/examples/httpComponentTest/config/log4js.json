@@ -1,0 +1,21 @@
+{
+  "appenders": [
+    {
+      "type": "console"
+    },
+    {
+      "type": "file",
+      "filename": "${opts:base}/logs/newbeely.log",
+      "maxLogSize": 1048576,
+      "layout": {
+        "type": "basic"
+      },
+      "backups": 5,
+      "category": "newbeely"
+    }
+  ],
+  "levels": {
+  },
+  "replaceConsole": true,
+  "lineDebug": false
+}

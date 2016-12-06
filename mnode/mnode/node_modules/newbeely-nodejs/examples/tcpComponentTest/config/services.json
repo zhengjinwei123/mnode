@@ -1,0 +1,11 @@
+{
+  "development": {
+    "tcp": {
+      "bean": "tcpComponent",
+      "host": "localhost",
+      "port": 1990,
+      "protocol": "",
+      "ssl": false
+    }
+  }
+}

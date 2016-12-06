@@ -1,0 +1,50 @@
+var Hello = module.exports = {};
+var Bearcat = require('bearcat');
+
+/**
+ * 使用Get方法获取数据 Example
+ *
+ * @param {Object} request
+ * @param {Object} response
+ * @example
+ * <pre>
+ *     Request Example:
+ *         Method: GET
+ *         API: /hello
+ *         Params:
+ *             None
+ *     Response Example:
+ *         "hello world"
+ * </pre>
+ */
+Hello.get = function (request, response) {
+    if (request.query) {
+        Logger.info("Request GET: [ %j ]", request.query);
+    }
+
+    response.end("hello world!");
+};
+
+/**
+ * 使用POST方法获取数据 Example
+ *
+ * @param {Object} request
+ * @param {Object} response
+ * @example
+ * <pre>
+ *     Request Example:
+ *         Method: POST
+ *         API: /hello
+ *         Params:
+ *             None
+ *     Response Example:
+ *         "hello world"
+ * </pre>
+ */
+Hello.post = function (request, response) {
+    if (request.body) {
+        Logger.info("Request POST: [ %j ]", request.body);
+    }
+
+    response.end("hello world!");
+};

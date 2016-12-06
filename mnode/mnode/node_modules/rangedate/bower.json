@@ -1,0 +1,22 @@
+{
+  "name": "rangedate",
+  "main": "rangedate.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/miguelmota/rangedate",
+  "authors": [
+    "Miguel Mota <miguelmota2@gmail.com>"
+  ],
+  "description": "Generate an array of dates",
+  "keywords": [
+    "property",
+    "checker"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "license": "MIT"
+}

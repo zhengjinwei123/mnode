@@ -1,0 +1,37 @@
+var Bearcat = require('bearcat');
+
+module.exports = function () {
+    return Bearcat.getBean({
+        id: "upload-file",
+        func: Hello,
+        props: [
+            {name: "app", "ref": "application"}
+        ]
+    });
+}
+
+function Hello() {
+    this.app = null;
+}
+
+/**
+ * handle message
+ *
+ *  http://url/hello
+ * @param msg
+ * @param next
+ */
+Hello.prototype.handle = function (msg, next) {
+    next(null, {code: 0, msg: "hello!"});
+}
+
+
+/**
+ * next route world
+ * http://url/hello/world
+ * @param msg
+ * @param next
+ */
+Hello.prototype.world = function (msg, next) {
+    next(null, {code: 0, msg: "hello world!"});
+}

@@ -1,0 +1,77 @@
+[2016-12-06 17:16:29.306] [INFO] jadeLoader - JadeLoader init finish
+[2016-12-06 17:16:30.307] [WARN] jadeLoader - hotLoad module start.
+[2016-12-06 17:16:30.310] [WARN] jadeLoader - hotLoad module finish,cost  0  milliSecond
+[2016-12-06 17:16:31.316] [WARN] jadeLoader - hotLoad module start.
+[2016-12-06 17:16:31.316] [WARN] jadeLoader - hotLoad module finish,cost  0  milliSecond
+[2016-12-06 17:16:32.316] [WARN] jadeLoader - hotLoad module start.
+[2016-12-06 17:16:32.316] [WARN] jadeLoader - hotLoad module finish,cost  0  milliSecond
+[2016-12-06 17:16:33.316] [WARN] jadeLoader - hotLoad module start.
+[2016-12-06 17:16:33.316] [WARN] jadeLoader - hotLoad module finish,cost  0  milliSecond
+[2016-12-06 17:16:34.316] [WARN] jadeLoader - hotLoad module start.
+[2016-12-06 17:16:34.316] [WARN] jadeLoader - hotLoad module finish,cost  0  milliSecond
+[2016-12-06 17:16:35.316] [WARN] jadeLoader - hotLoad module start.
+[2016-12-06 17:16:35.317] [WARN] jadeLoader - hotLoad module finish,cost  0  milliSecond
+[2016-12-06 17:16:36.318] [WARN] jadeLoader - hotLoad module start.
+[2016-12-06 17:16:36.319] [WARN] jadeLoader - hotLoad module finish,cost  0  milliSecond
+[2016-12-06 17:16:37.320] [WARN] jadeLoader - hotLoad module start.
+[2016-12-06 17:16:37.321] [WARN] jadeLoader - hotLoad module finish,cost  0  milliSecond
+[2016-12-06 17:16:38.322] [WARN] jadeLoader - hotLoad module start.
+[2016-12-06 17:16:38.323] [WARN] jadeLoader - hotLoad module finish,cost  0  milliSecond
+[2016-12-06 17:16:39.324] [WARN] jadeLoader - hotLoad module start.
+[2016-12-06 17:16:39.324] [WARN] jadeLoader - hotLoad module finish,cost  0  milliSecond
+[2016-12-06 17:38:19.180] [INFO] jadeLoader - JadeLoader init finish
+[2016-12-06 17:38:20.180] [WARN] jadeLoader - hotLoad module start.
+[2016-12-06 17:38:20.183] [WARN] jadeLoader - hotLoad module finish,cost  0  milliSecond
+[2016-12-06 17:38:21.190] [WARN] jadeLoader - hotLoad module start.
+[2016-12-06 17:38:21.190] [WARN] jadeLoader - hotLoad module finish,cost  0  milliSecond
+[2016-12-06 17:38:22.192] [WARN] jadeLoader - hotLoad module start.
+[2016-12-06 17:38:22.192] [WARN] jadeLoader - hotLoad module finish,cost  0  milliSecond
+[2016-12-06 17:41:16.482] [INFO] jadeLoader - JadeLoader init finish
+[2016-12-06 17:41:17.482] [WARN] jadeLoader - hotLoad module start.
+[2016-12-06 17:41:17.485] [WARN] jadeLoader - hotLoad module finish,cost  0  milliSecond
+[2016-12-06 17:41:18.490] [WARN] jadeLoader - hotLoad module start.
+[2016-12-06 17:41:18.490] [WARN] jadeLoader - hotLoad module finish,cost  0  milliSecond
+[2016-12-06 17:41:19.494] [WARN] jadeLoader - hotLoad module start.
+[2016-12-06 17:41:19.494] [WARN] jadeLoader - hotLoad module finish,cost  0  milliSecond
+[2016-12-06 17:41:32.813] [INFO] jadeLoader - JadeLoader init finish
+[2016-12-06 17:41:33.813] [WARN] jadeLoader - hotLoad module start.
+[2016-12-06 17:41:33.815] [WARN] jadeLoader - hotLoad module finish,cost  0  milliSecond
+[2016-12-06 17:41:34.820] [WARN] jadeLoader - hotLoad module start.
+[2016-12-06 17:41:34.820] [WARN] jadeLoader - hotLoad module finish,cost  0  milliSecond
+[2016-12-06 19:26:45.474] [ERROR] jadeLoader - TypeError: protocols.split is not a function
+    at Protocol.decode (c:\Users\ff\Desktop\mnode\mnode\mnode\plugin\http\protocol.js:39:23)
+    at HttpServer.protocolProcess (c:\Users\ff\Desktop\mnode\mnode\mnode\plugin\http\app.js:152:14)
+    at IncomingMessage.<anonymous> (c:\Users\ff\Desktop\mnode\mnode\mnode\plugin\http\app.js:122:18)
+    at emitNone (events.js:67:13)
+    at IncomingMessage.emit (events.js:166:7)
+    at endReadableNT (_stream_readable.js:913:12)
+    at nextTickCallbackWith2Args (node.js:442:9)
+    at process._tickCallback (node.js:356:17)
+[2016-12-06 19:34:43.036] [ERROR] jadeLoader - TypeError: buf.copy is not a function
+    at Function.Buffer.concat (buffer.js:228:9)
+    at IncomingMessage.<anonymous> (c:\Users\ff\Desktop\mnode\mnode\mnode\plugin\http\app.js:125:30)
+    at emitNone (events.js:67:13)
+    at IncomingMessage.emit (events.js:166:7)
+    at endReadableNT (_stream_readable.js:913:12)
+    at nextTickCallbackWith2Args (node.js:442:9)
+    at process._tickCallback (node.js:356:17)
+[2016-12-06 19:36:00.547] [ERROR] jadeLoader - TypeError: must start with number, buffer, array or string
+    at fromObject (buffer.js:138:11)
+    at new Buffer (buffer.js:65:10)
+    at IncomingMessage.<anonymous> (c:\Users\ff\Desktop\mnode\mnode\mnode\plugin\http\app.js:125:23)
+    at emitNone (events.js:67:13)
+    at IncomingMessage.emit (events.js:166:7)
+    at endReadableNT (_stream_readable.js:913:12)
+    at nextTickCallbackWith2Args (node.js:442:9)
+    at process._tickCallback (node.js:356:17)
+[2016-12-06 19:51:39.647] [ERROR] jadeLoader - TypeError: this.routes.get[route] is not a function
+    at HttpServer.processMessage (c:\Users\ff\Desktop\mnode\mnode\mnode\plugin\http\app.js:177:31)
+    at c:\Users\ff\Desktop\mnode\mnode\mnode\plugin\http\app.js:152:34
+    at c:\Users\ff\Desktop\mnode\mnode\mnode\plugin\http\app.js:162:9
+    at Protocol.decode (c:\Users\ff\Desktop\mnode\mnode\mnode\plugin\http\protocol.js:42:9)
+    at HttpServer.protocolProcess (c:\Users\ff\Desktop\mnode\mnode\mnode\plugin\http\app.js:161:14)
+    at IncomingMessage.<anonymous> (c:\Users\ff\Desktop\mnode\mnode\mnode\plugin\http\app.js:128:18)
+    at emitNone (events.js:67:13)
+    at IncomingMessage.emit (events.js:166:7)
+    at endReadableNT (_stream_readable.js:913:12)
+    at nextTickCallbackWith2Args (node.js:442:9)

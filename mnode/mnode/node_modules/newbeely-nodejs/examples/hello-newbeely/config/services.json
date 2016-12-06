@@ -1,0 +1,40 @@
+{
+    "development": {
+        "api": {
+            "bean": "httpComponent",
+            "host": "0.0.0.0",
+            "port": 18500,
+            "ssl": false,
+            "method": "post|get",
+            "protocol": "base64"
+        },
+        "dao-hello": {
+            "bean": "mongooseComponent",
+            "host": "127.0.0.1",
+            "pool": 1,
+            "port": 27017,
+            "user": "",
+            "password": "",
+            "dbname": "hello"
+        }
+    },
+    "production": {
+        "api": {
+            "bean": "httpComponent",
+            "host": "0.0.0.0",
+            "port": 18500,
+            "ssl": false,
+            "method": "post|get",
+            "protocol": "base64"
+        },
+        "dao-hello": {
+            "bean": "mongooseComponent",
+            "host": "127.0.0.1",
+            "pool": 1,
+            "port": 27017,
+            "user": "",
+            "password": "",
+            "dbname": "hello"
+        }
+    }
+}

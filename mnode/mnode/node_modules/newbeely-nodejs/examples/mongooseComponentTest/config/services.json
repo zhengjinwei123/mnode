@@ -1,0 +1,22 @@
+{
+    "development": {
+        "dao-mongoose": {
+            "bean": "mongooseComponent",
+            "host": "127.0.0.1",
+            "port": 27017,
+            "user": "",
+            "password": "",
+            "dbname": "HelloMongo"
+        }
+    },
+    "production": {
+        "dao-mongoose": {
+            "bean": "mongooseComponent",
+            "host": "127.0.0.1",
+            "port": 27017,
+            "user": "",
+            "password": "",
+            "dbname": "HelloMongo"
+        }
+    }
+}
