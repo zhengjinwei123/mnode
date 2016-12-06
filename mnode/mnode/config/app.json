@@ -1,0 +1,32 @@
+{
+  "desc": "mnode运行环境配置",
+  "env": "dev|prod",
+  "plugin": {
+    "desc": "插件配置",
+    "name": "http",
+    "http-conf": {
+    },
+    "https-conf": {
+    },
+    "express-conf": {
+    },
+    "tcp-conf": {
+    },
+    "udp-conf": {
+    },
+    "websocket-conf": {
+    }
+  },
+  "mnode": {
+    "desc": "是否启用多节点部署 true开启 false 不开启 开启后自动加载当前目录的mnode.json 配置 mnode 当前只支持http/tcp/websocket",
+    "value": false
+  },
+  "log": {
+    "desc": "日志开启选项 [true/1 开启 false/0 不开启]",
+    "debug": true,
+    "warn": true,
+    "error": true,
+    "sql": true,
+    "info": true
+  }
+}

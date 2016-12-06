@@ -1,0 +1,69 @@
+{
+  "name": "mnode",
+  "version": "1.0.0",
+  "description": "mnode",
+  "main": "app.js",
+  "dependencies": {
+    "async": "*",
+    "bearcat": "*",
+    "body-parser": "*",
+    "connect-redis": "*",
+    "cookie-parser": "*",
+    "core-util-is": "*",
+    "crc32": "*",
+    "cron": "*",
+    "csv": "*",
+    "ejs": "*",
+    "express": "4.x",
+    "express-session": "*",
+    "formidable": "*",
+    "ftp": "*",
+    "generic-pool": "2.x.x",
+    "http": "*",
+    "iconv-lite": "^0.4.13",
+    "include-all": "^0.1.6",
+    "inherits": "*",
+    "isarray": "*",
+    "jade": "*",
+    "lodash": "3.10.1",
+    "moment": "*",
+    "mongodb": "^2.1.7",
+    "mongoose": "4.x",
+    "morgan": "*",
+    "multer": "^1.1.0",
+    "newbeely-nodejs": "1.x",
+    "node-schedule": "*",
+    "pomelo-logger": "0.1.x",
+    "pomelo-scheduler": "0.3.x",
+    "process-nextick-args": "*",
+    "querystring": "*",
+    "rangedate": "0.0.2",
+    "redis": "0.12.x",
+    "request": "*",
+    "serve-favicon": "*",
+    "underscore": "1.6.x",
+    "utility": "*",
+    "uuid": "*",
+    "ws":"1.1.1",
+    "mysql": "^2.12.0"
+  },
+  "scripts": {
+    "test": "grunt mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@111.206.85.29:ZplayOpenPlatform/ZplayCmsTools.git"
+  },
+  "keywords": [
+    "mnode",
+    "multinode"
+  ],
+  "author": [
+    {
+      "name": "zhengjinwei",
+      "email": "2538698032@qq.com"
+    }
+  ],
+  "contributors": [],
+  "license": "MIT"
+}

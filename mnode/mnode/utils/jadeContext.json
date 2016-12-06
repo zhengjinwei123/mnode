@@ -1,0 +1,30 @@
+{
+  "scan-dir": false,
+  "scan-dir-list": [
+    {
+      "dir-name": "obj-utils",
+      "app-name": "app.js",
+      "hot": true
+    },
+    {
+      "dir-name": "singleton-utils",
+      "app-name": "app.js",
+      "hot": true
+    },
+    {
+      "dir-name": "time-utils",
+      "app-name": "app.js",
+      "hot": true
+    },
+    {
+      "dir-name": "type-utils",
+      "app-name": "app.js",
+      "hot": true
+    },
+    {
+      "dir-name": "timer-utils",
+      "app-name": "app.js",
+      "hot": true
+    }
+  ]
+}
