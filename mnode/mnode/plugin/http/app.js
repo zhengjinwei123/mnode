@@ -143,11 +143,6 @@ HttpServer.prototype.createServer = function () {
                         if (self.methods.indexOf(message.method.toLowerCase()) == -1) {
                             Logger.error("does not support ", message.method, " method");
                             e = {msg: Util.format("server does not support %s request method", message.method)};
-                        } else {
-                            //message.body = JSON.parse(data.toString());
-                            //if (bytes.length) {
-                            //
-                            //}
                         }
                     } catch (exception) {
                         Logger.error("Got Exception:", exception.message);
@@ -170,32 +165,52 @@ HttpServer.prototype.protocolProcess = function (buff, protocol, callback) {
         callback(err, resp);
     })
 };
+HttpServer.prototype.getReqModule = function (route) {
+    if (route.indexOf("/") == -1) {
+        return {
+            "module": route,
+            "func": "index"
+        };
+    }
+    var _list = route.split("/");
+    return {
+        "module": _list[0],
+        "func": _list[1]
+    };
+};
+
 
 HttpServer.prototype.processMessage = function (message, response) {
     var _routeName = message.method.toLowerCase();
+
+    var _routesList = null;
     if (_routeName === "get") {
+        _routesList = this.routes.get;
+    } else if (_routeName === "post") {
+        _routesList = this.routes.post;
+    }
+
+    if (_routesList != null) {
         var route = message.route;
 
-        console.log(this.routes);
-        if (this.routes.get[route] == undefined) {
+        var _module = this.getReqModule(route);
+
+        if (_routesList[_module.module] == undefined) {
             response.statusCode = 404;
             response.end("未知路由");
             return;
         }
-        this.routes.get[route].say(message, response);
 
+        if (_routesList[_module.module][_module.func] == undefined) {
+            response.statusCode = 404;
+            response.end("未知路由");
+            return;
+        }
 
-        //var remoteAddress = message.remoteAddress;
-        //
-        //console.log(message);
-        //
-        //response.statusCode = 500;
-        //response.end();
-
-        //response.write(JSON.stringify(msg));
-        //response.end();
-    } else if (_routeName === "post") {
-
+        _routesList[_module.module][_module.func](message, response);
+    } else {
+        response.statusCode = 501;
+        response.end("un support the method");
     }
 };
 

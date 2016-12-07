@@ -75,3 +75,25 @@
     at IncomingMessage.emit (events.js:166:7)
     at endReadableNT (_stream_readable.js:913:12)
     at nextTickCallbackWith2Args (node.js:442:9)
+[2016-12-07 12:39:29.696] [ERROR] jadeLoader - TypeError: first argument must be a string or Buffer
+    at ServerResponse.OutgoingMessage.end (_http_outgoing.js:549:11)
+    at Object.exports.say (c:\Users\ff\Desktop\nodePro\mnode\httpServerTest\get\helloword.js:6:14)
+    at HttpServer.processMessage (c:\Users\ff\Desktop\nodePro\mnode\mnode\plugin\http\app.js:185:32)
+    at c:\Users\ff\Desktop\nodePro\mnode\mnode\plugin\http\app.js:160:34
+    at c:\Users\ff\Desktop\nodePro\mnode\mnode\plugin\http\app.js:170:9
+    at Protocol.decode (c:\Users\ff\Desktop\nodePro\mnode\mnode\plugin\http\protocol.js:42:9)
+    at HttpServer.protocolProcess (c:\Users\ff\Desktop\nodePro\mnode\mnode\plugin\http\app.js:169:14)
+    at IncomingMessage.<anonymous> (c:\Users\ff\Desktop\nodePro\mnode\mnode\plugin\http\app.js:136:18)
+    at emitNone (events.js:67:13)
+    at IncomingMessage.emit (events.js:166:7)
+[2016-12-07 12:46:43.396] [ERROR] jadeLoader - TypeError: Cannot read property 'say' of undefined
+    at HttpServer.processMessage (c:\Users\ff\Desktop\nodePro\mnode\mnode\plugin\http\app.js:200:31)
+    at c:\Users\ff\Desktop\nodePro\mnode\mnode\plugin\http\app.js:160:34
+    at c:\Users\ff\Desktop\nodePro\mnode\mnode\plugin\http\app.js:170:9
+    at Protocol.decode (c:\Users\ff\Desktop\nodePro\mnode\mnode\plugin\http\protocol.js:42:9)
+    at HttpServer.protocolProcess (c:\Users\ff\Desktop\nodePro\mnode\mnode\plugin\http\app.js:169:14)
+    at IncomingMessage.<anonymous> (c:\Users\ff\Desktop\nodePro\mnode\mnode\plugin\http\app.js:136:18)
+    at emitNone (events.js:67:13)
+    at IncomingMessage.emit (events.js:166:7)
+    at endReadableNT (_stream_readable.js:913:12)
+    at nextTickCallbackWith2Args (node.js:442:9)
