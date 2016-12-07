@@ -5,6 +5,9 @@ exports.index = function (req, callback) {
     var session = req.session;
     var message = req.message;
 
+    console.log(session.get('a'));
+    session.set("a",1);
+
     callback(null, message);
 };
 

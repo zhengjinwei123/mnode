@@ -6,7 +6,7 @@
 var Singleton = (function () {
     var _inst = [];
     return {
-        getDemon:function(obj){
+        getDemon: function (obj) {
             var arg = arguments;
             return new obj(arg[1], arg[2], arg[3], arg[4], arg[5], arg[6], arg[7], arg[8], arg[9], arg[10]);
         },
@@ -24,38 +24,4 @@ var Singleton = (function () {
     }
 })();
 
-
 module.exports = Singleton;
-/**************test code*******************/
-//
-//function demo1(a) {
-//    this.a = a;
-//}
-//
-//demo1.prototype.set = function (a) {
-//    this.a = a;
-//};
-//demo1.prototype.get = function () {
-//    return this.a;
-//};
-//
-//
-//function demo(a) {
-//    this.a = a;
-//}
-//
-//demo.prototype.set = function (a) {
-//    this.a = a;
-//};
-//demo.prototype.get = function () {
-//    return this.a;
-//};
-//
-//var d1 = Singleton.getInstance(demo, 1)
-//console.log(d1.get());
-//
-//var d2 = Singleton.getInstance(demo)
-//console.log(d2.get());
-//
-//var d3 = Singleton.getInstance(demo1,8)
-//console.log(d3.get());

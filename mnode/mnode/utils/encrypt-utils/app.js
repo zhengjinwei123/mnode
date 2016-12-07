@@ -24,89 +24,34 @@ Encrypt.getInstance = (function () {
         return _inst;
     }
 })();
-/**
- *  rc4 加密
- * @method decode
- * @for Encrypt
- * @param buf
- * @param key
- * @returns {*}
- */
+
 Encrypt.prototype.rc4Encode = function (buf, key, exp) {
     return Code(buf, 'ENCODE', key, exp || this.expired);
 };
 
-/**
- * rc4 解密
- *
- * @method decode
- * @for Encrypt
- * @param buf
- * @returns {*}
- */
 Encrypt.prototype.rc4Decode = function (buf, key) {
     return Code(buf, 'DECODE', key);
 };
 
-/**
- * md5
- *
- * @method md5
- * @for Encrypt
- * @param str
- * @param opt
- * @returns {*}
- */
+
 Encrypt.prototype.md5 = function (str, opt) {
     return MD5(str, opt);
 };
 
-/**
- * sha1
- *
- * @method sha1
- * @for Encrypt
- * @param str
- * @param opt
- * @returns {*}
- */
+
 Encrypt.prototype.sha1 = function (str, opt) {
     return SHA1(str, opt);
 };
 
-/**
- * base64Encode
- *
- * @method base64Encode
- * @for Encrypt
- * @param str
- * @returns {string}
- */
+
 Encrypt.prototype.base64Encode = function (str) {
     return Base64Encode(str);
 };
 
-/**
- * base64Decode
- *
- * @method base64Decode
- * @for Encrypt
- * @param str
- * @returns {string}
- */
 Encrypt.prototype.base64Decode = function (str) {
     return Base64Decode(str);
 };
 
-
-/**
- * 编码
- * @param string
- * @param operation
- * @param key
- * @param expiry
- * @returns {*}
- */
 function Code(string, operation, key, expiry) {
     operation = operation || 'DECODE';
     key = key || 'ondae8dafbGfda0FDA';
@@ -124,7 +69,7 @@ function Code(string, operation, key, expiry) {
 
     var fvzone_auth_key = '';
     var ckey_length = 4;
-    var key = MD5(key ? key : fvzone_auth_key);
+    key = MD5(key ? key : fvzone_auth_key);
     var keya = MD5(key.substr(0, 16));
     var keyb = MD5(key.substr(16, 16));
     var keyc = ckey_length ? (operation == 'DECODE' ? string.substr(0, ckey_length) : MD5(seconds).substr(-ckey_length)) : '';
@@ -148,18 +93,10 @@ function Code(string, operation, key, expiry) {
             return '';
         }
     } else {
-        return keyc + Base64Encode(result);
+        return (keyc + Base64Encode(result));
     }
 }
 
-/**
- * RC4
- *
- * @method RC4
- * @param key
- * @param text
- * @returns {string}
- */
 function RC4(key, text) {
     var s = [];
     for (var i = 0; i < 256; i++) {
@@ -185,75 +122,35 @@ function RC4(key, text) {
     return ct.join('');
 }
 
-/**
- * MD5
- *
- * @method MD5
- * @param str
- * @param enc
- * @returns {*}
- */
 function MD5(str, enc) {
     return Crypto.createHash('md5').update(str).digest(enc || 'hex');
 }
 
-/**
- * SHA1
- *
- * @method SHA1
- * @param str
- * @param enc
- * @returns {*}
- */
+
 function SHA1(str, enc) {
     return Crypto.createHash('sha1').update(str).digest(enc || 'hex');
 }
 
-/**
- * Base64Encode
- *
- * @method Base64Encode
- * @param str
- * @returns {string}
- */
 function Base64Encode(str) {
     return new Buffer(str, 'utf8').toString('base64');
 }
 
-/**
- * Base64Decode
- *
- * @method Base64Decode
- * @param str
- * @returns {string}
- */
 function Base64Decode(str) {
     return new Buffer(str, 'base64').toString('utf8');
 }
 
-/**
- * Aes128位加密
- * @param str
- * @param key
- * @returns {*|Array|Array.<T>|string}
- * @constructor
- */
-function AesEncode(str, key) {
+
+Encrypt.prototype.AesEncode = function (str, key) {
     var cipher = Crypto.createCipheriv('aes-128-cbc', key.crypt_key, key.iv);
     cipher.setAutoPadding(true);
     var bytes = [];
     bytes.push(cipher.update(str));
     bytes.push(cipher.final());
     return Buffer.concat(bytes);
-}
+};
 
-/**
- * aes128解密
- * @param str
- * @param key
- * @constructor
- */
-function AesDecode(str, key) {
+
+Encrypt.prototype.AesDecode = function (str, key) {
     var decipher = Crypto.createDecipheriv('aes-128-cbc', key.crypt_key, key.iv);
     decipher.setAutoPadding(true);
     try {
@@ -262,9 +159,9 @@ function AesDecode(str, key) {
         bytes.push(decipher.final());
         return Buffer.concat(bytes);
     } catch (e) {
-        console.error('decode error:', e.message);
-        return "";
+        console.error(e.message);
+        return null;
     }
-}
+};
 
 module.exports = Encrypt.getInstance();

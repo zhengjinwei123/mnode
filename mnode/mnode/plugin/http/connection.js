@@ -45,8 +45,13 @@ HttpConnection.prototype.init = function () {
     });
 
     this.on('message', function (func, msg) {
-        var ret = func(msg);
-        self.send(ret, 200);
+        func(msg, function (err, resp) {
+            if (err) {
+                self.errorCode(resp, 201);
+            } else {
+                self.send(resp, 200);
+            }
+        });
     });
 
     this.state = STATE_INITED;
