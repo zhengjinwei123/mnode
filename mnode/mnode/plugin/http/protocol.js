@@ -85,7 +85,7 @@ Protocol.prototype.encode = function (buf, protocols, cb) {
     var bytes_buf = buf;
     var s = protocols.split('|');
     s = s.reverse();
-    s = __.compact(s);
+    s = _.compact(s);
     if (s.length == 0) {
         cb(null, bytes_buf);
         return;
@@ -105,7 +105,7 @@ Protocol.prototype.encode = function (buf, protocols, cb) {
             bytes_buf = Encrypt.base64Encode(bytes_buf.toString("binary"));
             next(null);
         } else if (item == 'rc4') {
-            bytes_buf = Encrypt.rc4Encode(bytes_buf, _this.rc4key);
+            bytes_buf = Encrypt.rc4Encode(bytes_buf, "rc4key");
             next(null);
         } else {
             next(null);

@@ -15,6 +15,8 @@ var Util = require("util");
 var _ = require("lodash");
 var Protocol = require("./protocol");
 var Encrypt = require("../../utils/app").Encrypt;
+var HttpConnection = require("./connection");
+var Singleton = require("../../utils/app").Singleton;
 
 
 function HttpServer(bindPort, bindHost, opts, serverRootPath) {
@@ -39,11 +41,11 @@ function HttpServer(bindPort, bindHost, opts, serverRootPath) {
         key: null,
         ca: [],
         cert: null,
-        protocols: ""
+        protocols: "",//协议加密
+        filtersFunc: [] //过滤器
     };
 
     this.methods = ["get", "post"];
-
 
     if (opts) {
         if (typeof opts !== "object") {
@@ -59,6 +61,9 @@ function HttpServer(bindPort, bindHost, opts, serverRootPath) {
         }
         if (opts['protocols'] && _.isString(opts['protocols'])) {
             this.opts.protocols = opts['protocols'];
+        }
+        if (opts['filtersFunc'] && _.isArray(opts['filtersFunc'])) {
+            this.opts.filtersFunc = opts['filtersFunc'];
         }
     }
 
@@ -100,10 +105,11 @@ function HttpServer(bindPort, bindHost, opts, serverRootPath) {
     //监听器
     this.listener = null;
 
+    this.skey = "sssaaabbbgggjjj";//session 秘钥
 
-    //回话 保活列表
-    this.skey = "asklapoposa";
-    this.sessions = {};
+    this.cidIndex = 0; //连接id计数
+
+    this.sessions = {}; //session 记录
 }
 
 Util.inherits(HttpServer, EventEmitter);
@@ -132,27 +138,33 @@ HttpServer.prototype.createServer = function () {
             bytes.push(chunk);
         });
         request.on('end', function () {
+            var connection = Singleton.getDemon(HttpConnection, ++self.cidIndex, response, self.opts.protocols);
+
+            response.emit('connection', connection);
+
             var buf = Buffer.concat(bytes);
             self.protocolProcess(buf, self.opts.protocols || "", function (err, data) {
                 if (err) {
+                    connection.disconnect("Protocol format error!");
                     Logger.error("Protocol format error!");
                 } else {
                     var message = processRequest(request);
+
                     var e = null;
+                    if (self.methods.indexOf(message.method.toLowerCase()) == -1) {
+                        Logger.error("does not support ", message.method, " method");
+                        e = {msg: Util.format("server does not support %s request method", message.method)};
+                    }
+
                     try {
-                        if (self.methods.indexOf(message.method.toLowerCase()) == -1) {
-                            Logger.error("does not support ", message.method, " method");
-                            e = {msg: Util.format("server does not support %s request method", message.method)};
-                        }
+                        message.body = JSON.parse(data);
                     } catch (exception) {
-                        Logger.error("Got Exception:", exception.message);
-                        e = exception;
+                        message.body = data;
                     } finally {
                         if (e) {
-                            response.statusCode = 500;
-                            response.end(Util.format("error:%s", e.message));
+                            connection.disconnect(Util.format("error:%s", e.msg));
                         } else {
-                            self.processMessage(message, response);
+                            self.processMessage(message, response, connection);
                         }
                     }
                 }
@@ -179,8 +191,12 @@ HttpServer.prototype.getReqModule = function (route) {
     };
 };
 
+HttpServer.prototype.setSession = function (remoteAddress, cid) {
 
-HttpServer.prototype.processMessage = function (message, response) {
+};
+
+
+HttpServer.prototype.processMessage = function (message, response, connection) {
     var _routeName = message.method.toLowerCase();
 
     var _routesList = null;
@@ -192,25 +208,34 @@ HttpServer.prototype.processMessage = function (message, response) {
 
     if (_routesList != null) {
         var route = message.route;
-
         var _module = this.getReqModule(route);
 
         if (_routesList[_module.module] == undefined) {
-            response.statusCode = 404;
-            response.end("未知路由");
+            connection.disconnect("unknown route");
             return;
         }
 
         if (_routesList[_module.module][_module.func] == undefined) {
-            response.statusCode = 404;
-            response.end("未知路由");
+            connection.disconnect("unknown route");
             return;
         }
 
-        _routesList[_module.module][_module.func](message, response);
+        if (this.opts.filtersFunc.length) {
+            var retCode = true;
+            this.opts.filtersFunc.forEach(function (func) {
+                retCode = retCode && func(message);
+            });
+
+            if (!retCode) {
+                connection.disconnect("invalid request");
+                return;
+            }
+        }
+
+        response.emit('message', _routesList[_module.module][_module.func], message);
+        //var $retMsg = _routesList[_module.module][_module.func](message);
     } else {
-        response.statusCode = 501;
-        response.end("un support the method");
+        connection.disconnect("un support the method");
     }
 };
 

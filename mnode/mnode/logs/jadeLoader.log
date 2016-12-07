@@ -97,3 +97,14 @@
     at IncomingMessage.emit (events.js:166:7)
     at endReadableNT (_stream_readable.js:913:12)
     at nextTickCallbackWith2Args (node.js:442:9)
+[2016-12-07 13:50:12.506] [ERROR] jadeLoader - ReferenceError: __ is not defined
+    at Protocol.encode (c:\Users\ff\Desktop\nodePro\mnode\mnode\plugin\http\protocol.js:88:9)
+    at HttpConnection.send (c:\Users\ff\Desktop\nodePro\mnode\mnode\plugin\http\connection.js:69:14)
+    at HttpConnection.<anonymous> (c:\Users\ff\Desktop\nodePro\mnode\mnode\plugin\http\connection.js:49:14)
+    at emitTwo (events.js:87:13)
+    at HttpConnection.emit (events.js:172:7)
+    at emitTwo (events.js:87:13)
+    at ServerResponse.emit (events.js:172:7)
+    at HttpServer.processMessage (c:\Users\ff\Desktop\nodePro\mnode\mnode\plugin\http\app.js:235:18)
+    at c:\Users\ff\Desktop\nodePro\mnode\mnode\plugin\http\app.js:167:34
+    at c:\Users\ff\Desktop\nodePro\mnode\mnode\plugin\http\app.js:177:9
