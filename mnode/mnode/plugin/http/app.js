@@ -45,17 +45,19 @@ function HttpServer(bindPort, bindHost, opts, serverRootPath) {
         filtersFunc: [] //过滤器
     };
 
+    //_.extend(this.opts, opts);
     this.methods = ["get", "post"];
 
     if (opts) {
         if (typeof opts !== "object") {
             throw new Error(opts + " must be object");
         }
-        if (!opts['key'] || !opts["cert"]) {
-            throw new Error(opts + " invalid parameters");
+
+        if(opts['key'] && opts['cert']){
+            this.opts.key = Fs.readFileSync(opts.key);
+            this.opts.cert = Fs.readFileSync(opts.cert);
         }
-        this.opts.key = Fs.readFileSync(opts.key);
-        this.opts.cert = Fs.readFileSync(opts.cert);
+
         if (opts['ca']) {
             this.opts.ca.push(Fs.readFileSync(opts.ca))
         }

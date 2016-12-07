@@ -36,7 +36,7 @@ HttpConnection.prototype.init = function () {
 
     var self = this;
     this.on('error', function (error) {
-        Logger.warn("Connection " + self.cid + " has an error :" + error.stack + "");
+        Logger.warn("Connection " + self.cid + " has an error :" + error.stack);
     });
 
     this.on('disconnect', function () {
