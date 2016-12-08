@@ -9,7 +9,6 @@ var Singleton = require("./utils/app").Singleton;
 var logger = Singleton.getDemon(LogUtil, Path.join(__dirname, "./config/logger.json"), Path.join(__dirname, "./logs"));
 
 JadeLoader.init(Path.join(__dirname, "./"), true, 60, function () {
-    console.log("jadeLoader success");
     var httpS = new HttpServer(9090, "127.0.0.1", {
         filtersFunc: [
             function (message) {

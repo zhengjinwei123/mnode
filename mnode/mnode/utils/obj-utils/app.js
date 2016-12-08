@@ -17,6 +17,19 @@ ObjUtils.getInstance = (function () {
     }
 })();
 
+ObjUtils.prototype.count = function (obj) {
+    if (typeof obj === "object") {
+        var count = 0;
+        for (var property in this) {
+            if (Object.prototype.hasOwnProperty.call(this, property)) {
+                count++;
+            }
+        }
+        return count;
+    }
+    return -1;
+};
+
 ObjUtils.prototype.init = function () {
     //Object.prototype.count = function () {
     //    var count = 0;

@@ -23,7 +23,7 @@ function HttpUtils(host, port) {
 }
 
 HttpUtils.prototype.Get = function (route, host, port, data, cb) {
-    var argCnt = arguments.count();
+    var argCnt = ObjUtils.count(arguments);
     if (argCnt == 3) {
         host = this.host;
         port = this.port;
@@ -37,7 +37,7 @@ HttpUtils.prototype.Get = function (route, host, port, data, cb) {
 };
 
 HttpUtils.prototype.Post = function (route, host, port, data, cb) {
-    var argCnt = arguments.count();
+    var argCnt =  ObjUtils.count(arguments);
     if (argCnt == 3) {
         host = this.host;
         port = this.port;
