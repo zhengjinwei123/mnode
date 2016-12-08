@@ -227,13 +227,11 @@ HttpServer.prototype.processMessage = function (message, response, connection) {
             this.opts.filtersFunc.forEach(function (func) {
                 retCode = retCode && func(message);
             });
-
             if (!retCode) {
                 connection.disconnect("invalid request");
                 return;
             }
         }
-
         response.emit('message', _routesList[_module.module][_module.func], message);
         //var $retMsg = _routesList[_module.module][_module.func](message);
     } else {
