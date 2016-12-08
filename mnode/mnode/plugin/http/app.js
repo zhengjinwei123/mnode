@@ -17,6 +17,7 @@ var Protocol = require("./protocol");
 var Encrypt = require("../../utils/app").Encrypt;
 var HttpConnection = require("./connection");
 var Singleton = require("../../utils/app").Singleton;
+var Session = require("./session");
 
 
 function HttpServer(bindPort, bindHost, opts, serverRootPath) {
@@ -53,7 +54,7 @@ function HttpServer(bindPort, bindHost, opts, serverRootPath) {
             throw new Error(opts + " must be object");
         }
 
-        if(opts['key'] && opts['cert']){
+        if (opts['key'] && opts['cert']) {
             this.opts.key = Fs.readFileSync(opts.key);
             this.opts.cert = Fs.readFileSync(opts.cert);
         }
@@ -75,12 +76,12 @@ function HttpServer(bindPort, bindHost, opts, serverRootPath) {
 
     var template = FileUtils.readSync(Path.resolve(Path.join(__dirname, "/template.js")));
 
-    var _file1 = Path.resolve(this.runPath + "/" + "post" + "/helloword.js");
+    var _file1 = Path.resolve(this.runPath + "/" + "post" + "/index.js");
     if (!FileUtils.isExists(_file1)) {
         FileUtils.writeSync(_file1, template);
     }
 
-    var _file2 = Path.resolve(this.runPath + "/" + "get" + "/helloword.js");
+    var _file2 = Path.resolve(this.runPath + "/" + "get" + "/index.js");
     if (!FileUtils.isExists(_file2)) {
         FileUtils.writeSync(_file2, template);
     }
@@ -107,7 +108,11 @@ function HttpServer(bindPort, bindHost, opts, serverRootPath) {
     //监听器
     this.listener = null;
 
-    this.skey = "sssaaabbbgggjjj";//session 秘钥
+    this.skey = {
+        crypt_key: opts['skey'] || new Buffer("OiGvNhTbD90KKLlk").toString('binary'), //16位
+        iv: new Buffer('rtDSSANva98n1ery').toString('binary') //16位
+    };
+    
 
     this.cidIndex = 0; //连接id计数
 
@@ -157,7 +162,6 @@ HttpServer.prototype.createServer = function () {
                         Logger.error("does not support ", message.method, " method");
                         e = {msg: Util.format("server does not support %s request method", message.method)};
                     }
-
                     try {
                         message.body = JSON.parse(data);
                     } catch (exception) {
@@ -182,7 +186,7 @@ HttpServer.prototype.protocolProcess = function (buff, protocol, callback) {
 HttpServer.prototype.getReqModule = function (route) {
     if (route.indexOf("/") == -1) {
         return {
-            "module": route,
+            "module": (route === '') ? 'index' : route,
             "func": "index"
         };
     }
@@ -193,8 +197,14 @@ HttpServer.prototype.getReqModule = function (route) {
     };
 };
 
-HttpServer.prototype.setSession = function (remoteAddress, cid) {
-
+HttpServer.prototype.setSession = function (remoteAddress) {
+    if (this.sessions[remoteAddress]) {
+        return this.sessions[remoteAddress];
+    }
+    var encodeText = Util.format("host:%s", remoteAddress);
+    var sid = Encrypt.AesEncode(encodeText, this.skey);
+    this.sessions[remoteAddress] = Singleton.getDemon(Session, sid);
+    return this.sessions[remoteAddress];
 };
 
 
@@ -225,16 +235,22 @@ HttpServer.prototype.processMessage = function (message, response, connection) {
         if (this.opts.filtersFunc.length) {
             var retCode = true;
             this.opts.filtersFunc.forEach(function (func) {
-                retCode = retCode && func(message);
+                if (_.isFunction(func)) {
+                    retCode = retCode && func(message);
+                }
             });
+
             if (!retCode) {
                 connection.disconnect("invalid request");
                 return;
             }
         }
-        response.emit('message', _routesList[_module.module][_module.func], message);
-        //var $retMsg = _routesList[_module.module][_module.func](message);
-    } else {
+
+        var req = {
+            message: message,
+            session: this.setSession(message.remoteAddress)
+        };
+        response.emit('message', _routesList[_module.module][_module.func], req);
         connection.disconnect("un support the method");
     }
 };

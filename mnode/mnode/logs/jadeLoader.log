@@ -108,3 +108,58 @@
     at HttpServer.processMessage (c:\Users\ff\Desktop\nodePro\mnode\mnode\plugin\http\app.js:235:18)
     at c:\Users\ff\Desktop\nodePro\mnode\mnode\plugin\http\app.js:167:34
     at c:\Users\ff\Desktop\nodePro\mnode\mnode\plugin\http\app.js:177:9
+[2016-12-07 22:27:00.901] [ERROR] jadeLoader - Error: Invalid IV length
+    at Error (native)
+    at new Cipheriv (crypto.js:187:16)
+    at Object.Cipheriv (crypto.js:185:12)
+    at Encrypt.AesEncode (e:\nodePro\mnode\mnode\utils\encrypt-utils\app.js:144:25)
+    at HttpServer.setSession (e:\nodePro\mnode\mnode\plugin\http\app.js:205:23)
+    at HttpServer.processMessage (e:\nodePro\mnode\mnode\plugin\http\app.js:251:27)
+    at e:\nodePro\mnode\mnode\plugin\http\app.js:173:34
+    at e:\nodePro\mnode\mnode\plugin\http\app.js:183:9
+    at Protocol.decode (e:\nodePro\mnode\mnode\plugin\http\protocol.js:42:9)
+    at HttpServer.protocolProcess (e:\nodePro\mnode\mnode\plugin\http\app.js:182:14)
+[2016-12-07 22:29:07.107] [ERROR] jadeLoader - Error: Invalid IV length
+    at Error (native)
+    at new Cipheriv (crypto.js:187:16)
+    at Object.Cipheriv (crypto.js:185:12)
+    at Encrypt.AesEncode (e:\nodePro\mnode\mnode\utils\encrypt-utils\app.js:144:25)
+    at HttpServer.setSession (e:\nodePro\mnode\mnode\plugin\http\app.js:205:23)
+    at HttpServer.processMessage (e:\nodePro\mnode\mnode\plugin\http\app.js:251:27)
+    at e:\nodePro\mnode\mnode\plugin\http\app.js:173:34
+    at e:\nodePro\mnode\mnode\plugin\http\app.js:183:9
+    at Protocol.decode (e:\nodePro\mnode\mnode\plugin\http\protocol.js:42:9)
+    at HttpServer.protocolProcess (e:\nodePro\mnode\mnode\plugin\http\app.js:182:14)
+[2016-12-07 22:29:24.210] [ERROR] jadeLoader - Error: Invalid IV length
+    at Error (native)
+    at new Cipheriv (crypto.js:187:16)
+    at Object.Cipheriv (crypto.js:185:12)
+    at Encrypt.AesEncode (e:\nodePro\mnode\mnode\utils\encrypt-utils\app.js:144:25)
+    at HttpServer.setSession (e:\nodePro\mnode\mnode\plugin\http\app.js:205:23)
+    at HttpServer.processMessage (e:\nodePro\mnode\mnode\plugin\http\app.js:251:27)
+    at e:\nodePro\mnode\mnode\plugin\http\app.js:173:34
+    at e:\nodePro\mnode\mnode\plugin\http\app.js:183:9
+    at Protocol.decode (e:\nodePro\mnode\mnode\plugin\http\protocol.js:42:9)
+    at HttpServer.protocolProcess (e:\nodePro\mnode\mnode\plugin\http\app.js:182:14)
+[2016-12-07 22:30:14.976] [ERROR] jadeLoader - Error: Invalid key length
+    at Error (native)
+    at new Cipheriv (crypto.js:187:16)
+    at Object.Cipheriv (crypto.js:185:12)
+    at Encrypt.AesEncode (e:\nodePro\mnode\mnode\utils\encrypt-utils\app.js:144:25)
+    at HttpServer.setSession (e:\nodePro\mnode\mnode\plugin\http\app.js:205:23)
+    at HttpServer.processMessage (e:\nodePro\mnode\mnode\plugin\http\app.js:251:27)
+    at e:\nodePro\mnode\mnode\plugin\http\app.js:173:34
+    at e:\nodePro\mnode\mnode\plugin\http\app.js:183:9
+    at Protocol.decode (e:\nodePro\mnode\mnode\plugin\http\protocol.js:42:9)
+    at HttpServer.protocolProcess (e:\nodePro\mnode\mnode\plugin\http\app.js:182:14)
+[2016-12-07 22:33:04.504] [ERROR] jadeLoader - Error: Invalid key length
+    at Error (native)
+    at new Cipheriv (crypto.js:187:16)
+    at Object.Cipheriv (crypto.js:185:12)
+    at Encrypt.AesEncode (e:\nodePro\mnode\mnode\utils\encrypt-utils\app.js:144:25)
+    at HttpServer.setSession (e:\nodePro\mnode\mnode\plugin\http\app.js:205:23)
+    at HttpServer.processMessage (e:\nodePro\mnode\mnode\plugin\http\app.js:251:27)
+    at e:\nodePro\mnode\mnode\plugin\http\app.js:173:34
+    at e:\nodePro\mnode\mnode\plugin\http\app.js:183:9
+    at Protocol.decode (e:\nodePro\mnode\mnode\plugin\http\protocol.js:42:9)
+    at HttpServer.protocolProcess (e:\nodePro\mnode\mnode\plugin\http\app.js:182:14)

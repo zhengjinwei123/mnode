@@ -57,7 +57,7 @@ Protocol.prototype.decode = function (buf, protocols, cb) {
             recived_buf = Encrypt.base64Decode(recived_buf.toString());
             next(null);
         } else if (item = "rc4") {
-            recived_buf = Encrypt.rc4Decode(recived_buf, _this.rc4key);
+            recived_buf = Encrypt.rc4Decode(recived_buf, "rc4key");
             next(null);
         } else {
             next(null);
