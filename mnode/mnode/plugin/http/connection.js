@@ -2,8 +2,7 @@
  * Created by zhengjinwei on 2016/12/4.
  */
 var EventEmitter = require('events').EventEmitter,
-    Util = require('util'),
-    Logger = require('pomelo-logger').getLogger('Http', 'httpConnection');
+    Util = require('util');
 
 var Protocol = require("./protocol");
 
@@ -11,7 +10,7 @@ var STATE_INITED = 0;
 var STATE_CLOSED = 1;
 
 
-function HttpConnection(cid, socket, encrypts) {
+function HttpConnection(cid, socket, encrypts, server) {
     EventEmitter.call(this);
 
     this.cid = cid; //连接id
@@ -22,7 +21,9 @@ function HttpConnection(cid, socket, encrypts) {
 
     this.init();
 
-    Logger.info("New connection " + cid + " from " + (socket.connection ? socket.connection.remoteAddress : "unknown address"));
+    this.server = server;
+
+    this.server.emit("connect-connect", "New connection " + cid + " from " + (socket.connection ? socket.connection.remoteAddress : "unknown address"));
 }
 
 Util.inherits(HttpConnection, EventEmitter);
@@ -36,11 +37,11 @@ HttpConnection.prototype.init = function () {
 
     var self = this;
     this.on('error', function (error) {
-        Logger.warn("Connection " + self.cid + " has an error :" + error.stack);
+        self.server.emit("connect-error", "Connection " + self.cid + " has an error :" + error.stack);
     });
 
     this.on('disconnect', function () {
-        Logger.info("Connection " + self.cid + " disconnected  time-consumed:" + (new Date() - self.createTime));
+        self.server.emit("connect-disconnect", "Connection " + self.cid + " disconnected  time-consumed:" + (new Date() - self.createTime));
         self.state = STATE_CLOSED;
     });
 
@@ -59,7 +60,7 @@ HttpConnection.prototype.init = function () {
 
 HttpConnection.prototype.send = function (msg, status) {
     if (this.state !== STATE_INITED) {
-        Logger.warn('Bad connection state:' + this.state);
+        this.server.emit("connect-error", 'Bad connection state:' + this.state);
         return;
     }
     var _this = this;
@@ -69,7 +70,7 @@ HttpConnection.prototype.send = function (msg, status) {
         return;
     }
     var strBuf = typeof msg === 'object' ? JSON.stringify(msg) : msg.toString("binary");
-    Logger.info("Response message to connection [" + this.cid + "] " + strBuf.length + " : " + strBuf);
+    this.server.emit("connect-response", "Response message to connection [" + this.cid + "] " + strBuf.length + " : " + strBuf);
 
     Protocol.encode(strBuf, this.encrypts, function (error, data) {
         _this.socket.end(data);
@@ -82,7 +83,7 @@ HttpConnection.prototype.disconnect = function (reason) {
 
 HttpConnection.prototype.errorCode = function (code, status) {
     if (this.state !== STATE_CLOSED) {
-        Logger.debug("This connection will be disconnect by: " + code);
+        this.server.emit("connect-errorcode", "This connection will be disconnect by: " + code);
         this.send({error: code}, status || 405);
     }
 };

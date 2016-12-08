@@ -1,166 +1,99 @@
-[2016-12-06 18:00:32.428] [INFO] Http - http server already listen on port: 9090
-[2016-12-06 18:01:40.375] [INFO] Http - http server already listen on port: 9090
-[2016-12-06 18:03:42.958] [INFO] Http - http server already listen on port: 9090
-[2016-12-06 18:15:31.708] [INFO] Http - http server already listen on port: 9090
-[2016-12-06 18:20:58.097] [INFO] Http - http server already listen on port: 9090
-[2016-12-06 18:21:39.466] [INFO] Http - http server already listen on port: 9090
-[2016-12-06 18:22:38.345] [INFO] Http - http server already listen on port: 9090
-[2016-12-06 18:23:14.158] [INFO] Http - http server already listen on port: 9090
-[2016-12-06 19:26:41.540] [INFO] Http - http server already listen on port: 9090
-[2016-12-06 19:28:17.260] [INFO] Http - http server already listen on port: 9090
-[2016-12-06 19:28:20.809] [ERROR] Http - Got Exception: Unexpected end of input
-[2016-12-06 19:28:59.566] [INFO] Http - http server already listen on port: 9090
-[2016-12-06 19:29:02.464] [ERROR] Http - Got Exception: Unexpected end of input
-[2016-12-06 19:31:05.866] [INFO] Http - http server already listen on port: 9090
-[2016-12-06 19:31:08.435] [ERROR] Http - Got Exception: Unexpected end of input
-[2016-12-06 19:31:47.821] [INFO] Http - http server already listen on port: 9090
-[2016-12-06 19:31:50.979] [ERROR] Http - Got Exception: Unexpected end of input
-[2016-12-06 19:32:38.630] [INFO] Http - http server already listen on port: 9090
-[2016-12-06 19:32:42.138] [ERROR] Http - Got Exception: Unexpected end of input
-[2016-12-06 19:34:36.732] [INFO] Http - http server already listen on port: 9090
-[2016-12-06 19:35:55.665] [INFO] Http - http server already listen on port: 9090
-[2016-12-06 19:36:13.461] [INFO] Http - http server already listen on port: 9090
-[2016-12-06 19:36:15.918] [ERROR] Http - Got Exception: Unexpected end of input
-[2016-12-06 19:39:50.038] [INFO] Http - http server already listen on port: 9090
-[2016-12-06 19:39:51.890] [ERROR] Http - Got Exception: Unexpected end of input
-[2016-12-06 19:40:14.459] [INFO] Http - http server already listen on port: 9090
-[2016-12-06 19:47:42.985] [INFO] Http - http server already listen on port: 9090
-[2016-12-06 19:48:49.786] [INFO] Http - http server already listen on port: 9090
-[2016-12-06 19:51:36.472] [INFO] Http - http server already listen on port: 9090
-[2016-12-06 19:52:27.029] [INFO] Http - http server already listen on port: 9090
-[2016-12-06 19:53:06.475] [INFO] Http - http server already listen on port: 9090
-[2016-12-07 12:38:10.220] [INFO] Http - http server already listen on port: 9090
-[2016-12-07 12:39:26.162] [INFO] Http - http server already listen on port: 9090
-[2016-12-07 12:39:56.697] [INFO] Http - http server already listen on port: 9090
-[2016-12-07 12:41:19.017] [INFO] Http - http server already listen on port: 9090
-[2016-12-07 12:46:37.509] [INFO] Http - http server already listen on port: 9090
-[2016-12-07 12:47:22.205] [INFO] Http - http server already listen on port: 9090
-[2016-12-07 12:48:04.746] [INFO] Http - http server already listen on port: 9090
-[2016-12-07 12:51:55.743] [INFO] Http - http server already listen on port: 9090
-[2016-12-07 12:52:31.416] [INFO] Http - http server already listen on port: 9090
-[2016-12-07 13:25:39.517] [INFO] Http - http server already listen on port: 9090
-[2016-12-07 13:50:07.443] [INFO] Http - http server already listen on port: 9090
-[2016-12-07 13:50:12.495] [INFO] Http - New connection 1 from 127.0.0.1
-[2016-12-07 13:50:41.418] [INFO] Http - http server already listen on port: 9090
-[2016-12-07 13:50:44.404] [INFO] Http - New connection 1 from 127.0.0.1
-[2016-12-07 13:50:44.408] [INFO] Http - Response message to connection [1] 682 : {"httpVersion":"1.1","route":"helloword","params":{"a":"1","b":"2"},"method":"GET","statusCode":null,"headers":{"host":"localhost:9090","connection":"keep-alive","cache-control":"max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0","accept-encoding":"gzip, deflate, gzip","accept-language":"zh-CN,zh;q=0.8","cookie":"sg.sid=s%3AnjP9ClJwqVHQCxTA9jGzWd00.bWkf%2BjugWE9qNtMeDMKtEvayShOPMYmew2AZYtsn2TY"},"remoteAddress":"127.0.0.1","body":{"type":"Buffer","data":[]}}
-[2016-12-07 13:50:44.411] [INFO] Http - Connection 1 disconnected  time-consumed:7
-[2016-12-07 13:50:51.210] [INFO] Http - New connection 2 from 127.0.0.1
-[2016-12-07 13:50:51.212] [INFO] Http - Response message to connection [2] 682 : {"httpVersion":"1.1","route":"helloword","params":{"a":"1","b":"2"},"method":"GET","statusCode":null,"headers":{"host":"localhost:9090","connection":"keep-alive","cache-control":"max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0","accept-encoding":"gzip, deflate, gzip","accept-language":"zh-CN,zh;q=0.8","cookie":"sg.sid=s%3AnjP9ClJwqVHQCxTA9jGzWd00.bWkf%2BjugWE9qNtMeDMKtEvayShOPMYmew2AZYtsn2TY"},"remoteAddress":"127.0.0.1","body":{"type":"Buffer","data":[]}}
-[2016-12-07 13:50:51.214] [INFO] Http - Connection 2 disconnected  time-consumed:4
-[2016-12-07 13:51:50.762] [INFO] Http - New connection 3 from 127.0.0.1
-[2016-12-07 13:51:50.763] [INFO] Http - Response message to connection [3] 682 : {"httpVersion":"1.1","route":"helloword","params":{"a":"1","b":"2"},"method":"GET","statusCode":null,"headers":{"host":"localhost:9090","connection":"keep-alive","cache-control":"max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0","accept-encoding":"gzip, deflate, gzip","accept-language":"zh-CN,zh;q=0.8","cookie":"sg.sid=s%3AnjP9ClJwqVHQCxTA9jGzWd00.bWkf%2BjugWE9qNtMeDMKtEvayShOPMYmew2AZYtsn2TY"},"remoteAddress":"127.0.0.1","body":{"type":"Buffer","data":[]}}
-[2016-12-07 13:51:50.763] [INFO] Http - Connection 3 disconnected  time-consumed:2
-[2016-12-07 13:52:03.228] [INFO] Http - New connection 4 from 127.0.0.1
-[2016-12-07 13:52:03.229] [INFO] Http - Response message to connection [4] 660 : {"httpVersion":"1.1","route":"helloword/index","params":{"a":"1","b":"2"},"method":"GET","statusCode":null,"headers":{"host":"localhost:9090","connection":"keep-alive","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0","accept-encoding":"gzip, deflate, gzip","accept-language":"zh-CN,zh;q=0.8","cookie":"sg.sid=s%3AnjP9ClJwqVHQCxTA9jGzWd00.bWkf%2BjugWE9qNtMeDMKtEvayShOPMYmew2AZYtsn2TY"},"remoteAddress":"127.0.0.1","body":{"type":"Buffer","data":[]}}
-[2016-12-07 13:52:03.230] [INFO] Http - Connection 4 disconnected  time-consumed:2
-[2016-12-07 13:52:14.017] [INFO] Http - New connection 5 from 127.0.0.1
-[2016-12-07 13:52:14.018] [DEBUG] Http - This connection will be disconnect by: unknown route
-[2016-12-07 13:52:14.018] [INFO] Http - Response message to connection [5] 25 : {"error":"unknown route"}
-[2016-12-07 13:52:14.018] [INFO] Http - Connection 5 disconnected  time-consumed:1
-[2016-12-07 13:59:33.663] [INFO] Http - http server already listen on port: 9090
-[2016-12-07 13:59:37.868] [INFO] Http - New connection 1 from 127.0.0.1
-[2016-12-07 13:59:37.875] [DEBUG] Http - This connection will be disconnect by: unknown route
-[2016-12-07 13:59:37.876] [INFO] Http - Response message to connection [1] 25 : {"error":"unknown route"}
-[2016-12-07 13:59:37.882] [INFO] Http - Connection 1 disconnected  time-consumed:15
-[2016-12-07 14:00:26.643] [INFO] Http - New connection 2 from 127.0.0.1
-[2016-12-07 14:00:26.644] [DEBUG] Http - This connection will be disconnect by: invalid request
-[2016-12-07 14:00:26.644] [INFO] Http - Response message to connection [2] 27 : {"error":"invalid request"}
-[2016-12-07 14:00:26.645] [INFO] Http - Connection 2 disconnected  time-consumed:2
-[2016-12-07 14:00:37.952] [INFO] Http - http server already listen on port: 9090
-[2016-12-07 14:00:40.250] [INFO] Http - New connection 1 from 127.0.0.1
-[2016-12-07 14:00:40.261] [INFO] Http - Response message to connection [1] 688 : {"httpVersion":"1.1","route":"helloword/index","params":{"a":"1","b":"2"},"method":"GET","statusCode":null,"headers":{"host":"localhost:9090","connection":"keep-alive","cache-control":"max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0","accept-encoding":"gzip, deflate, gzip","accept-language":"zh-CN,zh;q=0.8","cookie":"sg.sid=s%3AnjP9ClJwqVHQCxTA9jGzWd00.bWkf%2BjugWE9qNtMeDMKtEvayShOPMYmew2AZYtsn2TY"},"remoteAddress":"127.0.0.1","body":{"type":"Buffer","data":[]}}
-[2016-12-07 14:00:40.267] [INFO] Http - Connection 1 disconnected  time-consumed:17
-[2016-12-07 21:11:34.959] [INFO] Http - http server already listen on port: 9090
-[2016-12-07 21:11:54.453] [INFO] Http - New connection 1 from 127.0.0.1
-[2016-12-07 21:11:54.455] [DEBUG] Http - This connection will be disconnect by: unknown route
-[2016-12-07 21:11:54.456] [INFO] Http - Response message to connection [1] 25 : {"error":"unknown route"}
-[2016-12-07 21:11:54.459] [INFO] Http - Connection 1 disconnected  time-consumed:6
-[2016-12-07 21:11:55.540] [INFO] Http - New connection 2 from 127.0.0.1
-[2016-12-07 21:11:55.540] [DEBUG] Http - This connection will be disconnect by: unknown route
-[2016-12-07 21:11:55.541] [INFO] Http - Response message to connection [2] 25 : {"error":"unknown route"}
-[2016-12-07 21:11:55.541] [INFO] Http - Connection 2 disconnected  time-consumed:1
-[2016-12-07 21:12:22.017] [INFO] Http - New connection 3 from 127.0.0.1
-[2016-12-07 21:12:22.018] [INFO] Http - Response message to connection [3] 576 : {"httpVersion":"1.1","route":"helloword","params":{},"method":"GET","statusCode":null,"headers":{"host":"localhost:9090","connection":"keep-alive","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0","accept-encoding":"gzip, deflate, sdch","accept-language":"zh-CN,zh;q=0.8","cookie":"pgv_pvi=1805284352"},"remoteAddress":"127.0.0.1","body":{"type":"Buffer","data":[]}}
-[2016-12-07 21:12:22.019] [INFO] Http - Connection 3 disconnected  time-consumed:2
-[2016-12-07 21:13:04.782] [INFO] Http - http server already listen on port: 9090
-[2016-12-07 21:13:17.748] [INFO] Http - New connection 1 from 127.0.0.1
-[2016-12-07 21:13:17.750] [DEBUG] Http - This connection will be disconnect by: unknown route
-[2016-12-07 21:13:17.751] [INFO] Http - Response message to connection [1] 25 : {"error":"unknown route"}
-[2016-12-07 21:13:17.753] [INFO] Http - Connection 1 disconnected  time-consumed:5
-[2016-12-07 21:13:36.062] [INFO] Http - New connection 2 from 127.0.0.1
-[2016-12-07 21:13:36.063] [INFO] Http - Response message to connection [2] 572 : {"httpVersion":"1.1","route":"index","params":{},"method":"GET","statusCode":null,"headers":{"host":"localhost:9090","connection":"keep-alive","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0","accept-encoding":"gzip, deflate, sdch","accept-language":"zh-CN,zh;q=0.8","cookie":"pgv_pvi=1805284352"},"remoteAddress":"127.0.0.1","body":{"type":"Buffer","data":[]}}
-[2016-12-07 21:13:36.064] [INFO] Http - Connection 2 disconnected  time-consumed:2
-[2016-12-07 21:14:48.770] [INFO] Http - http server already listen on port: 9090
-[2016-12-07 21:14:53.486] [INFO] Http - New connection 1 from 127.0.0.1
-[2016-12-07 21:14:53.488] [DEBUG] Http - This connection will be disconnect by: unknown route
-[2016-12-07 21:14:53.488] [INFO] Http - Response message to connection [1] 25 : {"error":"unknown route"}
-[2016-12-07 21:14:53.491] [INFO] Http - Connection 1 disconnected  time-consumed:4
-[2016-12-07 21:15:31.694] [INFO] Http - http server already listen on port: 9090
-[2016-12-07 21:15:36.162] [INFO] Http - New connection 1 from 127.0.0.1
-[2016-12-07 21:15:36.169] [INFO] Http - Response message to connection [1] 595 : {"httpVersion":"1.1","route":"","params":{},"method":"GET","statusCode":null,"headers":{"host":"localhost:9090","connection":"keep-alive","cache-control":"max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0","accept-encoding":"gzip, deflate, sdch","accept-language":"zh-CN,zh;q=0.8","cookie":"pgv_pvi=1805284352"},"remoteAddress":"127.0.0.1","body":{"type":"Buffer","data":[]}}
-[2016-12-07 21:15:36.177] [INFO] Http - Connection 1 disconnected  time-consumed:16
-[2016-12-07 22:26:51.581] [INFO] Http - http server already listen on port: 9090
-[2016-12-07 22:26:58.538] [INFO] Http - New connection 1 from 127.0.0.1
-[2016-12-07 22:26:58.542] [DEBUG] Http - This connection will be disconnect by: unknown route
-[2016-12-07 22:26:58.542] [INFO] Http - Response message to connection [1] 25 : {"error":"unknown route"}
-[2016-12-07 22:26:58.546] [INFO] Http - Connection 1 disconnected  time-consumed:8
-[2016-12-07 22:27:00.899] [INFO] Http - New connection 2 from 127.0.0.1
-[2016-12-07 22:29:02.526] [INFO] Http - http server already listen on port: 9090
-[2016-12-07 22:29:07.099] [INFO] Http - New connection 1 from 127.0.0.1
-[2016-12-07 22:29:20.682] [INFO] Http - http server already listen on port: 9090
-[2016-12-07 22:29:24.202] [INFO] Http - New connection 1 from 127.0.0.1
-[2016-12-07 22:30:11.326] [INFO] Http - http server already listen on port: 9090
-[2016-12-07 22:30:14.964] [INFO] Http - New connection 1 from 127.0.0.1
-[2016-12-07 22:33:00.508] [INFO] Http - http server already listen on port: 9090
-[2016-12-07 22:33:04.493] [INFO] Http - New connection 1 from 127.0.0.1
-[2016-12-07 22:33:18.268] [INFO] Http - http server already listen on port: 9090
-[2016-12-07 22:36:44.600] [INFO] Http - http server already listen on port: 9090
-[2016-12-07 22:36:55.247] [INFO] Http - New connection 1 from 127.0.0.1
-[2016-12-07 22:36:55.254] [INFO] Http - Response message to connection [1] 595 : {"httpVersion":"1.1","route":"","params":{},"method":"GET","statusCode":null,"headers":{"host":"localhost:9090","connection":"keep-alive","cache-control":"max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0","accept-encoding":"gzip, deflate, sdch","accept-language":"zh-CN,zh;q=0.8","cookie":"pgv_pvi=1805284352"},"remoteAddress":"127.0.0.1","body":{"type":"Buffer","data":[]}}
-[2016-12-07 22:36:55.259] [DEBUG] Http - This connection will be disconnect by: un support the method
-[2016-12-07 22:36:55.260] [INFO] Http - Response message to connection [1] 33 : {"error":"un support the method"}
-[2016-12-07 22:36:55.261] [INFO] Http - Connection 1 disconnected  time-consumed:13
-[2016-12-07 22:37:48.094] [INFO] Http - http server already listen on port: 9090
-[2016-12-07 22:37:52.219] [INFO] Http - New connection 1 from 127.0.0.1
-[2016-12-07 22:37:52.232] [INFO] Http - Response message to connection [1] 595 : {"httpVersion":"1.1","route":"","params":{},"method":"GET","statusCode":null,"headers":{"host":"localhost:9090","connection":"keep-alive","cache-control":"max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0","accept-encoding":"gzip, deflate, sdch","accept-language":"zh-CN,zh;q=0.8","cookie":"pgv_pvi=1805284352"},"remoteAddress":"127.0.0.1","body":{"type":"Buffer","data":[]}}
-[2016-12-07 22:37:52.236] [DEBUG] Http - This connection will be disconnect by: un support the method
-[2016-12-07 22:37:52.236] [INFO] Http - Response message to connection [1] 33 : {"error":"un support the method"}
-[2016-12-07 22:37:52.236] [INFO] Http - Connection 1 disconnected  time-consumed:17
-[2016-12-07 22:38:18.435] [INFO] Http - http server already listen on port: 9090
-[2016-12-07 22:38:20.891] [INFO] Http - New connection 1 from 127.0.0.1
-[2016-12-07 22:38:20.903] [INFO] Http - Response message to connection [1] 595 : {"httpVersion":"1.1","route":"","params":{},"method":"GET","statusCode":null,"headers":{"host":"localhost:9090","connection":"keep-alive","cache-control":"max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0","accept-encoding":"gzip, deflate, sdch","accept-language":"zh-CN,zh;q=0.8","cookie":"pgv_pvi=1805284352"},"remoteAddress":"127.0.0.1","body":{"type":"Buffer","data":[]}}
-[2016-12-07 22:38:20.909] [DEBUG] Http - This connection will be disconnect by: un support the method
-[2016-12-07 22:38:20.909] [INFO] Http - Response message to connection [1] 33 : {"error":"un support the method"}
-[2016-12-07 22:38:20.910] [INFO] Http - Connection 1 disconnected  time-consumed:20
-[2016-12-07 22:40:23.659] [INFO] Http - http server already listen on port: 9090
-[2016-12-07 22:40:27.048] [INFO] Http - New connection 1 from 127.0.0.1
-[2016-12-07 22:40:27.056] [INFO] Http - Response message to connection [1] 595 : {"httpVersion":"1.1","route":"","params":{},"method":"GET","statusCode":null,"headers":{"host":"localhost:9090","connection":"keep-alive","cache-control":"max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0","accept-encoding":"gzip, deflate, sdch","accept-language":"zh-CN,zh;q=0.8","cookie":"pgv_pvi=1805284352"},"remoteAddress":"127.0.0.1","body":{"type":"Buffer","data":[]}}
-[2016-12-07 22:40:27.061] [DEBUG] Http - This connection will be disconnect by: un support the method
-[2016-12-07 22:40:27.062] [INFO] Http - Response message to connection [1] 33 : {"error":"un support the method"}
-[2016-12-07 22:40:27.063] [INFO] Http - Connection 1 disconnected  time-consumed:16
-[2016-12-07 22:40:32.964] [INFO] Http - New connection 2 from 127.0.0.1
-[2016-12-07 22:40:32.966] [INFO] Http - Response message to connection [2] 595 : {"httpVersion":"1.1","route":"","params":{},"method":"GET","statusCode":null,"headers":{"host":"localhost:9090","connection":"keep-alive","cache-control":"max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0","accept-encoding":"gzip, deflate, sdch","accept-language":"zh-CN,zh;q=0.8","cookie":"pgv_pvi=1805284352"},"remoteAddress":"127.0.0.1","body":{"type":"Buffer","data":[]}}
-[2016-12-07 22:40:32.967] [DEBUG] Http - This connection will be disconnect by: un support the method
-[2016-12-07 22:40:32.967] [INFO] Http - Response message to connection [2] 33 : {"error":"un support the method"}
-[2016-12-07 22:40:32.968] [INFO] Http - Connection 2 disconnected  time-consumed:4
-[2016-12-07 22:40:39.749] [INFO] Http - New connection 3 from 127.0.0.1
-[2016-12-07 22:40:39.750] [INFO] Http - Response message to connection [3] 595 : {"httpVersion":"1.1","route":"","params":{},"method":"GET","statusCode":null,"headers":{"host":"localhost:9090","connection":"keep-alive","cache-control":"max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0","accept-encoding":"gzip, deflate, sdch","accept-language":"zh-CN,zh;q=0.8","cookie":"pgv_pvi=1805284352"},"remoteAddress":"127.0.0.1","body":{"type":"Buffer","data":[]}}
-[2016-12-07 22:40:39.750] [DEBUG] Http - This connection will be disconnect by: un support the method
-[2016-12-07 22:40:39.751] [INFO] Http - Response message to connection [3] 33 : {"error":"un support the method"}
-[2016-12-07 22:40:39.751] [INFO] Http - Connection 3 disconnected  time-consumed:2
-[2016-12-07 22:40:39.993] [INFO] Http - New connection 4 from 127.0.0.1
-[2016-12-07 22:40:39.993] [INFO] Http - Response message to connection [4] 595 : {"httpVersion":"1.1","route":"","params":{},"method":"GET","statusCode":null,"headers":{"host":"localhost:9090","connection":"keep-alive","cache-control":"max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0","accept-encoding":"gzip, deflate, sdch","accept-language":"zh-CN,zh;q=0.8","cookie":"pgv_pvi=1805284352"},"remoteAddress":"127.0.0.1","body":{"type":"Buffer","data":[]}}
-[2016-12-07 22:40:39.993] [DEBUG] Http - This connection will be disconnect by: un support the method
-[2016-12-07 22:40:39.994] [INFO] Http - Response message to connection [4] 33 : {"error":"un support the method"}
-[2016-12-07 22:40:39.994] [INFO] Http - Connection 4 disconnected  time-consumed:2
-[2016-12-07 22:40:40.153] [INFO] Http - New connection 5 from 127.0.0.1
-[2016-12-07 22:40:40.153] [INFO] Http - Response message to connection [5] 595 : {"httpVersion":"1.1","route":"","params":{},"method":"GET","statusCode":null,"headers":{"host":"localhost:9090","connection":"keep-alive","cache-control":"max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0","accept-encoding":"gzip, deflate, sdch","accept-language":"zh-CN,zh;q=0.8","cookie":"pgv_pvi=1805284352"},"remoteAddress":"127.0.0.1","body":{"type":"Buffer","data":[]}}
-[2016-12-07 22:40:40.154] [DEBUG] Http - This connection will be disconnect by: un support the method
-[2016-12-07 22:40:40.154] [INFO] Http - Response message to connection [5] 33 : {"error":"un support the method"}
-[2016-12-07 22:40:40.154] [INFO] Http - Connection 5 disconnected  time-consumed:1
-[2016-12-07 22:40:40.275] [INFO] Http - New connection 6 from 127.0.0.1
-[2016-12-07 22:40:40.276] [INFO] Http - Response message to connection [6] 595 : {"httpVersion":"1.1","route":"","params":{},"method":"GET","statusCode":null,"headers":{"host":"localhost:9090","connection":"keep-alive","cache-control":"max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0","accept-encoding":"gzip, deflate, sdch","accept-language":"zh-CN,zh;q=0.8","cookie":"pgv_pvi=1805284352"},"remoteAddress":"127.0.0.1","body":{"type":"Buffer","data":[]}}
-[2016-12-07 22:40:40.277] [DEBUG] Http - This connection will be disconnect by: un support the method
-[2016-12-07 22:40:40.277] [INFO] Http - Response message to connection [6] 33 : {"error":"un support the method"}
-[2016-12-07 22:40:40.278] [INFO] Http - Connection 6 disconnected  time-consumed:4
+[2016-12-08 14:01:48.833] [INFO] Http - halloreundefined
+[2016-12-08 14:03:29.703] [INFO] Http - halloreundefined
+[2016-12-08 14:03:51.318] [INFO] Http - halloreundefined
+[2016-12-08 14:04:20.418] [INFO] Http - halloreundefined
+[2016-12-08 14:05:21.551] [INFO] Http - halloreundefined
+[2016-12-08 14:06:09.240] [INFO] Http - hallore
+[2016-12-08 14:06:24.197] [INFO] Http - [object Arguments]
+[2016-12-08 14:06:36.047] [INFO] Http - function (category) {
+    if (this.openList.info) {
+        this.loggers[category] && this.loggers[category].info(arguments.callee);
+    }
+}
+[2016-12-08 14:07:19.214] [INFO] Http - undefined
+[2016-12-08 14:07:36.770] [INFO] Http - hallore
+[2016-12-08 14:08:15.124] [INFO] Http - hallore12true[1,2,3,4]{"a":1}
+[2016-12-08 14:08:44.153] [INFO] Http - 	hallore	1	2	true	[1,2,3,4]	{"a":1}	
+[2016-12-08 14:09:02.095] [INFO] Http - hallore	1	2	true	[1,2,3,4]	{"a":1}	
+[2016-12-08 14:09:18.724] [INFO] Http - hallore  1  2  true  [1,2,3,4]  {"a":1}  
+[2016-12-08 14:09:36.822] [INFO] Http - hallore  1  2  true  [1,2,3,4]  {"a":1}  
+[2016-12-08 14:39:36.923] [INFO] Http - http server already listen on port:9090  
+[2016-12-08 14:39:44.864] [INFO] Http - New connection 1 from 127.0.0.1  
+[2016-12-08 14:39:44.872] [INFO] Http - Response message to connection [1] 663 : {"httpVersion":"1.1","route":"index","params":{},"method":"GET","statusCode":null,"headers":{"host":"localhost:9090","connection":"keep-alive","cache-control":"max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0","accept-encoding":"gzip, deflate, gzip","accept-language":"zh-CN,zh;q=0.8","cookie":"sg.sid=s%3AnjP9ClJwqVHQCxTA9jGzWd00.bWkf%2BjugWE9qNtMeDMKtEvayShOPMYmew2AZYtsn2TY"},"remoteAddress":"127.0.0.1","body":{"type":"Buffer","data":[]}}  
+[2016-12-08 14:39:44.879] [INFO] Http - Connection 1 disconnected  time-consumed:16  
+[2016-12-08 14:39:45.347] [INFO] Http - New connection 2 from 127.0.0.1  
+[2016-12-08 14:39:45.348] [INFO] Http - Response message to connection [2] 663 : {"httpVersion":"1.1","route":"index","params":{},"method":"GET","statusCode":null,"headers":{"host":"localhost:9090","connection":"keep-alive","cache-control":"max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0","accept-encoding":"gzip, deflate, gzip","accept-language":"zh-CN,zh;q=0.8","cookie":"sg.sid=s%3AnjP9ClJwqVHQCxTA9jGzWd00.bWkf%2BjugWE9qNtMeDMKtEvayShOPMYmew2AZYtsn2TY"},"remoteAddress":"127.0.0.1","body":{"type":"Buffer","data":[]}}  
+[2016-12-08 14:39:45.348] [INFO] Http - Connection 2 disconnected  time-consumed:1  
+[2016-12-08 14:39:46.028] [INFO] Http - New connection 3 from 127.0.0.1  
+[2016-12-08 14:39:46.028] [INFO] Http - Response message to connection [3] 663 : {"httpVersion":"1.1","route":"index","params":{},"method":"GET","statusCode":null,"headers":{"host":"localhost:9090","connection":"keep-alive","cache-control":"max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0","accept-encoding":"gzip, deflate, gzip","accept-language":"zh-CN,zh;q=0.8","cookie":"sg.sid=s%3AnjP9ClJwqVHQCxTA9jGzWd00.bWkf%2BjugWE9qNtMeDMKtEvayShOPMYmew2AZYtsn2TY"},"remoteAddress":"127.0.0.1","body":{"type":"Buffer","data":[]}}  
+[2016-12-08 14:39:46.029] [INFO] Http - Connection 3 disconnected  time-consumed:1  
+[2016-12-08 14:39:46.191] [INFO] Http - New connection 4 from 127.0.0.1  
+[2016-12-08 14:39:46.192] [INFO] Http - Response message to connection [4] 663 : {"httpVersion":"1.1","route":"index","params":{},"method":"GET","statusCode":null,"headers":{"host":"localhost:9090","connection":"keep-alive","cache-control":"max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0","accept-encoding":"gzip, deflate, gzip","accept-language":"zh-CN,zh;q=0.8","cookie":"sg.sid=s%3AnjP9ClJwqVHQCxTA9jGzWd00.bWkf%2BjugWE9qNtMeDMKtEvayShOPMYmew2AZYtsn2TY"},"remoteAddress":"127.0.0.1","body":{"type":"Buffer","data":[]}}  
+[2016-12-08 14:39:46.192] [INFO] Http - Connection 4 disconnected  time-consumed:1  
+[2016-12-08 14:39:46.803] [INFO] Http - New connection 5 from 127.0.0.1  
+[2016-12-08 14:39:46.804] [INFO] Http - Response message to connection [5] 663 : {"httpVersion":"1.1","route":"index","params":{},"method":"GET","statusCode":null,"headers":{"host":"localhost:9090","connection":"keep-alive","cache-control":"max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0","accept-encoding":"gzip, deflate, gzip","accept-language":"zh-CN,zh;q=0.8","cookie":"sg.sid=s%3AnjP9ClJwqVHQCxTA9jGzWd00.bWkf%2BjugWE9qNtMeDMKtEvayShOPMYmew2AZYtsn2TY"},"remoteAddress":"127.0.0.1","body":{"type":"Buffer","data":[]}}  
+[2016-12-08 14:39:46.805] [INFO] Http - Connection 5 disconnected  time-consumed:2  
+[2016-12-08 14:39:46.865] [INFO] Http - New connection 6 from 127.0.0.1  
+[2016-12-08 14:39:46.866] [INFO] Http - Response message to connection [6] 663 : {"httpVersion":"1.1","route":"index","params":{},"method":"GET","statusCode":null,"headers":{"host":"localhost:9090","connection":"keep-alive","cache-control":"max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0","accept-encoding":"gzip, deflate, gzip","accept-language":"zh-CN,zh;q=0.8","cookie":"sg.sid=s%3AnjP9ClJwqVHQCxTA9jGzWd00.bWkf%2BjugWE9qNtMeDMKtEvayShOPMYmew2AZYtsn2TY"},"remoteAddress":"127.0.0.1","body":{"type":"Buffer","data":[]}}  
+[2016-12-08 14:39:46.866] [INFO] Http - Connection 6 disconnected  time-consumed:1  
+[2016-12-08 14:40:13.619] [INFO] Http - New connection 7 from 127.0.0.1  
+[2016-12-08 14:40:13.620] [INFO] Http - Response message to connection [7] 663 : {"httpVersion":"1.1","route":"index","params":{},"method":"GET","statusCode":null,"headers":{"host":"localhost:9090","connection":"keep-alive","cache-control":"max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0","accept-encoding":"gzip, deflate, gzip","accept-language":"zh-CN,zh;q=0.8","cookie":"sg.sid=s%3AnjP9ClJwqVHQCxTA9jGzWd00.bWkf%2BjugWE9qNtMeDMKtEvayShOPMYmew2AZYtsn2TY"},"remoteAddress":"127.0.0.1","body":{"type":"Buffer","data":[]}}  
+[2016-12-08 14:40:13.622] [INFO] Http - Connection 7 disconnected  time-consumed:2  
+[2016-12-08 14:40:14.070] [INFO] Http - New connection 8 from 127.0.0.1  
+[2016-12-08 14:40:14.070] [INFO] Http - Response message to connection [8] 663 : {"httpVersion":"1.1","route":"index","params":{},"method":"GET","statusCode":null,"headers":{"host":"localhost:9090","connection":"keep-alive","cache-control":"max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0","accept-encoding":"gzip, deflate, gzip","accept-language":"zh-CN,zh;q=0.8","cookie":"sg.sid=s%3AnjP9ClJwqVHQCxTA9jGzWd00.bWkf%2BjugWE9qNtMeDMKtEvayShOPMYmew2AZYtsn2TY"},"remoteAddress":"127.0.0.1","body":{"type":"Buffer","data":[]}}  
+[2016-12-08 14:40:14.070] [INFO] Http - Connection 8 disconnected  time-consumed:0  
+[2016-12-08 14:40:14.291] [INFO] Http - New connection 9 from 127.0.0.1  
+[2016-12-08 14:40:14.291] [INFO] Http - Response message to connection [9] 663 : {"httpVersion":"1.1","route":"index","params":{},"method":"GET","statusCode":null,"headers":{"host":"localhost:9090","connection":"keep-alive","cache-control":"max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0","accept-encoding":"gzip, deflate, gzip","accept-language":"zh-CN,zh;q=0.8","cookie":"sg.sid=s%3AnjP9ClJwqVHQCxTA9jGzWd00.bWkf%2BjugWE9qNtMeDMKtEvayShOPMYmew2AZYtsn2TY"},"remoteAddress":"127.0.0.1","body":{"type":"Buffer","data":[]}}  
+[2016-12-08 14:40:14.292] [INFO] Http - Connection 9 disconnected  time-consumed:1  
+[2016-12-08 14:40:14.435] [INFO] Http - New connection 10 from 127.0.0.1  
+[2016-12-08 14:40:14.435] [INFO] Http - Response message to connection [10] 663 : {"httpVersion":"1.1","route":"index","params":{},"method":"GET","statusCode":null,"headers":{"host":"localhost:9090","connection":"keep-alive","cache-control":"max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0","accept-encoding":"gzip, deflate, gzip","accept-language":"zh-CN,zh;q=0.8","cookie":"sg.sid=s%3AnjP9ClJwqVHQCxTA9jGzWd00.bWkf%2BjugWE9qNtMeDMKtEvayShOPMYmew2AZYtsn2TY"},"remoteAddress":"127.0.0.1","body":{"type":"Buffer","data":[]}}  
+[2016-12-08 14:40:14.436] [INFO] Http - Connection 10 disconnected  time-consumed:1  
+[2016-12-08 14:40:15.030] [INFO] Http - New connection 11 from 127.0.0.1  
+[2016-12-08 14:40:15.031] [INFO] Http - Response message to connection [11] 663 : {"httpVersion":"1.1","route":"index","params":{},"method":"GET","statusCode":null,"headers":{"host":"localhost:9090","connection":"keep-alive","cache-control":"max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0","accept-encoding":"gzip, deflate, gzip","accept-language":"zh-CN,zh;q=0.8","cookie":"sg.sid=s%3AnjP9ClJwqVHQCxTA9jGzWd00.bWkf%2BjugWE9qNtMeDMKtEvayShOPMYmew2AZYtsn2TY"},"remoteAddress":"127.0.0.1","body":{"type":"Buffer","data":[]}}  
+[2016-12-08 14:40:15.031] [INFO] Http - Connection 11 disconnected  time-consumed:1  
+[2016-12-08 14:40:55.029] [INFO] Http - http server already listen on port:9090  
+[2016-12-08 14:43:19.377] [INFO] Http - http server already listen on port:9090  
+[2016-12-08 14:43:20.972] [INFO] Http - New connection 1 from 127.0.0.1  
+[2016-12-08 14:43:20.979] [INFO] Http - Response message to connection [1] 663 : {"httpVersion":"1.1","route":"index","params":{},"method":"GET","statusCode":null,"headers":{"host":"localhost:9090","connection":"keep-alive","cache-control":"max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0","accept-encoding":"gzip, deflate, gzip","accept-language":"zh-CN,zh;q=0.8","cookie":"sg.sid=s%3AnjP9ClJwqVHQCxTA9jGzWd00.bWkf%2BjugWE9qNtMeDMKtEvayShOPMYmew2AZYtsn2TY"},"remoteAddress":"127.0.0.1","body":{"type":"Buffer","data":[]}}  
+[2016-12-08 14:43:20.984] [INFO] Http - Connection 1 disconnected  time-consumed:12  
+[2016-12-08 14:43:21.626] [INFO] Http - New connection 2 from 127.0.0.1  
+[2016-12-08 14:43:21.627] [INFO] Http - Response message to connection [2] 663 : {"httpVersion":"1.1","route":"index","params":{},"method":"GET","statusCode":null,"headers":{"host":"localhost:9090","connection":"keep-alive","cache-control":"max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0","accept-encoding":"gzip, deflate, gzip","accept-language":"zh-CN,zh;q=0.8","cookie":"sg.sid=s%3AnjP9ClJwqVHQCxTA9jGzWd00.bWkf%2BjugWE9qNtMeDMKtEvayShOPMYmew2AZYtsn2TY"},"remoteAddress":"127.0.0.1","body":{"type":"Buffer","data":[]}}  
+[2016-12-08 14:43:21.629] [INFO] Http - Connection 2 disconnected  time-consumed:2  
+[2016-12-08 14:43:22.028] [INFO] Http - New connection 3 from 127.0.0.1  
+[2016-12-08 14:43:22.029] [INFO] Http - Response message to connection [3] 663 : {"httpVersion":"1.1","route":"index","params":{},"method":"GET","statusCode":null,"headers":{"host":"localhost:9090","connection":"keep-alive","cache-control":"max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0","accept-encoding":"gzip, deflate, gzip","accept-language":"zh-CN,zh;q=0.8","cookie":"sg.sid=s%3AnjP9ClJwqVHQCxTA9jGzWd00.bWkf%2BjugWE9qNtMeDMKtEvayShOPMYmew2AZYtsn2TY"},"remoteAddress":"127.0.0.1","body":{"type":"Buffer","data":[]}}  
+[2016-12-08 14:43:22.029] [INFO] Http - Connection 3 disconnected  time-consumed:1  
+[2016-12-08 14:43:22.532] [INFO] Http - New connection 4 from 127.0.0.1  
+[2016-12-08 14:43:22.532] [INFO] Http - Response message to connection [4] 663 : {"httpVersion":"1.1","route":"index","params":{},"method":"GET","statusCode":null,"headers":{"host":"localhost:9090","connection":"keep-alive","cache-control":"max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0","accept-encoding":"gzip, deflate, gzip","accept-language":"zh-CN,zh;q=0.8","cookie":"sg.sid=s%3AnjP9ClJwqVHQCxTA9jGzWd00.bWkf%2BjugWE9qNtMeDMKtEvayShOPMYmew2AZYtsn2TY"},"remoteAddress":"127.0.0.1","body":{"type":"Buffer","data":[]}}  
+[2016-12-08 14:43:22.533] [INFO] Http - Connection 4 disconnected  time-consumed:0  
+[2016-12-08 14:43:22.912] [INFO] Http - New connection 5 from 127.0.0.1  
+[2016-12-08 14:43:22.913] [INFO] Http - Response message to connection [5] 663 : {"httpVersion":"1.1","route":"index","params":{},"method":"GET","statusCode":null,"headers":{"host":"localhost:9090","connection":"keep-alive","cache-control":"max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0","accept-encoding":"gzip, deflate, gzip","accept-language":"zh-CN,zh;q=0.8","cookie":"sg.sid=s%3AnjP9ClJwqVHQCxTA9jGzWd00.bWkf%2BjugWE9qNtMeDMKtEvayShOPMYmew2AZYtsn2TY"},"remoteAddress":"127.0.0.1","body":{"type":"Buffer","data":[]}}  
+[2016-12-08 14:43:22.913] [INFO] Http - Connection 5 disconnected  time-consumed:1  
+[2016-12-08 14:43:23.010] [INFO] Http - New connection 6 from 127.0.0.1  
+[2016-12-08 14:43:23.011] [INFO] Http - Response message to connection [6] 663 : {"httpVersion":"1.1","route":"index","params":{},"method":"GET","statusCode":null,"headers":{"host":"localhost:9090","connection":"keep-alive","cache-control":"max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0","accept-encoding":"gzip, deflate, gzip","accept-language":"zh-CN,zh;q=0.8","cookie":"sg.sid=s%3AnjP9ClJwqVHQCxTA9jGzWd00.bWkf%2BjugWE9qNtMeDMKtEvayShOPMYmew2AZYtsn2TY"},"remoteAddress":"127.0.0.1","body":{"type":"Buffer","data":[]}}  
+[2016-12-08 14:43:23.012] [INFO] Http - Connection 6 disconnected  time-consumed:2  
+[2016-12-08 14:43:23.377] [INFO] Http - New connection 7 from 127.0.0.1  
+[2016-12-08 14:43:23.378] [INFO] Http - Response message to connection [7] 663 : {"httpVersion":"1.1","route":"index","params":{},"method":"GET","statusCode":null,"headers":{"host":"localhost:9090","connection":"keep-alive","cache-control":"max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0","accept-encoding":"gzip, deflate, gzip","accept-language":"zh-CN,zh;q=0.8","cookie":"sg.sid=s%3AnjP9ClJwqVHQCxTA9jGzWd00.bWkf%2BjugWE9qNtMeDMKtEvayShOPMYmew2AZYtsn2TY"},"remoteAddress":"127.0.0.1","body":{"type":"Buffer","data":[]}}  
+[2016-12-08 14:43:23.378] [INFO] Http - Connection 7 disconnected  time-consumed:1  
+[2016-12-08 14:43:23.405] [INFO] Http - New connection 8 from 127.0.0.1  
+[2016-12-08 14:43:23.405] [INFO] Http - Response message to connection [8] 663 : {"httpVersion":"1.1","route":"index","params":{},"method":"GET","statusCode":null,"headers":{"host":"localhost:9090","connection":"keep-alive","cache-control":"max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0","accept-encoding":"gzip, deflate, gzip","accept-language":"zh-CN,zh;q=0.8","cookie":"sg.sid=s%3AnjP9ClJwqVHQCxTA9jGzWd00.bWkf%2BjugWE9qNtMeDMKtEvayShOPMYmew2AZYtsn2TY"},"remoteAddress":"127.0.0.1","body":{"type":"Buffer","data":[]}}  
+[2016-12-08 14:43:23.406] [INFO] Http - Connection 8 disconnected  time-consumed:1  
+[2016-12-08 14:43:23.702] [INFO] Http - New connection 9 from 127.0.0.1  
+[2016-12-08 14:43:23.703] [INFO] Http - Response message to connection [9] 663 : {"httpVersion":"1.1","route":"index","params":{},"method":"GET","statusCode":null,"headers":{"host":"localhost:9090","connection":"keep-alive","cache-control":"max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0","accept-encoding":"gzip, deflate, gzip","accept-language":"zh-CN,zh;q=0.8","cookie":"sg.sid=s%3AnjP9ClJwqVHQCxTA9jGzWd00.bWkf%2BjugWE9qNtMeDMKtEvayShOPMYmew2AZYtsn2TY"},"remoteAddress":"127.0.0.1","body":{"type":"Buffer","data":[]}}  
+[2016-12-08 14:43:23.704] [INFO] Http - Connection 9 disconnected  time-consumed:2  
+[2016-12-08 14:43:25.619] [INFO] Http - New connection 10 from 127.0.0.1  
+[2016-12-08 14:43:25.619] [INFO] Http - This connection will be disconnect by: unknown route  
+[2016-12-08 14:43:25.619] [INFO] Http - Response message to connection [10] 25 : {"error":"unknown route"}  
+[2016-12-08 14:43:25.620] [INFO] Http - Connection 10 disconnected  time-consumed:1  
+[2016-12-08 14:45:08.518] [INFO] Http - http server already listen on port:9090  
+[2016-12-08 14:45:09.980] [INFO] Http - New connection 1 from 127.0.0.1  
+[2016-12-08 14:45:09.985] [INFO] Http - This connection will be disconnect by: unknown route  
+[2016-12-08 14:45:09.986] [INFO] Http - Response message to connection [1] 25 : {"error":"unknown route"}  
+[2016-12-08 14:45:09.991] [INFO] Http - Connection 1 disconnected  time-consumed:12  
+[2016-12-08 14:45:10.559] [INFO] Http - New connection 2 from 127.0.0.1  
+[2016-12-08 14:45:10.559] [INFO] Http - This connection will be disconnect by: unknown route  
+[2016-12-08 14:45:10.559] [INFO] Http - Response message to connection [2] 25 : {"error":"unknown route"}  
+[2016-12-08 14:45:10.560] [INFO] Http - Connection 2 disconnected  time-consumed:2  
+[2016-12-08 14:45:15.312] [INFO] Http - New connection 3 from 127.0.0.1  
+[2016-12-08 14:45:15.313] [INFO] Http - This connection will be disconnect by: invalid request  
+[2016-12-08 14:45:15.313] [INFO] Http - Response message to connection [3] 27 : {"error":"invalid request"}  
+[2016-12-08 14:45:15.313] [INFO] Http - Connection 3 disconnected  time-consumed:1  

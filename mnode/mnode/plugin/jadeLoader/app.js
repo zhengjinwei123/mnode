@@ -5,7 +5,6 @@
  */
 var ArrayUtils = require("../../utils/app").Array;
 var Singleton = require("../../utils/app").Singleton;
-var Logger = require('pomelo-logger').getLogger('jadeLoader', __filename);
 var FileUtils = require("../../utils/app").File;
 var Path = require("path");
 var Fs = require("fs");
@@ -18,16 +17,16 @@ function JadeLoader() {
     EventEmitter.call(this);
     this.userKey = "user-doc-" + (new Date().getTime());
     process.on("uncaughtException", function (err) {
-        Logger.error(err.stack);
+        console.error(err.stack);
         process.exit(1);
     });
 }
 
 Util.inherits(JadeLoader, EventEmitter);
 
-JadeLoader.prototype.init = function (rootPath, hot, hotSecond) {
+JadeLoader.prototype.init = function (rootPath, hot, hotSecond, callback) {
     if (!Fs.existsSync(rootPath)) {
-        throw new Error("JadeLoader::init"+rootPath+" is not a valid directory");
+        throw new Error("JadeLoader::init" + rootPath + " is not a valid directory");
     }
 
     var _hot = hot ? hot : false;
@@ -125,13 +124,12 @@ JadeLoader.prototype.init = function (rootPath, hot, hotSecond) {
             self.hotLoad();
         }, self.hotSecond);
     }
-    Logger.info("JadeLoader init finish");
+    callback();
 };
 
 JadeLoader.prototype.hotLoad = function () {
     Singleton.getDemon(TimerUtils);
-    Logger.warn("hotLoad module start.");
-
+    this.emit("hotLoad", "hotLoad module start.");
     var self = this;
     Async.each(this.mapList, function (itemList, callback) {
         Async.each(itemList, function (item, cb) {
@@ -158,9 +156,9 @@ JadeLoader.prototype.hotLoad = function () {
         });
     }, function (err, resp) {
         if (err) {
-            Logger.error("hotLoad module error,", err);
+            self.emit("error", "hotLoad module error," + err);
         } else {
-            Logger.warn("hotLoad module finish,cost ", Singleton.getDemon(TimerUtils).end(), " milliSecond");
+            self.emit("hotLoad", "hotLoad module finish,cost " + Singleton.getDemon(TimerUtils).end() + " milliSecond");
         }
     });
 };
@@ -173,7 +171,7 @@ JadeLoader.prototype.Jader = function (pKey) {
     if (this.mapList[pKey]) {
         this.pKey = pKey;
     } else {
-        throw new Error("JadeLoader::Jader " + pKey + " is invalid");
+        this.emit("error", "JadeLoader::Jader " + pKey + " is invalid");
     }
     return this;
 };
@@ -182,19 +180,19 @@ JadeLoader.prototype.get = function (key) {
         if (this.mapList[this.pKey][key]) {
             var tKey = this.pKey;
             this.pKey = null;
-            if(tKey == this.userKey){
+            if (tKey == this.userKey) {
                 return this.mapList[tKey][key];
-            }else{
+            } else {
                 return this.mapList[tKey][key].app;
             }
         }
     } else {
-        if(this.mapList[this.userKey]){
-            if(this.mapList[this.userKey][key]){
+        if (this.mapList[this.userKey]) {
+            if (this.mapList[this.userKey][key]) {
                 return this.mapList[this.userKey][key];
             }
         }
-        throw new Error("JadeLoader::Jader,please call Jader(pKey).get(key)");
+        this.emit("error", "JadeLoader::Jader,please call Jader(pKey).get(key)");
     }
     return null;
 };

@@ -17,8 +17,8 @@ ObjUtils.getInstance = (function () {
     }
 })();
 
-ObjUtils.prototype.init = function () {
-    Object.prototype.count = function () {
+ObjUtils.prototype.count = function (obj) {
+    if (typeof obj === "object") {
         var count = 0;
         for (var property in this) {
             if (Object.prototype.hasOwnProperty.call(this, property)) {
@@ -26,7 +26,20 @@ ObjUtils.prototype.init = function () {
             }
         }
         return count;
-    };
+    }
+    return -1;
+};
+
+ObjUtils.prototype.init = function () {
+    //Object.prototype.count = function () {
+    //    var count = 0;
+    //    for (var property in this) {
+    //        if (Object.prototype.hasOwnProperty.call(this, property)) {
+    //            count++;
+    //        }
+    //    }
+    //    return count;
+    //};
 };
 
 ObjUtils.prototype.create = function (obj) {
