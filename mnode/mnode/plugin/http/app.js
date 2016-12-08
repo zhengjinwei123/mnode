@@ -44,7 +44,6 @@ function HttpServer(bindPort, bindHost, opts, serverRootPath) {
         protocols: "",//协议加密
         filtersFunc: [] //过滤器
     };
-
     //_.extend(this.opts, opts);
     this.methods = ["get", "post"];
 
