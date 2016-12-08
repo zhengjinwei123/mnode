@@ -112,7 +112,7 @@ function HttpServer(bindPort, bindHost, opts, serverRootPath) {
         crypt_key: opts['skey'] || new Buffer("OiGvNhTbD90KKLlk").toString('binary'), //16位
         iv: new Buffer('rtDSSANva98n1ery').toString('binary') //16位
     };
-    
+
 
     this.cidIndex = 0; //连接id计数
 
@@ -251,6 +251,7 @@ HttpServer.prototype.processMessage = function (message, response, connection) {
             session: this.setSession(message.remoteAddress)
         };
         response.emit('message', _routesList[_module.module][_module.func], req);
+    } else {
         connection.disconnect("un support the method");
     }
 };

@@ -164,3 +164,11 @@
 [2016-12-07 22:40:40.277] [DEBUG] Http - This connection will be disconnect by: un support the method
 [2016-12-07 22:40:40.277] [INFO] Http - Response message to connection [6] 33 : {"error":"un support the method"}
 [2016-12-07 22:40:40.278] [INFO] Http - Connection 6 disconnected  time-consumed:4
+[2016-12-08 10:01:40.291] [INFO] Http - http server already listen on port: 9090
+[2016-12-08 10:01:46.540] [INFO] Http - New connection 1 from 127.0.0.1
+[2016-12-08 10:01:46.545] [DEBUG] Http - This connection will be disconnect by: unknown route
+[2016-12-08 10:01:46.545] [INFO] Http - Response message to connection [1] 25 : {"error":"unknown route"}
+[2016-12-08 10:01:46.574] [INFO] Http - Connection 1 disconnected  time-consumed:34
+[2016-12-08 10:01:54.050] [INFO] Http - New connection 2 from 127.0.0.1
+[2016-12-08 10:01:54.113] [INFO] Http - Response message to connection [2] 635 : {"httpVersion":"1.1","route":"index","params":{},"method":"GET","statusCode":null,"headers":{"host":"localhost:9090","connection":"keep-alive","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0","accept-encoding":"gzip, deflate, gzip","accept-language":"zh-CN,zh;q=0.8","cookie":"sg.sid=s%3AnjP9ClJwqVHQCxTA9jGzWd00.bWkf%2BjugWE9qNtMeDMKtEvayShOPMYmew2AZYtsn2TY"},"remoteAddress":"127.0.0.1","body":{"type":"Buffer","data":[]}}
+[2016-12-08 10:01:54.114] [INFO] Http - Connection 2 disconnected  time-consumed:64
