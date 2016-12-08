@@ -7,8 +7,14 @@ var Singleton = (function () {
     var _inst = [];
     return {
         getDemon: function (obj) {
-            var arg = arguments;
-            return new obj(arg[1], arg[2], arg[3], arg[4], arg[5], arg[6], arg[7], arg[8], arg[9], arg[10]);
+            if (typeof obj === "function") {
+                var arg = arguments;
+                return new obj(arg[1], arg[2], arg[3], arg[4], arg[5], arg[6], arg[7], arg[8], arg[9], arg[10]);
+            } else if (typeof obj === "object") {
+                return obj;
+            } else {
+                throw new TypeError("Singleton.getDemon(OBJ) OBJ MUST BE A VALID TYPE VALUE");
+            }
         },
         getInstance: function (obj) {
             var _d = new obj();

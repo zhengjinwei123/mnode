@@ -7,7 +7,6 @@ var Fs = require("fs");
 var Url = require('url');
 var IpUtils = require("../../utils/ip-utils/app");
 var Qs = require('querystring');
-var Logger = require('pomelo-logger').getLogger('Http', __filename, process.pid);
 var FileUtils = require("../../utils/app").File;
 var Path = require("path");
 var EventEmitter = require("events").EventEmitter;
@@ -132,8 +131,7 @@ HttpServer.prototype.create = function (callback) {
             callback(req, res);
         }).listen(this.port, this.host);
     }
-
-    Logger.info("http server already listen on port:", this.port);
+    this.emit("ready", "http server already listen on port:" + this.port);
 };
 
 HttpServer.prototype.createServer = function () {
@@ -145,7 +143,7 @@ HttpServer.prototype.createServer = function () {
             bytes.push(chunk);
         });
         request.on('end', function () {
-            var connection = Singleton.getDemon(HttpConnection, ++self.cidIndex, response, self.opts.protocols);
+            var connection = Singleton.getDemon(HttpConnection, ++self.cidIndex, response, self.opts.protocols,self);
 
             response.emit('connection', connection);
 
@@ -153,13 +151,15 @@ HttpServer.prototype.createServer = function () {
             self.protocolProcess(buf, self.opts.protocols || "", function (err, data) {
                 if (err) {
                     connection.disconnect("Protocol format error!");
-                    Logger.error("Protocol format error!");
+
+                    self.emit("error", "Protocol format error!");
                 } else {
                     var message = processRequest(request);
 
                     var e = null;
                     if (self.methods.indexOf(message.method.toLowerCase()) == -1) {
-                        Logger.error("does not support ", message.method, " method");
+
+                        self.emit("error", "does not support " + message.method + " method");
                         e = {msg: Util.format("server does not support %s request method", message.method)};
                     }
                     try {

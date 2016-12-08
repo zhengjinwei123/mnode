@@ -1,0 +1,11 @@
+[2016-12-08 14:20:04.072] [INFO] Http - http server already listen on port: 9090
+[2016-12-08 14:20:09.412] [INFO] Http - New connection 1 from 127.0.0.1
+[2016-12-08 14:20:09.550] [INFO] Http - Response message to connection [1] 663 : {"httpVersion":"1.1","route":"index","params":{},"method":"GET","statusCode":null,"headers":{"host":"localhost:9090","connection":"keep-alive","cache-control":"max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0","accept-encoding":"gzip, deflate, gzip","accept-language":"zh-CN,zh;q=0.8","cookie":"sg.sid=s%3AnjP9ClJwqVHQCxTA9jGzWd00.bWkf%2BjugWE9qNtMeDMKtEvayShOPMYmew2AZYtsn2TY"},"remoteAddress":"127.0.0.1","body":{"type":"Buffer","data":[]}}
+[2016-12-08 14:20:09.611] [INFO] Http - Connection 1 disconnected  time-consumed:200
+[2016-12-08 14:20:14.628] [INFO] Http - New connection 2 from 127.0.0.1
+[2016-12-08 14:20:14.630] [INFO] Http - Response message to connection [2] 663 : {"httpVersion":"1.1","route":"index","params":{},"method":"GET","statusCode":null,"headers":{"host":"localhost:9090","connection":"keep-alive","cache-control":"max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.22 Safari/537.36 SE 2.X MetaSr 1.0","accept-encoding":"gzip, deflate, gzip","accept-language":"zh-CN,zh;q=0.8","cookie":"sg.sid=s%3AnjP9ClJwqVHQCxTA9jGzWd00.bWkf%2BjugWE9qNtMeDMKtEvayShOPMYmew2AZYtsn2TY"},"remoteAddress":"127.0.0.1","body":{"type":"Buffer","data":[]}}
+[2016-12-08 14:20:14.631] [INFO] Http - Connection 2 disconnected  time-consumed:3
+[2016-12-08 14:20:24.669] [INFO] Http - http server already listen on port: 9090
+[2016-12-08 14:20:59.739] [INFO] Http - http server already listen on port: 9090
+[2016-12-08 14:21:21.462] [INFO] Http - http server already listen on port: 9090
+[2016-12-08 14:21:45.465] [INFO] Http - http server already listen on port: 9090

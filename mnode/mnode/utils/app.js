@@ -12,6 +12,7 @@ module.exports = {
     "Http": require("./http-client-utils/app"),
     "Mysql": require("./db-mysql/app"),
     "Redis": require("./db-redis/app"),
-    "Encrypt": require("./encrypt-utils/app")
+    "Encrypt": require("./encrypt-utils/app"),
+    "Logger": require("./logger-utils/app")
 };
 

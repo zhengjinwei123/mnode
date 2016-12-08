@@ -5,7 +5,7 @@
     },
     {
       "type": "file",
-      "filename": "./logs/mnode.log",
+      "filename": "mnode.log",
       "pattern": "connector",
       "maxLogSize": 1048576,
       "layout": {
@@ -16,7 +16,7 @@
     },
     {
       "type": "file",
-      "filename": "./logs/jadeLoader.log",
+      "filename": "jadeLoader.log",
       "pattern": "connector",
       "maxLogSize": 1048576,
       "layout": {
@@ -27,7 +27,7 @@
     },
     {
       "type": "file",
-      "filename": "./logs/plugin_http.log",
+      "filename": "plugin_http.log",
       "pattern": "connector",
       "maxLogSize": 1048576,
       "layout": {
@@ -41,5 +41,12 @@
   },
   "replaceConsole": true,
   "lineDebug": true,
-  "rawMessage": true
+  "rawMessage": true,
+  "openLog": {
+    "debug": true,
+    "error": true,
+    "info": true,
+    "warn": true,
+    "fatal": true
+  }
 }
