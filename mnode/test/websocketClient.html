@@ -1,0 +1,83 @@
+<html>
+<head>
+    <title>Sgcraft WebSocket debugger</title>
+
+    <style>
+        html,body{font:normal 0.9em arial,helvetica;}
+        #log {width100%; height:600px; margin:10px; padding:10px; border:1px solid #7F9DB9; overflow:auto;}
+        #msg {width:80%; min-width:500px; margin:10px; padding:10px;}
+        .bnt { margin:10px; padding:10px; }
+    </style>
+
+    <script>
+        var socket;
+
+        function init(){
+            var host = "ws://127.0.0.1:9091";
+            try{
+                //socket = new WebSocket(host, 'default-protocol');
+                socket = new WebSocket(host);
+                log('WebSocket - status '+socket.readyState);
+                socket.onopen    = function(msg){ log("Welcome - status "+this.readyState); };
+                socket.onmessage = function(msg){ log("<strong>Received:</strong> <span contenteditable='true'>"+ msg.data +"</span>"); };
+                socket.onclose   = function(msg){ log("Disconnected - status "+this.readyState); };
+            }
+            catch(ex){ log(ex); }
+            $("msg").focus();
+        }
+
+        function conn(){
+            log("reConnection!");
+            init();
+        }
+        function send(){
+            var txt,msg;
+            txt = $("msg");
+            msg = txt.value;
+            if(!msg){ alert("Message can not be empty"); return; }
+            txt.value="";
+            txt.focus();
+            try{ socket.send(msg); log("<strong>Sent:</strong> <span contenteditable='true'>"+ msg +"</span>"); } catch(ex){ log(ex); }
+        }
+        function quit(){
+            log("Goodbye!");
+            socket.close();
+            socket=null;
+        }
+
+        // Utilities
+        function $(id){ return document.getElementById(id); }
+
+        var step = 0;
+        function log(msg){
+
+            var color = step ? '#000000' : '#2618B1';
+            $("log").innerHTML += "<br><span style='color:"+color+"'>" + msg + "</span>";
+
+            $("log").scrollTop = $("log").scrollHeight;
+            step = step ? 0 : 1;
+        }
+        function onkey(event){ if(event.keyCode==13){ send(); } }
+    </script>
+
+</head>
+<body onload="init()">
+<h3>sgcraft websocket调试器 v2.00</h3>
+
+<div id="log" /></div>
+
+<button onclick="conn()" class="bnt">Conn</button>
+
+<button onclick="send()" class="bnt">Send</button>
+
+<input id="msg" type="textbox" onkeypress="onkey(event)" />
+
+<button onclick="quit()" class="bnt">Quit</button>
+
+<!--<br><div>Input websocket json msg</div>-->
+<!--<br><div>Account server demo: <span contenteditable="true"> http://192.168.2.132:8000/test/user/ </span></div>-->
+<!--<br><div>Login server demo: <span contenteditable="true"> http://192.168.2.132:9012/index.php?ChannelId=100322&Token=66781247;ccb195d51e900cb11a07567657bd2bc8 </span></div>-->
+<!--<br><div>Login game demo: <span contenteditable="true"> {"Header":{"MsgID":10001},"Msg":{"ServerId":10001,"ChannelId":100322,"AccountId":66781247,"Account":"66781247","IMEI":0,"Version":0,"Platform":1,"Ticket":"fbb6c079-5ebe-9821-f9cc-8df91f59c36c"}} </span></div>-->
+
+</body>
+</html>

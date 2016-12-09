@@ -42,12 +42,17 @@ JadeLoader.init(Path.join(__dirname, "./"), true, 60, function () {
 
     httpS.createServer();
 
-    var wss = Singleton.getDemon(WSocketServer, "127.0.0.1", 8001);
+    var wss = Singleton.getDemon(WSocketServer, "127.0.0.1", 9091);
     wss.on("message", function (msg) {
         console.log("ws:", msg);
     });
-    wss.on("connection", function () {
-        console.log("ws:connection");
+    wss.on("connection", function (socket, param) {
+        socket.send("连接成功");
+        console.log("连接成功", param.host)
+    });
+
+    wss.on('close', function (param) {
+        console.log("客户端断开连接", param.host);
     });
 });
 
