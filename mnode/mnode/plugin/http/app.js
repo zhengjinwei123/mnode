@@ -146,7 +146,9 @@ HttpServer.prototype.createServer = function () {
 
             response.emit('connection', connection);
 
+            console.log(bytes);
             var buf = Buffer.concat(bytes);
+
             self.protocolProcess(buf, self.opts.protocols || "", function (err, data) {
                 if (err) {
                     connection.disconnect("Protocol format error!");

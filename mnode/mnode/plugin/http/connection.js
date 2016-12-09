@@ -71,7 +71,7 @@ HttpConnection.prototype.send = function (msg, status) {
     }
     var strBuf = typeof msg === 'object' ? JSON.stringify(msg) : msg.toString("binary");
     this.server.emit("connect-response", "Response message to connection [" + this.cid + "] " + strBuf.length + " : " + strBuf);
-
+    
     Protocol.encode(strBuf, this.encrypts, function (error, data) {
         _this.socket.end(data);
     })

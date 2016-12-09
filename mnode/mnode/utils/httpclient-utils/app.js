@@ -4,7 +4,7 @@
 var Http = require('http');
 var Qs = require('querystring');
 var Crypto = require('crypto');
-var ObjUtils = require("../app").Object;
+var ObjUtils = require("../obj-utils/app");
 var _ = require("lodash");
 
 function HttpUtils(host, port) {
@@ -24,38 +24,55 @@ function HttpUtils(host, port) {
 
 HttpUtils.prototype.Get = function (route, host, port, data, cb) {
     var argCnt = ObjUtils.count(arguments);
-    if (argCnt == 3) {
-        host = this.host;
-        port = this.port;
+    if (argCnt < 3) {
+        throw new Error("HttpUtils:Get parameters error");
     }
 
-    if (host == null || port == null) {
+    var _host = null, _port = null, _data, _callback;
+    if (argCnt == 3) {
+        _host = this.host;
+        _port = this.port;
+        _data = host;
+        _callback = port;
+    }
+
+    if (_host == null || _port == null) {
         throw new Error("HttpUtils::Get invalid args");
     }
-
-    this.send(route, host, port, "GET", data, cb);
+    this.send(route, _host, _port, "GET", _data, _callback);
 };
 
 HttpUtils.prototype.Post = function (route, host, port, data, cb) {
-    var argCnt =  ObjUtils.count(arguments);
-    if (argCnt == 3) {
-        host = this.host;
-        port = this.port;
+    var argCnt = ObjUtils.count(arguments);
+    if (argCnt < 3) {
+        throw new Error("HttpUtils:post parameters error");
     }
 
-    if (host == null || port == null) {
+    var _host = null, _port = null, _data, _callback;
+    if (argCnt == 3) {
+        _host = this.host;
+        _port = this.port;
+        _data = host;
+        _callback = port;
+    }
+
+    if (_host == null || _port == null) {
         throw new Error("HttpUtils::Get invalid args");
     }
-    this.send(route, host, port, "POST", data, cb);
+
+    this.send(route, _host, _port, "POST", _data, _callback);
 };
 
 HttpUtils.prototype.send = function (route, host, port, method, data, cb) {
+
+    var _data = JSON.stringify(data);
     var opt = {
         host: host,
         port: port,
         method: method,
         headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
+            'Content-Type': 'application/json',//'application/x-www-form-urlencoded',
+            'Content-Length': _data.length
         }
     };
 
@@ -95,9 +112,9 @@ HttpUtils.prototype.send = function (route, host, port, method, data, cb) {
 
     timeoutEvent = setTimeout(function () {
         req.emit("timeout");
-    }, 30000);
+    }, 60000);
 
-    req.write(Qs.stringify(data));
+    req.write(_data);
     req.end();
 };
 
