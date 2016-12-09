@@ -40,8 +40,8 @@ JadeLoader.init(Path.join(__dirname, "./"), true, 60, function () {
         logger.info("Http", log);
     });
 
-    httpS.createServer();
 
+    httpS.createServer();
     var wss = Singleton.getDemon(WSocketServer, "127.0.0.1", 9091);
     wss.on("message", function (msg) {
         console.log("ws:", msg);

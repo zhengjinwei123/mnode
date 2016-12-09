@@ -10,12 +10,9 @@ var WebSocketS = function (host, port) {
     EventEmitter.call(this);
     this.wss = new WebSocketServer({port: port, host: host});
 
-    this.connList = [];
-
     var self = this;
     this.wss.on('connection', function (ws) {
         var connParam = self.parseConnection(ws);
-        self.connList[connParam.host] = ws;
 
         self.emit("connection", ws, connParam);
 
@@ -25,14 +22,6 @@ var WebSocketS = function (host, port) {
 
         ws.on('close', function () {
             self.emit("close", connParam);
-            var index = 0;
-            for (var i in self.connList) {
-                if (i == connParam.host) {
-                    self.connList.splice(index, 1);
-                    break;
-                }
-                index++;
-            }
         });
     });
 };
@@ -41,30 +30,25 @@ Util.inherits(WebSocketS, EventEmitter);
 
 WebSocketS.prototype.broadcast = function (msg, async, callback) {
     if (async) {
-        Async.each(this.connList, function (conn, cb) {
+        Async.each(this.wss.clients, function (conn, cb) {
             conn.send(msg);
             cb(null);
         }, function (err, resp) {
             callback(err);
         });
     } else {
-        this.connList.forEach(function (conn) {
+        this.wss.clients.forEach(function (conn) {
             conn.send(msg);
         });
     }
 };
 //踢线所有连接
 WebSocketS.prototype.kickAll = function () {
-    this.connList[host].forEach(function (c) {
+    this.wss.clients.forEach(function (c) {
         c.terminate();
     });
 };
 
-WebSocketS.prototype.kick = function (host) {
-    if (this.connList[host]) {
-        this.connList[host].terminate();
-    }
-};
 
 WebSocketS.prototype.parseConnection = function (socket) {
     return {
