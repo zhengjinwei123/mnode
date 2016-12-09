@@ -61,6 +61,9 @@ JadeLoader.init(Path.join(__dirname, "./"), true, 60, function () {
     wss.on("error", function (err) {
         console.error(err);
     });
+
+    var a = JadeLoader.Jader('utils').get('file-utils').isFile("c://");
+    console.log(a);
 });
 
 JadeLoader.on("error", function (err) {

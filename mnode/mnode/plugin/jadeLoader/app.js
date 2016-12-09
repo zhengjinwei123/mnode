@@ -49,8 +49,7 @@ JadeLoader.prototype.init = function (rootPath, hot, hotSecond, callback) {
                     var _dirFileList = FileUtils.traverseSync(dirName, 2);
 
                     var _pList = dirName.split(/[/|\\]/);
-                    var $pK = _pList[_pList.length - 2];
-
+                    var $pK = _pList[_pList.length - 2];//获取 父文件夹名称
                     _dirFileList.forEach(function (f) {
                         if (f.name.toLowerCase() == "app.js") {
                             var _p = f.path;
@@ -114,7 +113,7 @@ JadeLoader.prototype.init = function (rootPath, hot, hotSecond, callback) {
                     });
                 }
             } catch (e) {
-                throw new Error("JadeLoader::init " + fileList[i].file + " is not a valid file", e.message);
+                throw new Error("JadeLoader::init " + fileList[i].file + " is not a valid file"+e.message);
             }
         }
     }

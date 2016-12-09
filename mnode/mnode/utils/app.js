@@ -4,7 +4,6 @@
 module.exports = {
     "Singleton": require("./singleton-utils/app"),
     "Object": require("./obj-utils/app"),
-    "Array": require("./type-utils/app"),
     "File": require("./file-utils/app"),
     "Time": require("./time-utils/app"),
     "Timer": require("./timer-utils/app"),
