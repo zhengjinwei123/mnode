@@ -40,15 +40,30 @@ JadeLoader.init(Path.join(__dirname, "./"), true, 60, function () {
         logger.info("Http", log);
     });
 
-    httpS.createServer();
 
-    var wss = Singleton.getDemon(WSocketServer, "127.0.0.1", 8001);
+    httpS.createServer();
+    var wss = Singleton.getDemon(WSocketServer, "127.0.0.1", 9091);
     wss.on("message", function (msg) {
         console.log("ws:", msg);
     });
-    wss.on("connection", function () {
-        console.log("ws:connection");
+    wss.on("connection", function (socket, param) {
+        socket.send("连接成功");
+        console.log("连接成功", param.host)
     });
+
+    wss.on('close', function (param) {
+        console.log("客户端断开连接", param.host);
+    });
+
+    wss.once("listening", function () {
+        console.log("listening");
+    });
+    wss.on("error", function (err) {
+        console.error(err);
+    });
+
+    var a = JadeLoader.Jader('utils').get('file-utils').isFile("c://");
+    console.log(a);
 });
 
 JadeLoader.on("error", function (err) {

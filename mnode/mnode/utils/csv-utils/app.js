@@ -1,7 +1,7 @@
 /**
  * Created by zhengjinwei on 2016/12/5.
  */
-var FileUtil = require("./fileUtil");
+var FileUtil = require("../file-utils/app");
 
 var CsvFileUtil = function () {
 

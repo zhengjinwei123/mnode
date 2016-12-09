@@ -1,5 +1,5 @@
 {
-  "scan-dir": false,
+  "scan-dir": true,
   "scan-dir-list": [
     {
       "dir-name": "obj-utils",
