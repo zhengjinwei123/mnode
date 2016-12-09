@@ -24,6 +24,13 @@ var WebSocketS = function (host, port) {
             self.emit("close", connParam);
         });
     });
+
+    this.wss.on("error", function (error) {
+        self.emit("error", error);
+    });
+    this.wss.once("listening", function () {
+        self.emit("listening");
+    });
 };
 
 Util.inherits(WebSocketS, EventEmitter);

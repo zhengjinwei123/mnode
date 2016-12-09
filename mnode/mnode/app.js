@@ -54,6 +54,13 @@ JadeLoader.init(Path.join(__dirname, "./"), true, 60, function () {
     wss.on('close', function (param) {
         console.log("客户端断开连接", param.host);
     });
+
+    wss.once("listening", function () {
+        console.log("listening");
+    });
+    wss.on("error", function (err) {
+        console.error(err);
+    });
 });
 
 JadeLoader.on("error", function (err) {
