@@ -7,7 +7,10 @@ var Crypto = require('crypto');
 var ObjUtils = require("../obj-utils/app");
 var _ = require("lodash");
 
-function HttpUtils(host, port) {
+
+var HEADER_FORM = 1, HEADER_JSON = 2;
+
+function HttpUtils(host, port, headerType) {
     if (arguments[0] && arguments[1]) {
         if (_.isNumber(host) && _.isString(port)) {
             var _tmp = host;
@@ -20,7 +23,37 @@ function HttpUtils(host, port) {
         this.host = "127.0.0.1";
         this.port = 8082;
     }
+    if (arguments[2] == undefined) {
+        this.headerType = HEADER_FORM;
+    } else {
+        if ((headerType != HEADER_FORM) && (headerType != HEADER_JSON)) {
+            throw new EvalError("headerType must be 1(for form) or 2(for json)");
+        }
+        this.headerType = headerType;
+    }
 }
+
+HttpUtils.prototype.header = function (data) {
+    if (this.headerType == HEADER_FORM) {
+        return {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Content-Length': data.length
+        }
+    } else if (this.headerType == HEADER_JSON) {
+        return {
+            'Content-Type': 'application/json',
+            'Content-Length': data.length
+        }
+    }
+};
+
+HttpUtils.prototype.parseData = function (data) {
+    if (this.headerType == HEADER_FORM) {
+        return Qs.stringify(data);
+    } else if (this.headerType == HEADER_JSON) {
+        return JSON.stringify(data);
+    }
+};
 
 HttpUtils.prototype.Get = function (route, host, port, data, cb) {
     var argCnt = ObjUtils.count(arguments);
@@ -65,15 +98,12 @@ HttpUtils.prototype.Post = function (route, host, port, data, cb) {
 
 HttpUtils.prototype.send = function (route, host, port, method, data, cb) {
 
-    var _data = JSON.stringify(data);
+    var _data = this.parseData(data);
     var opt = {
         host: host,
         port: port,
         method: method,
-        headers: {
-            'Content-Type': 'application/json',//'application/x-www-form-urlencoded',
-            'Content-Length': _data.length
-        }
+        headers: this.header(_data)
     };
 
     opt.path = "/" + route;
@@ -81,7 +111,10 @@ HttpUtils.prototype.send = function (route, host, port, method, data, cb) {
     var timeoutEvent = null;
     var g_res = null;
     var req = Http.request(opt, function (res) {
-        //console.log('STATUS: ' + res.statusCode);
+        if (res.statusCode != 200) {
+            cb("status error:" + res.statusCode);
+            return;
+        }
         //console.log('HEADERS: ' + JSON.stringify(res.headers));
         g_res = res;
         res.on('data', function (d) {

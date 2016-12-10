@@ -106,6 +106,17 @@ function HttpServer(bindPort, bindHost, opts, serverRootPath) {
     //监听器
     this.listener = null;
 
+    if (opts['skey']) {
+        if (!_.isString(opts['skey'])) {
+            throw new TypeError("skey must be string value");
+        }
+        if (opts['skey'].length != 16) {
+            throw new EvalError("skey's length must be 16");
+        }
+
+        opts['skey'] = new Buffer(opts['skey']).toString('binary')
+    }
+
     this.skey = {
         crypt_key: opts['skey'] || new Buffer("OiGvNhTbD90KKLlk").toString('binary'), //16位
         iv: new Buffer('rtDSSANva98n1ery').toString('binary') //16位
@@ -142,7 +153,7 @@ HttpServer.prototype.createServer = function () {
             bytes.push(chunk);
         });
         request.on('end', function () {
-            var connection = Singleton.getDemon(HttpConnection, ++self.cidIndex, response, self.opts.protocols,self);
+            var connection = Singleton.getDemon(HttpConnection, ++self.cidIndex, response, self.opts.protocols, self);
 
             response.emit('connection', connection);
 
