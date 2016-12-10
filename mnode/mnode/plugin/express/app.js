@@ -49,15 +49,58 @@ var ExpressPlugin = function (host, port, path) {
         }
     }
 
-    if (!FileUtil.isDirectory(path)) {
-        throw new Error(path + " must be valid directory")
+    if(!FileUtil.isExists(path)){
+        try{
+            FileUtil.createDirectory(path);
+        }catch(e){
+            console.error(e.message);
+        }finally {
+
+        }
     }
 
-    var viewPath = Path.join();
 
+    var viewPath = Path.join(path,'/views');
+    this.routePath  = Path.join(path,"/routes");
+    var publicPath = Path.join(path,"/public");
+    var staticPath = Path.join(path,'/static');
+
+    var imagesPath = Path.join(path,"/public/images");
+    var jsPath = Path.join(path,"/public/javascripts");
+    var stylePath = Path.join(path,"/public/stylesheets");
+    
+    FileUtil.createDirectory(viewPath);
+    FileUtil.createDirectory(this.routePath);
+    FileUtil.createDirectory(publicPath);
+    FileUtil.createDirectory(staticPath);
+    FileUtil.createDirectory(imagesPath);
+    FileUtil.createDirectory(jsPath);
+    FileUtil.createDirectory(stylePath);
+    
+    var jsTemplate = FileUtil.readSync(Path.join(__dirname,"/template.js"));
+    FileUtil.writeSync(Path.join(this.routePath,"/index.js"),jsTemplate);
+    
+    var viewTemplate = FileUtil.readSync(Path.join(__dirname,'/template.ejs'));
+    FileUtil.writeSync(Path.join(viewPath,"/index.ejs"),viewTemplate);
+
+    var cssTemplate = FileUtil.readSync(Path.join(__dirname,'/template.css'));
+    FileUtil.writeSync(Path.join(stylePath,"/style.css"),cssTemplate);
+
+    this.path = path;
     this.app = Express();
 };
 Util.inherits(ExpressPlugin,EventEmitter);
+
+ExpressPlugin.prototype.loadRoutes = function(routePath){
+    var routesFiles = FileUtil.traverseSync(routePath);
+    var self = this;
+    routesFiles.forEach(function(f){
+        var extraPath = f.path.replace(routePath,"");
+        var route = require(f.path);
+        var routeName = extraPath.replace('.js',"");
+        self.app.use(routeName, route);
+    });
+};
 
 ExpressPlugin.prototype.start = function () {
     var self = this;
@@ -66,7 +109,8 @@ ExpressPlugin.prototype.start = function () {
     });
 
     self.on('ready',function(){
-        self.app.set('views', Path.join(this.path, 'views'));
+
+        self.app.set('views', Path.join(self.path, 'views'));
         self.app.set('view engine', "ejs");
         self.app.use(MorganLogger('dev'));
         self.app.use(BodyParser.json());
@@ -79,8 +123,10 @@ ExpressPlugin.prototype.start = function () {
             name: 'expressSecret'
         }));
 
+        self.loadRoutes(self.routePath);
+
         self.app.use(Express.static(Path.join(this.path, 'public')));
-        self.app.use(Express.static(Path.join(this.path, 'staticFile')));
+        self.app.use(Express.static(Path.join(this.path, 'static')));
 
         self.app.use(function (req, res, next) {
             var url = req.originalUrl;
@@ -117,3 +163,6 @@ ExpressPlugin.prototype.start = function () {
         }
     });
 };
+
+var d = new ExpressPlugin('localhost',9095,Path.join(__dirname,"../../../expressTest"));
+d.start();
