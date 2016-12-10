@@ -52,7 +52,9 @@ var ExpressPlugin = function (host, port, path) {
     if (!FileUtil.isDirectory(path)) {
         throw new Error(path + " must be valid directory")
     }
-    
+
+    var viewPath = Path.join();
+
     this.app = Express();
 };
 Util.inherits(ExpressPlugin,EventEmitter);
@@ -70,7 +72,6 @@ ExpressPlugin.prototype.start = function () {
         self.app.use(BodyParser.json());
         self.app.use(BodyParser.urlencoded({extended: false}));
         self.app.use(CookieParser());
-
 
         self.app.use(Session({
             secret: 'express-secret',
