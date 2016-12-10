@@ -6,7 +6,7 @@ var JadeLoader = require("./plugin/app").JadeLoader;
 var HttpServer = require("./plugin/app").HttpServer;
 var LogUtil = require("./utils/app").Logger;
 var Singleton = require("./utils/app").Singleton;
-var logger = Singleton.getDemon(LogUtil, Path.join(__dirname, "./config/logger.json"), Path.join(__dirname, "./logs"));
+var logger = Singleton.getDemon(LogUtil, Path.join(__dirname, "./config/logger.json"),Path.join(__dirname, "./logs"));
 var WSocketServer = require("./plugin/app").WSServer;
 
 JadeLoader.init(Path.join(__dirname, "./"), true, 60, function () {
@@ -17,6 +17,8 @@ JadeLoader.init(Path.join(__dirname, "./"), true, 60, function () {
             }
         ]
     }, Path.join(__dirname, "../httpServerTest"));
+
+    httpS.createServer();
 
     httpS.on("ready", function (log) {
         logger.info("Http", log);
@@ -41,7 +43,6 @@ JadeLoader.init(Path.join(__dirname, "./"), true, 60, function () {
     });
 
 
-    httpS.createServer();
     var wss = Singleton.getDemon(WSocketServer, "127.0.0.1", 9091);
     wss.on("message", function (msg) {
         console.log("ws:", msg);
@@ -66,7 +67,7 @@ JadeLoader.init(Path.join(__dirname, "./"), true, 60, function () {
         console.log(err,resp)
     });
     
-    var HttpClient = Singleton.getDemon(JadeLoader.Jader('utils').get('httpclient-utils'),'127.0.0.1',9090);
+    var HttpClient = Singleton.getDemon(JadeLoader.Jader('utils').get('httpclient-utils'),'127.0.0.1',9090,2);
     
     setInterval(function(){
         HttpClient.Post("index", "zjw",function(err,resp){

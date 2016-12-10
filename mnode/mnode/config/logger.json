@@ -43,10 +43,10 @@
   "lineDebug": true,
   "rawMessage": true,
   "openLog": {
-    "debug": true,
-    "error": true,
-    "info": true,
-    "warn": true,
-    "fatal": true
+    "debug": false,
+    "error": false,
+    "info": false,
+    "warn": false,
+    "fatal": false
   }
 }
