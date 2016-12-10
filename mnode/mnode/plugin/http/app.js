@@ -44,7 +44,7 @@ function HttpServer(bindPort, bindHost, opts, serverRootPath) {
         protocols: "",//协议加密
         filtersFunc: [] //过滤器
     };
-    //_.extend(this.opts, opts);
+
     this.methods = ["get", "post"];
 
     if (opts) {
@@ -53,11 +53,20 @@ function HttpServer(bindPort, bindHost, opts, serverRootPath) {
         }
 
         if (opts['key'] && opts['cert']) {
+            if (!FileUtils.isFile(opts.key)) {
+                throw new Error("opts.key must a valid file path");
+            }
+            if (!FileUtils.isFile(opts.cert)) {
+                throw new Error("opts.cert must a valid file path");
+            }
             this.opts.key = Fs.readFileSync(opts.key);
             this.opts.cert = Fs.readFileSync(opts.cert);
         }
 
         if (opts['ca']) {
+            if (!FileUtils.isFile(opts.ca)) {
+                throw new Error("opts.ca must a valid file path");
+            }
             this.opts.ca.push(Fs.readFileSync(opts.ca))
         }
         if (opts['protocols'] && _.isString(opts['protocols'])) {
@@ -156,8 +165,6 @@ HttpServer.prototype.createServer = function () {
             var connection = Singleton.getDemon(HttpConnection, ++self.cidIndex, response, self.opts.protocols, self);
 
             response.emit('connection', connection);
-
-            console.log(bytes);
             var buf = Buffer.concat(bytes);
 
             self.protocolProcess(buf, self.opts.protocols || "", function (err, data) {

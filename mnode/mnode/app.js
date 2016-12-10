@@ -18,6 +18,8 @@ JadeLoader.init(Path.join(__dirname, "./"), true, 60, function () {
         ]
     }, Path.join(__dirname, "../httpServerTest"));
 
+    httpS.createServer();
+
     httpS.on("ready", function (log) {
         logger.info("Http", log);
     });
@@ -41,7 +43,6 @@ JadeLoader.init(Path.join(__dirname, "./"), true, 60, function () {
     });
 
 
-    httpS.createServer();
     var wss = Singleton.getDemon(WSocketServer, "127.0.0.1", 9091);
     wss.on("message", function (msg) {
         console.log("ws:", msg);
