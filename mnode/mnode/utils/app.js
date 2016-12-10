@@ -8,7 +8,7 @@ module.exports = {
     "Time": require("./time-utils/app"),
     "Timer": require("./timer-utils/app"),
     "WS": require("./websocket-client-utils/app"),
-    "Http": require("./http-client-utils/app"),
+    "Http": require("./httpclient-utils/app"),
     "Mysql": require("./db-mysql/app"),
     "Redis": require("./db-redis/app"),
     "Encrypt": require("./encrypt-utils/app"),

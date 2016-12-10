@@ -4,8 +4,8 @@
 exports.index = function (req, callback) {
     var session = req.session;
     var message = req.message;
-
-    callback(null, message);
+    
+    callback(null,message);
 };
 
 

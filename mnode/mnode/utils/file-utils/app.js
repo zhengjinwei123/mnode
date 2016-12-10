@@ -3,6 +3,7 @@
  */
 var Fs = require("fs");
 var Path = require("path");
+var _ = require("lodash");
 
 function FileUtils() {
 
@@ -30,7 +31,13 @@ FileUtils.prototype.readSync = function (filePath, code) {
     return _content;
 };
 FileUtils.prototype.readAsync = function (filePath, code, cb) {
-    var _code = (code == undefined) ? "utf-8" : code;
+    var _code = null;
+    if(_.isFunction(code)){
+        cb = code;
+        _code = "utf-8";
+    }else{
+        _code = (code == undefined) ? "utf-8" : code;
+    }
     Fs.readFile(filePath, _code, function (err, buf) {
         cb(err, buf);
     });
