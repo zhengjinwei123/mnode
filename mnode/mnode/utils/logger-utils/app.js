@@ -58,9 +58,9 @@ var LoggerUtils = function (configPath, logPath) {
                 categoryList.forEach(function (c) {
                     self.loggers[c] = Pomelo.getLogger(c);
                 });
-                if (configContent['openList']) {
-                    var o = configContent['openList'];
-
+               
+                if (configContent['openLog']) {
+                    var o = configContent['openLog'];
                     for (var k in this.openList) {
                         if (o[k] != undefined && (typeof o[k] == 'boolean')) {
                             this.openList[k] = o[k];
