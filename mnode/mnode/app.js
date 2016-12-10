@@ -6,7 +6,7 @@ var JadeLoader = require("./plugin/app").JadeLoader;
 var HttpServer = require("./plugin/app").HttpServer;
 var LogUtil = require("./utils/app").Logger;
 var Singleton = require("./utils/app").Singleton;
-var logger = Singleton.getDemon(LogUtil, Path.join(__dirname, "./config/logger.json"), Path.join(__dirname, "./logs"));
+var logger = Singleton.getDemon(LogUtil, Path.join(__dirname, "./config/logger.json"),Path.join(__dirname, "./logs"));
 var WSocketServer = require("./plugin/app").WSServer;
 
 JadeLoader.init(Path.join(__dirname, "./"), true, 60, function () {
