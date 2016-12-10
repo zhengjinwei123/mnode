@@ -32,10 +32,10 @@ FileUtils.prototype.readSync = function (filePath, code) {
 };
 FileUtils.prototype.readAsync = function (filePath, code, cb) {
     var _code = null;
-    if(_.isFunction(code)){
+    if (_.isFunction(code)) {
         cb = code;
         _code = "utf-8";
-    }else{
+    } else {
         _code = (code == undefined) ? "utf-8" : code;
     }
     Fs.readFile(filePath, _code, function (err, buf) {
@@ -111,12 +111,12 @@ FileUtils.prototype.traverseSync = function (dirPath, depth) {
             var states = Fs.statSync(path + '/' + file);
             if (states.isDirectory()) {
                 if (depth) {
-                    if (_curDepth >= depth) {
+                    if (_curDepth > depth) {
                         _curDepth = 0;
-                        return 0;
+                    } else {
+                        _curDepth++;
+                        readFile(path + '/' + file, filesList);
                     }
-                    _curDepth++;
-                    readFile(path + '/' + file, filesList);
                 } else {
                     readFile(path + '/' + file, filesList);
                 }

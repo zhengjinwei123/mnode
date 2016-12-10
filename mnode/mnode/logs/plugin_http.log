@@ -910,3 +910,14 @@
 [2016-12-10 14:07:47.473] [INFO] Http - New connection 2 from 127.0.0.1  
 [2016-12-10 14:07:47.476] [INFO] Http - Response message to connection [2] 236 : {"httpVersion":"1.1","route":"index","params":{},"method":"POST","statusCode":null,"headers":{"content-type":"application/json","content-length":"5","host":"127.0.0.1:9090","connection":"close"},"remoteAddress":"127.0.0.1","body":"zjw"}  
 [2016-12-10 14:07:47.478] [INFO] Http - Connection 2 disconnected  time-consumed:5  
+[2016-12-10 14:29:35.106] [INFO] Http - http server already listen on port:9090  
+[2016-12-10 14:29:47.444] [INFO] Http - http server already listen on port:9090  
+[2016-12-10 14:29:49.486] [INFO] Http - New connection 1 from 127.0.0.1  
+[2016-12-10 14:29:49.497] [INFO] Http - Response message to connection [1] 236 : {"httpVersion":"1.1","route":"index","params":{},"method":"POST","statusCode":null,"headers":{"content-type":"application/json","content-length":"5","host":"127.0.0.1:9090","connection":"close"},"remoteAddress":"127.0.0.1","body":"zjw"}  
+[2016-12-10 14:29:49.503] [INFO] Http - Connection 1 disconnected  time-consumed:18  
+[2016-12-10 14:29:51.479] [INFO] Http - New connection 2 from 127.0.0.1  
+[2016-12-10 14:29:51.479] [INFO] Http - Response message to connection [2] 236 : {"httpVersion":"1.1","route":"index","params":{},"method":"POST","statusCode":null,"headers":{"content-type":"application/json","content-length":"5","host":"127.0.0.1:9090","connection":"close"},"remoteAddress":"127.0.0.1","body":"zjw"}  
+[2016-12-10 14:29:51.480] [INFO] Http - Connection 2 disconnected  time-consumed:1  
+[2016-12-10 14:29:53.482] [INFO] Http - New connection 3 from 127.0.0.1  
+[2016-12-10 14:29:53.483] [INFO] Http - Response message to connection [3] 236 : {"httpVersion":"1.1","route":"index","params":{},"method":"POST","statusCode":null,"headers":{"content-type":"application/json","content-length":"5","host":"127.0.0.1:9090","connection":"close"},"remoteAddress":"127.0.0.1","body":"zjw"}  
+[2016-12-10 14:29:53.484] [INFO] Http - Connection 3 disconnected  time-consumed:2  
