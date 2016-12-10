@@ -87,6 +87,7 @@ var ExpressPlugin = function (host, port, path) {
     FileUtil.writeSync(Path.join(stylePath,"/style.css"),cssTemplate);
 
     this.path = path;
+    this.routesList = {};
     this.app = Express();
 };
 Util.inherits(ExpressPlugin,EventEmitter);
@@ -98,11 +99,12 @@ ExpressPlugin.prototype.loadRoutes = function(routePath){
         var extraPath = f.path.replace(routePath,"");
         var route = require(f.path);
         var routeName = extraPath.replace('.js',"");
+        self.routesList[routeName] = self.routesList[routeName] || 1;
         self.app.use(routeName, route);
     });
 };
 
-ExpressPlugin.prototype.start = function () {
+ExpressPlugin.prototype.start = function (callback) {
     var self = this;
     Http.createServer(this.app).listen(this.port, function () {
         self.emit('ready');
@@ -125,11 +127,15 @@ ExpressPlugin.prototype.start = function () {
 
         self.loadRoutes(self.routePath);
 
-        self.app.use(Express.static(Path.join(this.path, 'public')));
-        self.app.use(Express.static(Path.join(this.path, 'static')));
+        self.app.use(Express.static(Path.join(self.path, 'public')));
+        self.app.use(Express.static(Path.join(self.path, 'static')));
 
         self.app.use(function (req, res, next) {
             var url = req.originalUrl;
+            if(!self.routesList[url]){
+                return res.redirect("index");
+            }
+            
             if (url == '/login') {
                 if (req.session && req.session.user) {
                     return res.redirect("/index");
@@ -157,12 +163,17 @@ ExpressPlugin.prototype.start = function () {
 
         if (self.app.get('env') == 'development') {
             process.on('uncaughtException', function (err) {
-                console.error(' Caught exception: ', err.stack, ' error: ', err);
-                process.exit(1);
+                // console.error(' Caught exception: ', err.stack, ' error: ', err);
+                // process.exit(1);
             });
         }
+        callback();
     });
 };
 
+module.exports = ExpressPlugin;
+
 var d = new ExpressPlugin('localhost',9095,Path.join(__dirname,"../../../expressTest"));
-d.start();
+d.start(function(){
+    console.log("ready");
+});
