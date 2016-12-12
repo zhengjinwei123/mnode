@@ -1,5 +1,5 @@
 /**
- * Created by zhengjinwei on 2016/12/4.
+ * Created by 郑金玮 on 2016/12/4.
  */
 module.exports = {
     "css": "text/css",

@@ -1,5 +1,5 @@
 /**
- * Created by zhengjinwei on 2016/12/4.
+ * Created by 郑金玮 on 2016/12/4.
  */
 var Http = require("http");
 var Https = require("https");
@@ -17,9 +17,11 @@ var Encrypt = require("../../utils/app").Encrypt;
 var HttpConnection = require("./connection");
 var Singleton = require("../../utils/app").Singleton;
 var Session = require("./session");
+var UUID = require("node-uuid");
+var Async = require("async");
 
 
-function HttpServer(bindPort, bindHost, opts, serverRootPath) {
+function HttpServer(bindPort, bindHost, opts, serverRootPath, session) {
     EventEmitter.call(this);
 
     this.host = bindHost;
@@ -134,7 +136,15 @@ function HttpServer(bindPort, bindHost, opts, serverRootPath) {
 
     this.cidIndex = 0; //连接id计数
 
-    this.sessions = {}; //session 记录
+    session = session ? session : {};
+    this.sessionOpts = {
+        name: session['name'] || "mySID",
+        secret: session['secret'] || 'secret',
+        maxAge: session['maxAge'.toLowerCase()] || (30 * 3600 * 1000)
+    };
+
+    this.sessions = []; //session 记录
+    this.sessionLifeCycle();
 }
 
 Util.inherits(HttpServer, EventEmitter);
@@ -150,7 +160,7 @@ HttpServer.prototype.create = function (callback) {
             callback(req, res);
         }).listen(this.port, this.host);
     }
-    this.emit("ready", "http server already listen on port:" + this.port);
+    this.emit("ready",this.port);
 };
 
 HttpServer.prototype.createServer = function () {
@@ -216,16 +226,54 @@ HttpServer.prototype.getReqModule = function (route) {
     };
 };
 
-HttpServer.prototype.setSession = function (remoteAddress) {
-    if (this.sessions[remoteAddress]) {
-        return this.sessions[remoteAddress];
-    }
-    var encodeText = Util.format("host:%s", remoteAddress);
-    var sid = Encrypt.AesEncode(encodeText, this.skey);
-    this.sessions[remoteAddress] = Singleton.getDemon(Session, sid);
-    return this.sessions[remoteAddress];
+HttpServer.prototype.getUUID = function () {
+    return Encrypt.md5(UUID.v1() + this.sessionOpts.secret);
 };
 
+HttpServer.prototype.getSession = function (message, response) {
+    var ssid = null;
+    if (message.headers['cookie']) {
+        var cookieList = message.headers['cookie'].split(";");
+        if (cookieList.length) {
+            for (var i = 0, len = cookieList.length; i < len; i++) {
+                var parts = cookieList[i].split('=');
+                if (parts.length) {
+                    if (parts[0].trim() == this.sessionOpts.name) {
+                        ssid = parts[1];
+                        break;
+                    }
+                }
+            }
+        }
+    }
+    if (ssid == null) {
+        ssid = this.getUUID();
+        this.sessions[ssid] = Singleton.getDemon(Session, ssid);
+        response.setHeader("Set-Cookie", [this.sessionOpts.name + "=" + ssid]);
+    } else {
+        if (this.sessions[ssid] == null) {
+            this.sessions[ssid] = Singleton.getDemon(Session, ssid);
+        }
+    }
+
+    return this.sessions[ssid];
+};
+
+//session 生命周期处理
+HttpServer.prototype.sessionLifeCycle = function () {
+    var self = this;
+    var now = new Date();
+    setInterval(function () {
+        self.sessions.forEach(function (session) {
+            if (parseInt(now - session.genTime) > self.sessionOpts.maxAge) {
+                var sid = session.sid;
+                delete session;
+                session = null;
+                self.sessions[sid] = null;
+            }
+        });
+    }, 10 * 60 * 1000);//每10分钟处理一次
+};
 
 HttpServer.prototype.processMessage = function (message, response, connection) {
     var _routeName = message.method.toLowerCase();
@@ -267,7 +315,7 @@ HttpServer.prototype.processMessage = function (message, response, connection) {
 
         var req = {
             message: message,
-            session: this.setSession(message.remoteAddress)
+            session: this.getSession(message, response)
         };
         response.emit('message', _routesList[_module.module][_module.func], req);
     } else {

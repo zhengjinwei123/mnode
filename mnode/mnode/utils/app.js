@@ -1,5 +1,5 @@
 /**
- * Created by zhengjinwei on 2016/11/30.
+ * Created by 郑金玮 on 2016/11/30.
  */
 module.exports = {
     "Singleton": require("./singleton-utils/app"),

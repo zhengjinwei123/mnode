@@ -1,5 +1,5 @@
 /**
- * Created by zhengjinwei on 2016/12/10.
+ * Created by 郑金玮 on 2016/12/10.
  */
 var Express = require("express");
 var _ = require("lodash");
@@ -110,6 +110,10 @@ ExpressPlugin.prototype.loadRoutes = function (routePath) {
     });
 };
 
+ExpressPlugin.prototype.env = function () {
+    return this.app.get('env');
+};
+
 ExpressPlugin.prototype.start = function (callback) {
     var self = this;
     Http.createServer(this.app).listen(this.port, function () {
@@ -138,15 +142,14 @@ ExpressPlugin.prototype.start = function (callback) {
             var url = req.originalUrl;
             if (!self.routesList[url]) {
                 res.redirect("/index");
-            }else{
+            } else {
                 if (url == '/user/login') {
-                    console.log("aa:",req.session.sessionID)
                     if (req.session && req.session.user) {
                         res.redirect("/index");
                     } else {
                         next();
                     }
-                }else{
+                } else {
                     next();
                 }
             }
@@ -158,19 +161,12 @@ ExpressPlugin.prototype.start = function (callback) {
             res.end();
         });
 
-        if (self.app.get('env') == 'development') {
-            process.on('uncaughtException', function (err) {
-                // console.error(' Caught exception: ', err.stack, ' error: ', err);
-                // process.exit(1);
-            });
-        }
+        process.on('uncaughtException', function (err) {
+            self.emit('uncaughtException', err);
+        });
+
         callback();
     });
 };
 
 module.exports = ExpressPlugin;
-
-var d = new ExpressPlugin('localhost', 9095, Path.join(__dirname, "../../../expressTest"));
-d.start(function () {
-    console.log("ready");
-});
