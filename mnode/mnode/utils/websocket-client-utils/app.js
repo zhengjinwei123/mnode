@@ -1,5 +1,5 @@
 /**
- * Created by zhengjinwei on 2016/12/4.
+ * Created by 郑金玮 on 2016/12/4.
  */
 var WebSocket = require('ws');
 var Util = require("util");
@@ -7,12 +7,9 @@ var Events = require("events");//EventEmitter通过events模块来访问
 
 function WS(ip, port) {
     Events.EventEmitter.call(this);
-
     var address = "ws://" + ip + ":" + port;
     this.ws = new WebSocket(address);
-
     this.opened = false;
-
     var self = this;
     this.ws.on('open', function () {
         self.opened = true;
@@ -28,8 +25,11 @@ function WS(ip, port) {
         self.opened = false;
     });
 }
-
 Util.inherits(WS, Events.EventEmitter);//使这个类继承EventEmitter
+
+WS.prototype.terminate = function () {
+    this.ww.terminate();
+};
 
 WS.prototype.send = function (msg) {
     if (this.opened) {

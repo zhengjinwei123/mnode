@@ -1,5 +1,5 @@
 /**
- * Created by zhengjinwei on 2016/12/8.
+ * Created by 郑金玮 on 2016/12/8.
  * 日志管理器
  */
 
@@ -49,12 +49,16 @@ var LoggerUtils = function (configPath, logPath) {
                             configContent['appenders'][index]['filename'] = Path.join(logPath, "/", fileName).replace([/\\/], "/");
                             categoryList.push(category);
                         }
+                    } else if (appender['type'] && appender['type'] == "console") {
+                        if (configContent['openLog']['console'] != undefined && configContent['openLog']['console'] == false) {
+                            configContent['appenders'].splice(index, 1);
+                        }
                     }
                     index++
                 });
-                var configTemp = configPath.split(".");
-                FileUtil.writeSync(configTemp[0] + "-tmp.json", JSON.stringify(configContent));
-                Pomelo.configure(configTemp[0] + "-tmp.json");
+                //var configTemp = configPath.split(".");
+                //FileUtil.writeSync(configTemp[0] + "-tmp.json", JSON.stringify(configContent));
+                Pomelo.configure(configContent);
                 categoryList.forEach(function (c) {
                     self.loggers[c] = Pomelo.getLogger(c);
                 });

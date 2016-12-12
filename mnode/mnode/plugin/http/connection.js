@@ -1,5 +1,5 @@
 /**
- * Created by zhengjinwei on 2016/12/4.
+ * Created by 郑金玮 on 2016/12/4.
  */
 var EventEmitter = require('events').EventEmitter,
     Util = require('util');

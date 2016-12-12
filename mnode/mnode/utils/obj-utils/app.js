@@ -1,5 +1,5 @@
 /**
- * Created by zhengjinwei on 2016/12/1.
+ * Created by 郑金玮 on 2016/12/1.
  */
 var Singleton = require("../singleton-utils/app")
 

@@ -1,5 +1,5 @@
 /**
- * Created by zhengjinwei on 2016/12/7.
+ * Created by 郑金玮 on 2016/12/7.
  */
 var Session = function (sid) {
     this.dataMap = {};

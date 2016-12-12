@@ -47,6 +47,7 @@
     "error": false,
     "info": false,
     "warn": false,
-    "fatal": false
+    "fatal": false,
+    "console": true
   }
 }
