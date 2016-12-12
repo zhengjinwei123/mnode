@@ -230,7 +230,7 @@ HttpServer.prototype.getUUID = function () {
     return Encrypt.md5(UUID.v1() + this.sessionOpts.secret);
 };
 
-HttpServer.prototype.setSession = function (message, response) {
+HttpServer.prototype.getSession = function (message, response) {
     var ssid = null;
     if (message.headers['cookie']) {
         var cookieList = message.headers['cookie'].split(";");
@@ -315,7 +315,7 @@ HttpServer.prototype.processMessage = function (message, response, connection) {
 
         var req = {
             message: message,
-            session: this.setSession(message, response)
+            session: this.getSession(message, response)
         };
         response.emit('message', _routesList[_module.module][_module.func], req);
     } else {

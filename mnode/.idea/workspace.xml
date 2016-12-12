@@ -37,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mnode/plugin/http/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="108.62069" vertical-offset="6552" max-vertical-offset="7245">
-              <caret line="162" column="22" selection-start-line="162" selection-start-column="22" selection-end-line="162" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.4906015" vertical-offset="6480" max-vertical-offset="7245">
+              <caret line="321" column="48" selection-start-line="321" selection-start-column="47" selection-end-line="321" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -81,10 +81,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mnode/examples/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44919786" vertical-offset="630" max-vertical-offset="1953">
+            <state vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="1953">
               <caret line="42" column="34" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
               <folding />
             </state>
@@ -178,8 +178,8 @@
         <option value="$PROJECT_DIR$/mnode/plugin/http/session.js" />
         <option value="$PROJECT_DIR$/test/test.js" />
         <option value="$PROJECT_DIR$/mnode/plugin/http/connection.js" />
-        <option value="$PROJECT_DIR$/mnode/plugin/http/app.js" />
         <option value="$PROJECT_DIR$/mnode/examples/app.js" />
+        <option value="$PROJECT_DIR$/mnode/plugin/http/app.js" />
       </list>
     </option>
   </component>
@@ -451,7 +451,7 @@
     <option name="totallyTimeSpent" value="19953000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -881,18 +881,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mnode/plugin/http/app.js">
+    <entry file="file://$PROJECT_DIR$/mnode/examples/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="108.62069" vertical-offset="6552" max-vertical-offset="7245">
-          <caret line="162" column="22" selection-start-line="162" selection-start-column="22" selection-end-line="162" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="1953">
+          <caret line="42" column="34" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mnode/examples/app.js">
+    <entry file="file://$PROJECT_DIR$/mnode/plugin/http/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44919786" vertical-offset="630" max-vertical-offset="1953">
-          <caret line="42" column="34" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.4906015" vertical-offset="6480" max-vertical-offset="7245">
+          <caret line="321" column="48" selection-start-line="321" selection-start-column="47" selection-end-line="321" selection-end-column="48" />
           <folding />
         </state>
       </provider>
