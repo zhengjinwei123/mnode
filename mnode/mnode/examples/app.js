@@ -21,26 +21,26 @@ JadeLoader.init(Path.join(__dirname, "../"), true, 60, function () {
 
     httpS.createServer();
 
-    httpS.on("ready", function (log) {
-        logger.info("Http", log);
+    httpS.on("ready", function (data) {
+        logger.info("Http", data);
     });
-    httpS.on("error", function (log) {
-        logger.info("Http", log);
+    httpS.on("error", function (data) {
+        logger.info("Http", data);
     });
-    httpS.on("connect-connect", function (log) {
-        logger.info("Http", log);
+    httpS.on("connect-connect", function (data) {
+        logger.info("Http", data);
     });
-    httpS.on("connect-error", function (log) {
-        logger.info("Http", log);
+    httpS.on("connect-error", function (error) {
+        logger.info("Http", error);
     });
-    httpS.on("connect-disconnect", function (log) {
-        logger.info("Http", log);
+    httpS.on("connect-disconnect", function (data) {
+        logger.info("Http", data);
     });
-    httpS.on("connect-response", function (log) {
-        logger.info("Http", log);
+    httpS.on("connect-response", function (data) {
+        logger.info("Http", data);
     });
-    httpS.on("connect-errorcode", function (log) {
-        logger.info("Http", log);
+    httpS.on("connect-errorcode", function (code) {
+        logger.info("Http", code);
     });
 
 

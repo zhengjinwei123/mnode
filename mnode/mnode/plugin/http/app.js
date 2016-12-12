@@ -160,7 +160,7 @@ HttpServer.prototype.create = function (callback) {
             callback(req, res);
         }).listen(this.port, this.host);
     }
-    this.emit("ready", "http server already listen on port:" + this.port);
+    this.emit("ready",this.port);
 };
 
 HttpServer.prototype.createServer = function () {
