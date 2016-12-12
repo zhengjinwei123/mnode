@@ -18,6 +18,7 @@ var HttpConnection = require("./connection");
 var Singleton = require("../../utils/app").Singleton;
 var Session = require("./session");
 var UUID = require("node-uuid");
+var Async = require("async");
 
 
 function HttpServer(bindPort, bindHost, opts, serverRootPath, session) {
@@ -142,7 +143,8 @@ function HttpServer(bindPort, bindHost, opts, serverRootPath, session) {
         maxAge: session['maxAge'.toLowerCase()] || (30 * 3600 * 1000)
     };
 
-    this.sessions = {}; //session 记录
+    this.sessions = []; //session 记录
+    this.sessionLifeCycle();
 }
 
 Util.inherits(HttpServer, EventEmitter);
@@ -228,7 +230,7 @@ HttpServer.prototype.getUUID = function () {
     return Encrypt.md5(UUID.v1() + this.sessionOpts.secret);
 };
 
-HttpServer.prototype.setSession = function (message, remoteAddress, response) {
+HttpServer.prototype.setSession = function (message, response) {
     var ssid = null;
     if (message.headers['cookie']) {
         var cookieList = message.headers['cookie'].split(";");
@@ -244,22 +246,34 @@ HttpServer.prototype.setSession = function (message, remoteAddress, response) {
             }
         }
     }
-
-    if (this.sessions[ssid]) {
-        return this.sessions[ssid];
-    }
-
     if (ssid == null) {
         ssid = this.getUUID();
+        this.sessions[ssid] = Singleton.getDemon(Session, ssid);
+        response.setHeader("Set-Cookie", [this.sessionOpts.name + "=" + ssid]);
+    } else {
+        if (this.sessions[ssid] == null) {
+            this.sessions[ssid] = Singleton.getDemon(Session, ssid);
+        }
     }
-
-    this.sessions[ssid] = Singleton.getDemon(Session, ssid);
-
-    response.setHeader("Set-Cookie", [this.sessionOpts.name + "=" + ssid]);
 
     return this.sessions[ssid];
 };
 
+//session 生命周期处理
+HttpServer.prototype.sessionLifeCycle = function () {
+    var self = this;
+    var now = new Date();
+    setInterval(function () {
+        self.sessions.forEach(function (session) {
+            if (parseInt(now - session.genTime) > self.sessionOpts.maxAge) {
+                var sid = session.sid;
+                delete session;
+                session = null;
+                self.sessions[sid] = null;
+            }
+        });
+    }, 10 * 60 * 1000);//每10分钟处理一次
+};
 
 HttpServer.prototype.processMessage = function (message, response, connection) {
     var _routeName = message.method.toLowerCase();
@@ -301,7 +315,7 @@ HttpServer.prototype.processMessage = function (message, response, connection) {
 
         var req = {
             message: message,
-            session: this.setSession(message, message.remoteAddress, response)
+            session: this.setSession(message, response)
         };
         response.emit('message', _routesList[_module.module][_module.func], req);
     } else {

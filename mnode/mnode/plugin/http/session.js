@@ -3,7 +3,8 @@
  */
 var Session = function (sid) {
     this.dataMap = {};
-    this.sid = sid;
+    this.sid = sid;//session id
+    this.genTime = new Date(); //生成时间
 };
 
 Session.prototype.set = function (k, d) {
