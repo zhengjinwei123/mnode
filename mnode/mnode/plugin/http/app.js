@@ -17,9 +17,10 @@ var Encrypt = require("../../utils/app").Encrypt;
 var HttpConnection = require("./connection");
 var Singleton = require("../../utils/app").Singleton;
 var Session = require("./session");
+var UUID = require("node-uuid");
 
 
-function HttpServer(bindPort, bindHost, opts, serverRootPath) {
+function HttpServer(bindPort, bindHost, opts, serverRootPath, session) {
     EventEmitter.call(this);
 
     this.host = bindHost;
@@ -134,6 +135,13 @@ function HttpServer(bindPort, bindHost, opts, serverRootPath) {
 
     this.cidIndex = 0; //连接id计数
 
+    session = session ? session : {};
+    this.sessionOpts = {
+        name: session['name'] || "mySID",
+        secret: session['secret'] || 'secret',
+        maxAge: session['maxAge'.toLowerCase()] || (30 * 3600 * 1000)
+    };
+
     this.sessions = {}; //session 记录
 }
 
@@ -216,14 +224,40 @@ HttpServer.prototype.getReqModule = function (route) {
     };
 };
 
-HttpServer.prototype.setSession = function (remoteAddress) {
-    if (this.sessions[remoteAddress]) {
-        return this.sessions[remoteAddress];
+HttpServer.prototype.getUUID = function () {
+    return Encrypt.md5(UUID.v1() + this.sessionOpts.secret);
+};
+
+HttpServer.prototype.setSession = function (message, remoteAddress, response) {
+    var ssid = null;
+    if (message.headers['cookie']) {
+        var cookieList = message.headers['cookie'].split(";");
+        if (cookieList.length) {
+            for (var i = 0, len = cookieList.length; i < len; i++) {
+                var parts = cookieList[i].split('=');
+                if (parts.length) {
+                    if (parts[0].trim() == this.sessionOpts.name) {
+                        ssid = parts[1];
+                        break;
+                    }
+                }
+            }
+        }
     }
-    var encodeText = Util.format("host:%s", remoteAddress);
-    var sid = Encrypt.AesEncode(encodeText, this.skey);
-    this.sessions[remoteAddress] = Singleton.getDemon(Session, sid);
-    return this.sessions[remoteAddress];
+
+    if (this.sessions[ssid]) {
+        return this.sessions[ssid];
+    }
+
+    if (ssid == null) {
+        ssid = this.getUUID();
+    }
+
+    this.sessions[ssid] = Singleton.getDemon(Session, ssid);
+
+    response.setHeader("Set-Cookie", [this.sessionOpts.name + "=" + ssid]);
+
+    return this.sessions[ssid];
 };
 
 
@@ -267,7 +301,7 @@ HttpServer.prototype.processMessage = function (message, response, connection) {
 
         var req = {
             message: message,
-            session: this.setSession(message.remoteAddress)
+            session: this.setSession(message, message.remoteAddress, response)
         };
         response.emit('message', _routesList[_module.module][_module.func], req);
     } else {

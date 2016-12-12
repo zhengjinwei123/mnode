@@ -68,13 +68,13 @@ JadeLoader.init(Path.join(__dirname, "../"), true, 60, function () {
         console.log(err,resp)
     });
 
-    var HttpClient = Singleton.getDemon(JadeLoader.Jader('utils').get('httpclient-utils'),'127.0.0.1',9090,2);
-
-    setInterval(function(){
-        HttpClient.Post("index", "zjw",function(err,resp){
-            console.log("http post response:",err,resp);
-        });
-    },2000)
+    //var HttpClient = Singleton.getDemon(JadeLoader.Jader('utils').get('httpclient-utils'),'127.0.0.1',9090,2);
+    //
+    //setInterval(function(){
+    //    HttpClient.Post("index", "zjw",function(err,resp){
+    //        console.log("http post response:",err,resp);
+    //    });
+    //},2000)
 });
 
 JadeLoader.on("error", function (err) {
