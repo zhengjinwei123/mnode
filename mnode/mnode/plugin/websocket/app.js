@@ -5,10 +5,47 @@ var WebSocketServer = require('ws').Server;
 var EventEmitter = require("events").EventEmitter;
 var Util = require("util");
 var Async = require("async");
+var ObjUtil = require("../../utils/app").Object;
+var _ = require("lodash");
+var IpUtil = require("../../utils/app").IP;
 
 var WebSocketS = function (host, port) {
     EventEmitter.call(this);
-    this.wss = new WebSocketServer({port: port, host: host});
+
+    var argCnt = ObjUtil.count(arguments);
+    if (argCnt == 0) {
+        this.host = '127.0.0.1';
+        this.port = 9091;
+    } else if (argCnt == 1) {
+        if (_.isString(arguments[0])) {
+            this.host = arguments[0];
+            this.port = 9091;
+        } else if (_.isNumber(arguments[0])) {
+            this.host = '127.0.0.1';
+            this.port = arguments[0];
+        } else {
+            throw new Error("args error,you must be specify a string for host and a number for port");
+        }
+    } else {
+        if (_.isString(arguments[0]) && _.isNumber(arguments[1])) {
+            this.host = arguments[0];
+            this.port = arguments[1];
+        } else if (_.isString(arguments[1]) && _.isNumber(arguments[0])) {
+            this.host = arguments[1];
+            this.port = arguments[0];
+        } else {
+            throw new Error("args error");
+        }
+    }
+
+    if (!IpUtil.ipIp(this.host)) {
+        throw new Error("invalid host args");
+    }
+    if (this.port <= 1024) {
+        throw new Error("invalid port args");
+    }
+
+    this.wss = new WebSocketServer({port: this.port, host: this.host});
 
     var self = this;
     this.wss.on('connection', function (ws) {

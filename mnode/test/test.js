@@ -9,3 +9,5 @@ Async.each({a:1,b:2},function(o,cb){
 },function(err,resp){
 
 });
+
+console.log(typeof {})

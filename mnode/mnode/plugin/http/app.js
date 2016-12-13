@@ -19,6 +19,7 @@ var Singleton = require("../../utils/app").Singleton;
 var Session = require("./session");
 var UUID = require("node-uuid");
 var Async = require("async");
+var IpUtil = require("../../utils/app").IP;
 
 
 function HttpServer(bindPort, bindHost, opts, serverRootPath, session) {
@@ -39,6 +40,14 @@ function HttpServer(bindPort, bindHost, opts, serverRootPath, session) {
     if (!this.port) {
         this.port = 8182;
     }
+
+    if (!IpUtil.ipIp(this.host)) {
+        throw new Error("host must be a valid ip address");
+    }
+    if (!(_.isNumber(this.port) && (this.port > 1024))) {
+        throw new Error("port is invalid");
+    }
+
     this.opts = {
         key: null,
         ca: [],
@@ -137,11 +146,19 @@ function HttpServer(bindPort, bindHost, opts, serverRootPath, session) {
     this.cidIndex = 0; //连接id计数
 
     session = session ? session : {};
+    if (!(_.isObject(session))) {
+        throw new Error("sesson must be object value,example {name:'',secret:'',maxAge:60000}");
+    }
+
     this.sessionOpts = {
-        name: session['name'] || "mySID",
-        secret: session['secret'] || 'secret',
-        maxAge: session['maxAge'.toLowerCase()] || (30 * 3600 * 1000)
+        name: (session['name'] || "mySID").toString(),
+        secret: (session['secret'] || 'secret').toString(),
+        maxAge: parseInt(session['maxAge'.toLowerCase()] || (30 * 3600 * 1000))
     };
+
+    if (this.sessionOpts.maxAge < (60 * 1000)) {
+        throw new Error("session.maxAge must be bigger than 60000");
+    }
 
     this.sessions = []; //session 记录
     this.sessionLifeCycle();
@@ -160,7 +177,7 @@ HttpServer.prototype.create = function (callback) {
             callback(req, res);
         }).listen(this.port, this.host);
     }
-    this.emit("ready",this.port);
+    this.emit("ready", this.port);
 };
 
 HttpServer.prototype.createServer = function () {
