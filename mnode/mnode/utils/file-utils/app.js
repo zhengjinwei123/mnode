@@ -71,6 +71,15 @@ FileUtils.prototype.isExists = function (path) {
     return Fs.existsSync(path);
 };
 
+//文件变动时间
+FileUtils.prototype.mtime = function (path) {
+    if (!this.isFile(path)) {
+        throw new Error(path + " is not a file");
+    }
+    var stat = Fs.statSync(path);
+    return stat.mtime;
+};
+
 FileUtils.prototype.isFile = function (path) {
     if (!this.isExists(path)) {
         throw new Error(path + " not exists");
@@ -91,9 +100,9 @@ FileUtils.prototype.createFile = function (filePathName) {
 };
 
 
-FileUtils.prototype.traverseSync = function (dirPath, depth) {
+FileUtils.prototype.traverseSync = function (dirPath) {
     var filesList = [];
-    var _curDepth = 0;
+
     var getExt = function (fileName) {
         var fileList = fileName.split(".");
         return fileList[fileList.length - 1];
@@ -106,28 +115,14 @@ FileUtils.prototype.traverseSync = function (dirPath, depth) {
 
     function readFile(path, filesList) {
         var files = Fs.readdirSync(path);
-        files.forEach(walk);
-        function walk(file) {
+        for (var i = 0, len = files.length; i < len; i++) {
+            var file = files[i];
             var states = Fs.statSync(path + '/' + file);
             if (states.isDirectory()) {
-                if (depth) {
-                    if (_curDepth > depth) {
-                        _curDepth = 0;
-                    } else {
-                        _curDepth++;
-                        readFile(path + '/' + file, filesList);
-                    }
-                } else {
-                    readFile(path + '/' + file, filesList);
-                }
-            }
-            else {
-                //var obj = new Object();
-                //obj.size = states.size;
-                //obj.name = file;
-                //obj.path = path + '/' + file;
-
+                readFile(path + '/' + file, filesList);
+            } else {
                 filesList.push({
+                    mtime: states.mtime,
                     size: states.size,
                     name: file,
                     path: path + '/' + file,
@@ -139,6 +134,7 @@ FileUtils.prototype.traverseSync = function (dirPath, depth) {
     }
 
     readFile(dirPath, filesList);
+    //console.log(filesList);
     return filesList;
 };
 
