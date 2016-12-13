@@ -28,24 +28,24 @@ var MongodbUtil = function (host, port, db, userOption) {
     }
 
     var self = this;
-    this.connected = false;
+    self.connected = false;
     this.pool = poolModule.Pool({
         name: 'mongoose',
         create: function (callback) {
             //var server_options = {'auto_reconnect': false, poolSize: 1};
             var conn = Mongoose.createConnection(self.dbUrl);
             conn.on('error', function (error) {
+                console.error(error);
                 callback(error);
             });
 
             conn.once('connected', function () {
-                self.connected = true;
+                // console.log(connected);
                 callback(null, conn);
             });
 
             conn.on('disconnected', function () {
-                self.emit("disconnected");
-                self.connected = false;
+                console.error('disconnected');
             });
         },
         destroy: function (db) {
@@ -73,9 +73,9 @@ MongodbUtil.prototype.exec = function (callback) {
 };
 
 MongodbUtil.prototype.model = function (schemeTable, modelName, callback) {
-    if (!this.connected) {
-        throw new Error("db lose connect");
-    }
+    // if (!this.connected) {
+    //     throw new Error("db lose connect");
+    // }
     var SchemaOption = {};
     var Schema = new Mongoose.Schema(schemeTable, SchemaOption);
     this.exec(function (err, client, release) {
@@ -94,7 +94,16 @@ module.exports = MongodbUtil;
 /*****
  * 测试用例
  */
-//var d = new MongodbUtil("localhost", 27017, 'mydb');
-//d.model({}, 'student', function (err, model, release) {
-//
-//});
+var d = new MongodbUtil("localhost", 27017, 'mydb');
+
+var t = {
+    name: {type: String},
+    age: {type: Number}
+};
+d.model(t, 'student', function (err, model, release) {
+    console.log(err);
+    model.find().exec(function(err,doc){
+        console.log(err,doc);
+        release();
+    });
+});
