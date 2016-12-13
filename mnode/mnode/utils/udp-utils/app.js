@@ -1,5 +1,5 @@
 /**
- * Created by zhengjinwei on 2016/12/13.
+ * Created by 郑金玮 on 2016/12/13.
  */
 var CppNum = require("./cpp").cppNum;
 var CppString = require("./cpp").cppString;

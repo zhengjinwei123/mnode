@@ -44,6 +44,9 @@ JadeLoader.init(Path.join(__dirname, "../"), true, 60, function () {
     });
 
 
+    /**
+     * 测试websocket
+     */
     var wss = Singleton.getDemon(WSocketServer, "127.0.0.1", 9091);
     wss.on("message", function (msg) {
         console.log("ws:", msg);
@@ -68,14 +71,21 @@ JadeLoader.init(Path.join(__dirname, "../"), true, 60, function () {
         console.log(err, resp)
     });
 
-    //var HttpClient = Singleton.getDemon(JadeLoader.Jader('utils').get('httpclient-utils'),'127.0.0.1',9090,2);
-    //
-    //setInterval(function(){
-    //    HttpClient.Post("index", "zjw",function(err,resp){
-    //        console.log("http post response:",err,resp);
-    //    });
-    //},2000)
+    /**
+     * 测试httpclient
+     */
+    var HttpClient = Singleton.getDemon(JadeLoader.Jader('utils').get('httpclient-utils'), '127.0.0.1', 9090, 2);
+    setInterval(function () {
+        HttpClient.Post("index", "zjw", function (err, resp) {
+            console.log("http post response:", err, resp);
+        });
+    }, 2000);
 
+
+    /**
+     * 测试 udpserver
+     * @type {exports.UdpServer|*}
+     */
     var UdpServer = require("../plugin/app").UdpServer;
     var d = new UdpServer();
     d.on('listening', function (address) {
@@ -99,7 +109,13 @@ JadeLoader.init(Path.join(__dirname, "../"), true, 60, function () {
         //messgae.push_int32(212121212);
 
         messgae.send("zhengjinwei");
-    }, 1000)
+    }, 1000);
+
+
+    /**
+     * 测试Date
+     */
+    console.log(new Date().normalize())
 });
 
 JadeLoader.on("error", function (err) {

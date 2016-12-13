@@ -15,6 +15,7 @@ module.exports = {
     "Logger": require("./logger-utils/app"),
     "IP": require("./ip-utils/app"),
     "UdpClient": require("./udp-utils/app"),
-    "Csv": require("./csv-utils/app")
+    "Csv": require("./csv-utils/app"),
+    "Ftp": require("./ftp-utils/app")
 };
 

@@ -1010,3 +1010,15 @@
 [2016-12-10 14:47:02.108] [INFO] Http - New connection 3 from 127.0.0.1  
 [2016-12-10 14:47:02.109] [INFO] Http - Response message to connection [3] 236 : {"httpVersion":"1.1","route":"index","params":{},"method":"POST","statusCode":null,"headers":{"content-type":"application/json","content-length":"5","host":"127.0.0.1:9090","connection":"close"},"remoteAddress":"127.0.0.1","body":"zjw"}  
 [2016-12-10 14:47:02.110] [INFO] Http - Connection 3 disconnected  time-consumed:2  
+[2016-12-13 13:44:44.684] [INFO] Http - 127.0.0.1  
+[2016-12-13 13:44:44.688] [INFO] Http - {"httpVersion":"1.1","route":"index","params":{},"method":"POST","statusCode":null,"headers":{"content-type":"application/json","content-length":"5","host":"127.0.0.1:9090","connection":"close"},"remoteAddress":"127.0.0.1","body":"zjw"}  
+[2016-12-13 13:44:44.721] [INFO] Http - 38  
+[2016-12-13 13:44:46.681] [INFO] Http - 127.0.0.1  
+[2016-12-13 13:44:46.682] [INFO] Http - {"httpVersion":"1.1","route":"index","params":{},"method":"POST","statusCode":null,"headers":{"content-type":"application/json","content-length":"5","host":"127.0.0.1:9090","connection":"close"},"remoteAddress":"127.0.0.1","body":"zjw"}  
+[2016-12-13 13:44:46.682] [INFO] Http - 1  
+[2016-12-13 13:44:48.680] [INFO] Http - 127.0.0.1  
+[2016-12-13 13:44:48.681] [INFO] Http - {"httpVersion":"1.1","route":"index","params":{},"method":"POST","statusCode":null,"headers":{"content-type":"application/json","content-length":"5","host":"127.0.0.1:9090","connection":"close"},"remoteAddress":"127.0.0.1","body":"zjw"}  
+[2016-12-13 13:44:48.682] [INFO] Http - 2  
+[2016-12-13 14:03:49.617] [INFO] Http - 127.0.0.1  
+[2016-12-13 14:03:49.623] [INFO] Http - {"httpVersion":"1.1","route":"index","params":{},"method":"POST","statusCode":null,"headers":{"content-type":"application/json","content-length":"5","host":"127.0.0.1:9090","connection":"close"},"remoteAddress":"127.0.0.1","body":"zjw"}  
+[2016-12-13 14:03:49.625] [INFO] Http - 9  

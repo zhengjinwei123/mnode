@@ -1,5 +1,5 @@
 /**
- * Created by ff on 2016/12/13.
+ * Created by 郑金玮 on 2016/12/13.
  */
 function cppString(str, len) {
 

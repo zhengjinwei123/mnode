@@ -18,7 +18,7 @@
     "express": "4.x",
     "express-session": "*",
     "formidable": "*",
-    "ftp": "*",
+    "ftp": "^0.3.10",
     "generic-pool": "2.x.x",
     "http": "*",
     "iconv-lite": "^0.4.13",
