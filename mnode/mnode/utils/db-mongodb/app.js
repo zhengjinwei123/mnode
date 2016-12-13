@@ -89,3 +89,12 @@ MongodbUtil.prototype.model = function (schemeTable, modelName, callback) {
 
 
 module.exports = MongodbUtil;
+
+
+/*****
+ * 测试用例
+ */
+//var d = new MongodbUtil("localhost", 27017, 'mydb');
+//d.model({}, 'student', function (err, model, release) {
+//
+//});
