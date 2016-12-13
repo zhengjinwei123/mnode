@@ -69,6 +69,8 @@ CsvFileUtil.prototype.parse = function (filePath, key) {
                 this.dataList.push(_rowData);
             }
         }
+    } else {
+        throw new Error("csv file content is null");
     }
 
     FileUtil.writeSync(fileNameL[0] + ".json", JSON.stringify(this.dataList));
