@@ -14,6 +14,7 @@ module.exports = {
     "Encrypt": require("./encrypt-utils/app"),
     "Logger": require("./logger-utils/app"),
     "IP": require("./ip-utils/app"),
-    "UdpClient": require("./udp-utils/app")
+    "UdpClient": require("./udp-utils/app"),
+    "Csv": require("./csv-utils/app")
 };
 
