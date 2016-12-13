@@ -29,7 +29,7 @@
     "lodash": "3.10.1",
     "moment": "*",
     "mongodb": "^2.1.7",
-    "mongoose": "4.x",
+    "mongoose": "^4.7.2",
     "morgan": "*",
     "multer": "^1.1.0",
     "mysql": "^2.12.0",

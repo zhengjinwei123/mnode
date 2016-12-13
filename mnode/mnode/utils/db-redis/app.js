@@ -3,6 +3,7 @@
  */
 var Redis = require("redis");
 var GenericPool = require("generic-pool");
+var Emitter = require("events").EventEmitter;
 
 function createRedisPool(poolName, host, port, auth) {
     return GenericPool.Pool({
@@ -20,18 +21,18 @@ function createRedisPool(poolName, host, port, auth) {
             }
 
             client.on("ready", function () {
-                console.log("redis 已就绪");
+                //console.log("redis 已就绪");
             });
 
             client.on('error', function (err) {
                 console.error('error at connect redis: %s', err.stack);
+                callback(err.stack);
             });
 
             client.on("connect", function () {
-                console.log("redis 连接成功");
+                //console.log("redis 连接成功");
+                callback(null, client);
             });
-
-            callback(null, client);
         },
         destroy: function (client) {
             client.quit();
