@@ -7,7 +7,7 @@ var JadeLoader = require("../plugin/app").JadeLoader;
 var HttpServer = require("../plugin/app").HttpServer;
 var LogUtil = require("../utils/app").Logger;
 var Singleton = require("../utils/app").Singleton;
-var logger = Singleton.getDemon(LogUtil, Path.join(__dirname, "../config/logger.json"),Path.join(__dirname, "../logs"));
+var logger = Singleton.getDemon(LogUtil, Path.join(__dirname, "../config/logger.json"), Path.join(__dirname, "../logs"));
 var WSocketServer = require("../plugin/app").WSServer;
 
 JadeLoader.init(Path.join(__dirname, "../"), true, 60, function () {
@@ -64,8 +64,8 @@ JadeLoader.init(Path.join(__dirname, "../"), true, 60, function () {
         console.error(err);
     });
 
-    JadeLoader.Jader('utils').get('file-utils').readAsync("c://start_nginx-php7.bat",function(err,resp){
-        console.log(err,resp)
+    JadeLoader.Jader('utils').get('file-utils').readAsync("c://start_nginx-php7.bat", function (err, resp) {
+        console.log(err, resp)
     });
 
     //var HttpClient = Singleton.getDemon(JadeLoader.Jader('utils').get('httpclient-utils'),'127.0.0.1',9090,2);
@@ -75,6 +75,31 @@ JadeLoader.init(Path.join(__dirname, "../"), true, 60, function () {
     //        console.log("http post response:",err,resp);
     //    });
     //},2000)
+
+    var UdpServer = require("../plugin/app").UdpServer;
+    var d = new UdpServer();
+    d.on('listening', function (address) {
+        console.log("server listening " + address.address + ":" + address.port);
+    });
+    d.on('message', function (msg, rinfo) {
+        console.log('Received %d bytes msg:%s from %s:%d\n', msg.length, msg, rinfo.address, rinfo.port);
+    });
+    d.on('error', function (error) {
+        console.error(error.stack);
+    });
+
+    setInterval(function () {
+        console.log("--------start send data by udp protocal----------------");
+        var UdpClient = require("../utils/app").UdpClient;
+        var messgae = new UdpClient("127.0.0.1", 9092);
+
+        //messgae.push_string("zhengjinwei", 20);
+        //messgae.push_string("male", 10);
+        //messgae.push_string("my name is zhengjinwei", 100);
+        //messgae.push_int32(212121212);
+
+        messgae.send("zhengjinwei");
+    }, 1000)
 });
 
 JadeLoader.on("error", function (err) {

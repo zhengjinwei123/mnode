@@ -13,6 +13,7 @@ module.exports = {
     "Redis": require("./db-redis/app"),
     "Encrypt": require("./encrypt-utils/app"),
     "Logger": require("./logger-utils/app"),
-    "IP": require("./ip-utils/app")
+    "IP": require("./ip-utils/app"),
+    "UdpClient": require("./udp-utils/app")
 };
 

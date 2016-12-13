@@ -17,7 +17,7 @@ function JadeLoader() {
     EventEmitter.call(this);
     this.userKey = "user-doc-" + (new Date().getTime());
     process.on("uncaughtException", function (err) {
-        console.error(err.stack);
+        console.error("hehe:",err.stack);
         process.exit(1);
     });
 }
@@ -33,7 +33,7 @@ JadeLoader.prototype.init = function (rootPath, hot, hotSecond, callback) {
     this.hotSecond = 1000 * (hotSecond ? hotSecond : (6 * 60));//6分钟
     this.mapList = [];
 
-    var fileList = FileUtils.traverseSync(rootPath, 6);
+    var fileList = FileUtils.traverseSync(rootPath);
 
     var self = this;
     for (var i in fileList) {
@@ -46,7 +46,7 @@ JadeLoader.prototype.init = function (rootPath, hot, hotSecond, callback) {
                 }
                 if (content['scan-dir'] == true) {
                     var dirName = Path.join(fileName, "../");
-                    var _dirFileList = FileUtils.traverseSync(dirName, 2);
+                    var _dirFileList = FileUtils.traverseSync(dirName);
 
                     var _pList = dirName.split(/[/|\\]/);
                     var $pK = _pList[_pList.length - 2];//获取 父文件夹名称
