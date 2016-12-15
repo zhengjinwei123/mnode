@@ -17,6 +17,7 @@ module.exports = {
     "UdpClient": require("./udp-utils/app"),
     "Csv": require("./csv-utils/app"),
     "Ftp": require("./ftp-utils/app"),
-    "Mongoose": require("./db-mongodb/app")
+    "Mongoose": require("./db-mongodb/app"),
+    "Queue": require("./queue-utils/app")
 };
 

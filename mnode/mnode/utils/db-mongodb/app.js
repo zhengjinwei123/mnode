@@ -6,8 +6,13 @@ var Schema = Mongoose.Schema;
 var poolModule = require('generic-pool');
 var Util = require("util");
 var Emitter = require("events").EventEmitter;
+var FileUtil = require("../app").File;
+var Path = require("path");
+var Singleton = require("../app").Singleton;
+var _ = require("lodash");
+var Queue = require("../app").Queue;
 
-var MongodbUtil = function (host, port, db, userOption) {
+var MongodbUtil = function (host, port, db, userOption, runPath) {
     Emitter.call(this);
 
     this.host = host || '127.0.0.1';
@@ -27,20 +32,35 @@ var MongodbUtil = function (host, port, db, userOption) {
         throw new Error("args error");
     }
 
+    this.runPath = runPath || Path.join(__dirname, "/schemas");
+
+    var _error = null;
+    try {
+        if (!FileUtil.isExists(this.runPath)) {
+            FileUtil.createDirectory(this.runPath);
+            var templateContent = FileUtil.readSync(Path.join(__dirname,"/template.js"));
+            FileUtil.writeSync(Path.join(this.runPath,"/demon.js"),templateContent);
+        }
+    } catch (e) {
+        _error = e.message;
+    } finally {
+        if (_error) {
+            console.error(_error);
+            process.exit(1);
+        }
+    }
+
     var self = this;
     self.connected = false;
     this.pool = poolModule.Pool({
         name: 'mongoose',
         create: function (callback) {
-            //var server_options = {'auto_reconnect': false, poolSize: 1};
             var conn = Mongoose.createConnection(self.dbUrl);
             conn.on('error', function (error) {
-                console.error(error);
                 callback(error);
             });
 
             conn.once('connected', function () {
-                // console.log(connected);
                 callback(null, conn);
             });
 
@@ -55,7 +75,25 @@ var MongodbUtil = function (host, port, db, userOption) {
         idleTimeoutMillis: 30000,
         log: false
     });
+
+    this.runList = {};
+
+    this.modelName = null;
+    this.loadSchema();
 };
+
+MongodbUtil.prototype.loadSchema = function () {
+    var schemaFileList = FileUtil.traverseSync(this.runPath);
+
+    var self = this;
+    schemaFileList.forEach(function (f) {
+        var scheme = require(f.path);
+        if (scheme['table'] && scheme['schema']) {
+            self.runList[scheme.table] = self.runList[scheme.table] || scheme.schema;
+        }
+    });
+};
+
 
 MongodbUtil.prototype.exec = function (callback) {
     var self = this;
@@ -72,38 +110,29 @@ MongodbUtil.prototype.exec = function (callback) {
     }, 0);
 };
 
-MongodbUtil.prototype.model = function (schemeTable, modelName, callback) {
-    // if (!this.connected) {
-    //     throw new Error("db lose connect");
-    // }
-    var SchemaOption = {};
-    var Schema = new Mongoose.Schema(schemeTable, SchemaOption);
-    this.exec(function (err, client, release) {
-        if (!err) {
-            callback(null, client.model(modelName, Schema), release);
-        } else {
-            callback(err);
-        }
-    });
+MongodbUtil.prototype.schema = function (modelName) {
+    if (this.runList[modelName]) {
+        this.modelName = modelName;
+        return this;
+    } else {
+        throw new Error(modelName + " is not undefine");
+    }
 };
 
+MongodbUtil.prototype.model = function (callback) {
+    if (this.modelName == null) {
+        callback("please call model method first");
+    } else {
+        var self = this;
+        this.exec(function (err, client, release) {
+            if (!err) {
+                callback(null, client.model(self.modelName, self.runList[self.modelName]), release);
+            } else {
+                callback(err);
+            }
+        });
+    }
+};
 
 module.exports = MongodbUtil;
 
-
-/*****
- * 测试用例
- */
-var d = new MongodbUtil("localhost", 27017, 'mydb');
-
-var t = {
-    name: {type: String},
-    age: {type: Number}
-};
-d.model(t, 'student', function (err, model, release) {
-    console.log(err);
-    model.find().exec(function(err,doc){
-        console.log(err,doc);
-        release();
-    });
-});

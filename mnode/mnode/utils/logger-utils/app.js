@@ -52,6 +52,7 @@ var LoggerUtils = function (configPath, logPath) {
                     } else if (appender['type'] && appender['type'] == "console") {
                         if (configContent['openLog']['console'] != undefined && configContent['openLog']['console'] == false) {
                             configContent['appenders'].splice(index, 1);
+                            configContent['replaceConsole'] = false;
                         }
                     }
                     index++
