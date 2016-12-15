@@ -8,7 +8,6 @@ var Util = require("util");
 var Emitter = require("events").EventEmitter;
 var FileUtil = require("../app").File;
 var Path = require("path");
-var Singleton = require("../app").Singleton;
 var _ = require("lodash");
 var Queue = require("../app").Queue;
 
