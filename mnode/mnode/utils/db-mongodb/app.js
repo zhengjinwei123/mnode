@@ -119,7 +119,7 @@ MongodbUtil.prototype.schema = function (modelName) {
 
 MongodbUtil.prototype.model = function (callback) {
     if (this.modelName == null) {
-        callback("please call model method first");
+        callback("please call schema method first");
     } else {
         var self = this;
         this.exec(function (err, client, release) {
