@@ -8,9 +8,20 @@ d.schema('student').model(function (err, model, release) {
     if (!err) {
         model.getData(function (err, docs) {
             console.log(err, docs);
-            release();
         })
     } else {
         console.error(err);
     }
+    release();
+});
+
+d.model(function(err,model,release){
+    if (!err) {
+        model.insertData(function (err, docs) {
+            console.log(err, docs);
+        })
+    } else {
+        console.error(err);
+    }
+    release();
 });
