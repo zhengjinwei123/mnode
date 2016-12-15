@@ -27,8 +27,8 @@ function WS(ip, port) {
 }
 Util.inherits(WS, Events.EventEmitter);//使这个类继承EventEmitter
 
-WS.prototype.terminate = function () {
-    this.ww.terminate();
+WS.prototype.close = function () {
+    this.ww.close();
 };
 
 WS.prototype.send = function (msg) {
