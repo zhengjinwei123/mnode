@@ -29,7 +29,7 @@ CsvFileUtil.prototype.parse = function (filePath, key) {
 
     var content = FileUtil.readSync(filePath);
     var parseContent = content.split("\r\n");
-    if (parseContent.length >= 2) {
+    if (parseContent.length > 2) {
         var t = parseContent.splice(parseContent.length - 1, 1);//去掉最后一行，因为最后一行无效
         var del = parseContent.splice(0, 2);//去掉前两行，第一行是说明，第二行是键名
         var keyStr = del[1];
