@@ -9,7 +9,6 @@ var Emitter = require("events").EventEmitter;
 var FileUtil = require("../app").File;
 var Path = require("path");
 var _ = require("lodash");
-var Queue = require("../app").Queue;
 
 var MongodbUtil = function (host, port, db, userOption, runPath) {
     Emitter.call(this);
