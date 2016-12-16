@@ -29,9 +29,13 @@ ProcessPool.prototype.add = function (mode, pid, id) {
     }
 };
 
-ProcessPool.prototype.sendTask = function (cluster, msg) {
+ProcessPool.prototype.sendTasking = function (cluster, msg) {
     var task = _.sample(this.taskList);
     cluster.workers[task.id].send(msg);
+};
+
+ProcessPool.prototype.sendTasked = function (worker, msg) {
+    worker.send(msg.ret);
 };
 
 ProcessPool.getInstance = (function () {

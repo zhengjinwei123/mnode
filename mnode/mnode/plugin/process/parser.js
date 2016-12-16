@@ -3,8 +3,14 @@
  */
 function Parser() {
     return {
-        task: function (msg) {
-            return (msg['func'] && msg['args']);
+        tasking: function (msg) {
+            return (msg['func'] && msg['args'] && msg['senderid']);
+        },
+        tasked: function (msg) {
+            return (msg['senderid'] && msg['ret']);
+        },
+        initPool:function(msg){
+            return (msg['mode'] && msg['pid'] && msg['id']);
         }
     }
 };
