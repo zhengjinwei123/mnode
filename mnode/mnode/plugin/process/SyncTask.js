@@ -3,7 +3,8 @@
  */
 var EventEmitter = require("events").EventEmitter;
 var Util = require("util");
-var ObjUtil = require("../../utils/app").Object;
+//var ObjUtil = require("../../utils/app").Object;
+var _ = require("lodash");
 
 var SyncTask = function (workerid) {
     EventEmitter.call(this);
@@ -16,14 +17,18 @@ Util.inherits(SyncTask, EventEmitter);
 
 
 SyncTask.prototype.sendTask = function (funcName) {
+    //var argCnt = ObjUtil.count(arguments);
+
     var args = [];
 
-    var argCnt = ObjUtil.count(arguments);
-
-    var func = arguments[argCnt - 1];
+    var func = null;
     for (var i in arguments) {
-        if (i != 0 && (i != (argCnt - 1))) {
-            args.push(arguments[i]);
+        if (i != 0) {
+            if (_.isFunction(arguments[i])) {
+                func(arguments[i]);
+            } else {
+                args.push(arguments[i]);
+            }
         }
     }
 
@@ -33,10 +38,11 @@ SyncTask.prototype.sendTask = function (funcName) {
         senderid: this.workerid
     });
 
-    this.on("return", function (data) {
-        func(data);
-    });
-
+    if (func) {
+        this.on("return", function (data) {
+            func(data);
+        });
+    }
 };
 
 module.exports = SyncTask;
