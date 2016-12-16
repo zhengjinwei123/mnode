@@ -2,8 +2,8 @@
  * Created by 郑金玮 on 2016/12/13.
  * UDP 客户端 支持二进制发送 （与C/c++ 对接）
  */
-var CppNum = require("../app").Buffer.CppNum;
-var CppString = require("./app").Buffer.CppString;
+var CppNum = require("../buffer-utils/app").CppNum;
+var CppString = require("../buffer-utils/app").CppString;
 var Dgram = require("dgram");
 
 function UdpClient(host, port) {

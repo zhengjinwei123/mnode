@@ -1,28 +1,19 @@
 var http = require('http');
-var EventEmitter = require("events").EventEmitter;
 var Util = require("util");
+var SyncTask = require("./SyncTask");
+
 
 var HttpServer = function (workerid) {
-    EventEmitter.call(this);
+    SyncTask.call(this, workerid);
 
-    this.workerid = workerid;
+    //this.workerid = workerid;
 
     var self = this;
     http.Server(function (req, res) {
         res.writeHead(200);
 
-        process.send({
-            func: 'calcV',
-            args: [1, 2, 3],
-            senderid: self.workerid
-        });
-
-
-        self.on("return", function (data) {
-            console.log("data:", data);
-
+        self.sendTask('calcV', 1, 2, 3,function(data){
             res.end("调用进程返回：" + data);
-            //res.end("Process " + process.pid + " says hello");
         });
 
         //process.send("Process " + process.pid + " handled request");
@@ -31,7 +22,7 @@ var HttpServer = function (workerid) {
     });
 };
 
-Util.inherits(HttpServer, EventEmitter);
+Util.inherits(HttpServer, SyncTask);
 
 
 module.exports = HttpServer;
