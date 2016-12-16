@@ -1,7 +1,7 @@
 /**
 * ExBuffer ByteBuffer结合的测试
 **/
-var ExBuffer = require('ExBuffer');
+var ExBuffer = require('./ExBuffer');
 var ByteBuffer = require('ByteBuffer');
 var net = require('net');
 

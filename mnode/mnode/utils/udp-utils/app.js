@@ -1,8 +1,8 @@
 /**
  * Created by 郑金玮 on 2016/12/13.
  */
-var CppNum = require("./cpp").cppNum;
-var CppString = require("./cpp").cppString;
+var CppNum = require("../app").Buffer.CppNum;
+var CppString = require("./app").Buffer.CppString;
 var Dgram = require("dgram");
 
 function UdpClient(host, port) {
@@ -51,7 +51,7 @@ UdpClient.prototype.push_string = function (strValue, len) {
     this.length += strValue.byteLen;
 };
 
-UdpClient.prototype.push_char = function (strChar) {
+UdpClient.prototype.push_char = function (strValue) {
     var strValue = new CppString(strValue, 2);
     this.listBuffer.push(strValue.buffer);
     this.length += strValue.byteLen;
