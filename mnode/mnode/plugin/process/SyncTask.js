@@ -25,7 +25,7 @@ SyncTask.prototype.sendTask = function (funcName) {
     for (var i in arguments) {
         if (i != 0) {
             if (_.isFunction(arguments[i])) {
-                func(arguments[i]);
+                func = (arguments[i]);
             } else {
                 args.push(arguments[i]);
             }
