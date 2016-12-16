@@ -1,5 +1,6 @@
 /**
- * Created zhengjinwei ff on 2016/12/16.
+ * Created 郑金玮 ff on 2016/12/16.
+ * TCP 客户端
  */
 var EventEmitter = require("events").EventEmitter;
 var Util = require("util");

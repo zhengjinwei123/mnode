@@ -1,5 +1,6 @@
 /**
  * Created by 郑金玮 on 2016/11/30.
+ * 时间操作
  */
 var Rangedate = require('rangedate');
 var timeUtils = function () {

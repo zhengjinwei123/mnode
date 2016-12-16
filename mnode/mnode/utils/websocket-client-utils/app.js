@@ -32,7 +32,7 @@ WS.prototype.close = function () {
 };
 
 WS.prototype.send = function (msg) {
-    if (this.opened) {
+    if (this.opened && this.ws) {
         this.ws.send(msg);
         return true;
     }

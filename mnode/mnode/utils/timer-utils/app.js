@@ -1,5 +1,6 @@
 /**
- * Created by Administrator on 2016/12/4.
+ * Created by 郑金玮 on 2016/12/4.
+ * 计时类
  */
 function TimerUtils() {
     this.s = new Date();
