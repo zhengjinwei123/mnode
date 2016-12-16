@@ -18,6 +18,8 @@ module.exports = {
     "Csv": require("./csv-utils/app"),
     "Ftp": require("./ftp-utils/app"),
     "Mongoose": require("./db-mongodb/app"),
-    "Queue": require("./queue-utils/app")
+    "Queue": require("./queue-utils/app"),
+    "Buffer": require("./buffer-utils/app"),
+    "TcpClient": require("./tcp-utils/app")
 };
 

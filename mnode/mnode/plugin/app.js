@@ -5,5 +5,6 @@ module.exports = {
     "JadeLoader": require("./jadeLoader/app"),
     "HttpServer": require("./http/app"),
     "WSServer": require("./websocket/app"),
-    "UdpServer": require("./udp/app")
+    "UdpServer": require("./udp/app"),
+    "TcpServer": require("./tcp/app")
 };
