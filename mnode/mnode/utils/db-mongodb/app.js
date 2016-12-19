@@ -78,7 +78,7 @@ var MongodbUtil = function (host, port, db, userOption, runPath) {
         if (err) {
             self.emit("error", err);
         } else {
-            self.emit("connect", {port: this.port, host: this.host});
+            self.emit("connect", {port: self.port, host: self.host});
 
             self.runList = {};
             self.modelName = null;
