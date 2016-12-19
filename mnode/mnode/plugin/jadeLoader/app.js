@@ -17,7 +17,7 @@ function JadeLoader() {
     EventEmitter.call(this);
     this.userKey = "user-doc-" + (new Date().getTime());
     process.on("uncaughtException", function (err) {
-        console.error("hehe:",err.stack);
+        console.error("hehe:", err.stack);
         process.exit(1);
     });
 }
@@ -174,6 +174,25 @@ JadeLoader.prototype.Jader = function (pKey) {
     }
     return this;
 };
+
+/**
+ * 用这个方法导出模块对应的对象 当然要确保你需要的是一个对象
+ * @param key
+ * @returns {*}
+ */
+JadeLoader.prototype.getInstance = function (key) {
+    var _module = this.get(key);
+    if (_module) {
+        return Singleton.getDemon(_module);
+    }
+    return null;
+};
+
+/**
+ * 导出你需要的模块
+ * @param key
+ * @returns {*}
+ */
 JadeLoader.prototype.get = function (key) {
     if (this.pKey) {
         if (this.mapList[this.pKey][key]) {
