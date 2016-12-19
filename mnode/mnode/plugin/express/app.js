@@ -98,6 +98,8 @@ var ExpressPlugin = function (host, port, path) {
     this.app = Express();
 
     this.filterFuncs = [];//过滤函数列表
+
+    this.dispatchFunc = null;//消息发送
 };
 Util.inherits(ExpressPlugin, EventEmitter);
 
@@ -116,6 +118,12 @@ ExpressPlugin.prototype.loadRoutes = function (routePath) {
 ExpressPlugin.prototype.use = function (func) {
     if (_.isFunction(func)) {
         this.filterFuncs.push(func);
+    }
+};
+
+ExpressPlugin.prototype.dispatch = function (func) {
+    if (_.isFunction(func)) {
+        this.dispatchFunc = func;
     }
 };
 
@@ -161,23 +169,13 @@ ExpressPlugin.prototype.start = function (callback) {
                 next();
             }
         });
-        //self.app.use(function (req, res, next) {
-        //    var url = req.originalUrl;
-        //    if (!self.routesList[url]) {
-        //        res.redirect("/index");
-        //    } else {
-        //        if (url == '/user/login') {
-        //            if (req.session && req.session.user) {
-        //                res.redirect("/index");
-        //            } else {
-        //                next();
-        //            }
-        //        } else {
-        //            next();
-        //        }
-        //    }
-        //});
         self.loadRoutes(self.routePath);
+
+        if (self.dispatchFunc) {
+            self.app.use(function (req, res, next) {
+                self.dispatchFunc(req, res, next);
+            });
+        }
 
         self.app.use(function (req, res) {
             res.statusCode = 404;

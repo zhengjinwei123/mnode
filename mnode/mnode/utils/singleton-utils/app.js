@@ -17,13 +17,13 @@ var Singleton = (function () {
             }
         },
         getInstance: function (obj) {
-            var _d = new obj();
+            var a = arguments;
+            var _d = new obj(a[1], a[2], a[3], a[4], a[5], a[6], a[7], a[8], a[9], a[10]);
             var clsName = _d.__proto__.constructor.name;
             delete _d;
             if (_inst[clsName]) {
                 return _inst[clsName];
             }
-            var a = arguments;
             _inst[clsName] = new obj(a[1], a[2], a[3], a[4], a[5], a[6], a[7], a[8], a[9], a[10]);
             return _inst[clsName];
         }
