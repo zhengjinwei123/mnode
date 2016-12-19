@@ -14,6 +14,7 @@ var ObjUtil = require("../../utils/app").Object;
 var FileUtil = require("../../utils/app").File;
 var EventEmitter = require("events").EventEmitter;
 var Util = require("util");
+var Async = require("async");
 
 
 var ExpressPlugin = function (host, port, path) {
@@ -95,6 +96,8 @@ var ExpressPlugin = function (host, port, path) {
     this.path = path;
     this.routesList = {};
     this.app = Express();
+
+    this.filterFuncs = [];//过滤函数列表
 };
 Util.inherits(ExpressPlugin, EventEmitter);
 
@@ -108,6 +111,12 @@ ExpressPlugin.prototype.loadRoutes = function (routePath) {
         self.routesList[routeName] = self.routesList[routeName] || 1;
         self.app.use(routeName, route);
     });
+};
+
+ExpressPlugin.prototype.use = function (func) {
+    if (_.isFunction(func)) {
+        this.filterFuncs.push(func);
+    }
 };
 
 ExpressPlugin.prototype.env = function () {
@@ -138,6 +147,20 @@ ExpressPlugin.prototype.start = function (callback) {
         self.app.use(Express.static(Path.join(self.path, 'public')));
         self.app.use(Express.static(Path.join(self.path, 'static')));
 
+
+        self.app.use(function (req, res, next) {
+            if (self.filterFuncs.length) {
+                Async.eachSeries(self.filterFuncs, function (func, callback) {
+                    func(req, res, function (err) {
+                        callback(err);
+                    });
+                }, function (err, resp) {
+                    next(err);
+                });
+            } else {
+                next();
+            }
+        });
         self.app.use(function (req, res, next) {
             var url = req.originalUrl;
             if (!self.routesList[url]) {
