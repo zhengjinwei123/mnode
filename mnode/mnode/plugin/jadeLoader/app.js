@@ -183,7 +183,7 @@ JadeLoader.prototype.Jader = function (pKey) {
 JadeLoader.prototype.getInstance = function (key) {
     var _module = this.get(key);
     if (_module) {
-        return Singleton.getDemon(_module);
+        return Singleton.getDemon(_module, arguments[1], arguments[2], arguments[3], arguments[4], arguments[5], arguments[6], arguments[7], arguments[8], arguments[9], arguments[10]);
     }
     return null;
 };
