@@ -161,22 +161,22 @@ ExpressPlugin.prototype.start = function (callback) {
                 next();
             }
         });
-        self.app.use(function (req, res, next) {
-            var url = req.originalUrl;
-            if (!self.routesList[url]) {
-                res.redirect("/index");
-            } else {
-                if (url == '/user/login') {
-                    if (req.session && req.session.user) {
-                        res.redirect("/index");
-                    } else {
-                        next();
-                    }
-                } else {
-                    next();
-                }
-            }
-        });
+        //self.app.use(function (req, res, next) {
+        //    var url = req.originalUrl;
+        //    if (!self.routesList[url]) {
+        //        res.redirect("/index");
+        //    } else {
+        //        if (url == '/user/login') {
+        //            if (req.session && req.session.user) {
+        //                res.redirect("/index");
+        //            } else {
+        //                next();
+        //            }
+        //        } else {
+        //            next();
+        //        }
+        //    }
+        //});
         self.loadRoutes(self.routePath);
 
         self.app.use(function (req, res) {
