@@ -24,7 +24,7 @@ schema.statics.insertData = function (callback) {
     newData.name = 'zhengjinwei';
     newData.age = 26;
 
-    newData.save(newData,function (err, resp) {
+    newData.save(function (err, resp) {
         callback(err, resp);
     })
 };

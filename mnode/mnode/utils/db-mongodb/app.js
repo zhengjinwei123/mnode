@@ -78,18 +78,16 @@ var MongodbUtil = function (host, port, db, userOption, runPath) {
         if (err) {
             self.emit("error", err);
         } else {
-            self.emit("connect", {port: self.port, host: self.host});
-
             self.runList = {};
             self.modelName = null;
             self.loadSchema();
 
             release();
+            self.emit("connect", {port: self.port, host: self.host});
         }
     });
 };
-
-Util.inherits(MongodbUtil,Emitter);
+Util.inherits(MongodbUtil, Emitter);
 
 MongodbUtil.prototype.loadSchema = function () {
     var schemaFileList = FileUtil.traverseSync(this.runPath);
