@@ -6,7 +6,7 @@ var Schema = Mongoose.Schema;
 var poolModule = require('generic-pool');
 var Util = require("util");
 var Emitter = require("events").EventEmitter;
-var FileUtil = require("../app").File;
+var FileUtil = require("../file-utils/app");
 var Path = require("path");
 var _ = require("lodash");
 
@@ -36,8 +36,8 @@ var MongodbUtil = function (host, port, db, userOption, runPath) {
     try {
         if (!FileUtil.isExists(this.runPath)) {
             FileUtil.createDirectory(this.runPath);
-            var templateContent = FileUtil.readSync(Path.join(__dirname,"/template.js"));
-            FileUtil.writeSync(Path.join(this.runPath,"/demon.js"),templateContent);
+            var templateContent = FileUtil.readSync(Path.join(__dirname, "/template.js"));
+            FileUtil.writeSync(Path.join(this.runPath, "/demon.js"), templateContent);
         }
     } catch (e) {
         _error = e.message;
@@ -74,10 +74,19 @@ var MongodbUtil = function (host, port, db, userOption, runPath) {
         log: false
     });
 
-    this.runList = {};
+    this.exec(function (err, client, release) {
+        if (err) {
+            self.emit("error", err);
+        } else {
+            self.emit("connect", {port: this.port, host: this.host});
 
-    this.modelName = null;
-    this.loadSchema();
+            self.runList = {};
+            self.modelName = null;
+            self.loadSchema();
+
+            release();
+        }
+    });
 };
 
 MongodbUtil.prototype.loadSchema = function () {
