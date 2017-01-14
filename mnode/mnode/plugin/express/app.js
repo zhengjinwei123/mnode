@@ -15,6 +15,7 @@ var FileUtil = require("../../utils/app").File;
 var EventEmitter = require("events").EventEmitter;
 var Util = require("util");
 var Async = require("async");
+var Favicon = require('serve-favicon');
 
 
 var ExpressPlugin = function (host, port, path) {
@@ -67,7 +68,7 @@ var ExpressPlugin = function (host, port, path) {
     var staticPath = Path.join(path, '/static');
 
     var imagesPath = Path.join(path, "/public/images");
-    var jsPath = Path.join(path, "/public/javascripts");
+    var jsPath = Path.join(path, "/public/js");
     var stylePath = Path.join(path, "/public/stylesheets");
 
     FileUtil.createDirectory(viewPath);
@@ -111,7 +112,17 @@ ExpressPlugin.prototype.loadRoutes = function (routePath) {
         var route = require(f.path);
         var routeName = extraPath.replace('.js', "");
         self.routesList[routeName] = self.routesList[routeName] || 1;
-        self.app.use(routeName, route);
+
+        if (route['L'] && _.isArray(route.L) && route['R']) {
+            self.app.use(routeName, route.R);
+            route.L.forEach(function (r) {
+                var _name = routeName + "/" + r;
+                self.routesList[_name] = self.routesList[_name] || 1;
+                self.app.use(_name, route.R);
+            });
+        } else {
+            self.app.use(routeName, route);
+        }
     });
 };
 
@@ -134,17 +145,22 @@ ExpressPlugin.prototype.env = function () {
 ExpressPlugin.prototype.start = function (callback) {
     var self = this;
     Http.createServer(this.app).listen(this.port, function () {
+        //self.app.configure('development', function () {
+        //
+        //});
         self.emit('ready');
     });
 
     self.on('ready', function () {
-
         self.app.set('views', Path.join(self.path, 'views'));
         self.app.set('view engine', "ejs");
         self.app.use(MorganLogger('dev'));
         self.app.use(BodyParser.json());
         self.app.use(BodyParser.urlencoded({extended: false}));
         self.app.use(CookieParser());
+        self.app.use(Favicon(self.path + '/public/images/favicon.ico'));
+
+        //self.use(Express.errorHandler({ dumpExceptions: true, showStack: true }));
 
         self.app.use(Session({
             secret: 'express-secret',
