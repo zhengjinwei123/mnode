@@ -21,6 +21,7 @@ module.exports = {
     "Queue": require("./queue-utils/app"),
     "Buffer": require("./buffer-utils/app"),
     "TcpClient": require("./tcp-utils/app"),
-    "MyLogger": require("./logger/app")
+    "MyLogger": require("./logger/app"),
+    "XmlParser": require("./xml-parser/app")
 };
 

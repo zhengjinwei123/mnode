@@ -21,7 +21,7 @@
     "ftp": "^0.3.10",
     "generic-pool": "2.x.x",
     "http": "*",
-    "iconv-lite": "^0.4.13",
+    "iconv-lite": "^0.4.15",
     "include-all": "^0.1.6",
     "inherits": "*",
     "isarray": "*",
@@ -48,7 +48,8 @@
     "underscore": "1.6.x",
     "utility": "*",
     "uuid": "*",
-    "ws": "1.1.1"
+    "ws": "1.1.1",
+    "xml2js": "^0.4.17"
   },
   "scripts": {
     "test": "grunt mocha"
