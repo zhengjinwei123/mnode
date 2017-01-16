@@ -6,20 +6,22 @@
 var XmlParser = require("../../utils/xml-parser/app");
 var FileUtil = require("../../utils/file-utils/app");
 
-var mysqlRedisCache = function (xmlPath) {
+var mysqlRedisCache = function (xmlPath, callback) {
     if (FileUtil.isFile(xmlPath)) {
         throw new Error(xmlPath + " file not exits");
     }
     this.xmlPath = xmlPath;
 
-    this.genDBCode();
+    this.genDBCode(callback);
 };
 
-mysqlRedisCache.prototype.genDBCode = function () {
+mysqlRedisCache.prototype.genDBCode = function (callback) {
     XmlParser(this.xmlPath, function (err, results) {
-        
+
     });
 };
+
+module.exports = mysqlRedisCache;
 
 
 
