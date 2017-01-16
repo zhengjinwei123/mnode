@@ -94,6 +94,12 @@ var ExpressPlugin = function (host, port, path) {
         FileUtil.writeSync(Path.join(stylePath, "/style.css"), cssTemplate);
     }
 
+    if (!FileUtil.isExists(Path.join(path, '/public/images/favicon.ico'))) {
+        var icon = FileUtil.readSync(Path.join(__dirname, '/favicon.ico'));
+        FileUtil.writeSync(Path.join(path, '/public/images/favicon.ico'), icon);
+    }
+
+
     this.path = path;
     this.routesList = {};
     this.app = Express();
@@ -158,7 +164,10 @@ ExpressPlugin.prototype.start = function (callback) {
         self.app.use(BodyParser.json());
         self.app.use(BodyParser.urlencoded({extended: false}));
         self.app.use(CookieParser());
-        self.app.use(Favicon(self.path + '/public/images/favicon.ico'));
+
+        var iconPath = self.path + '/public/images/favicon.ico';
+        FileUtil.createFile(iconPath);
+        self.app.use(Favicon(iconPath));
 
         //self.use(Express.errorHandler({ dumpExceptions: true, showStack: true }));
 
