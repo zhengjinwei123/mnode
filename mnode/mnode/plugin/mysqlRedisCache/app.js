@@ -4,3 +4,7 @@
  * 解决操作mysql的复杂度和速率，利用redis作为缓存，redis定时落地到mysql
  */
 
+var mysqlRedisCache = function () {
+    
+};
+
