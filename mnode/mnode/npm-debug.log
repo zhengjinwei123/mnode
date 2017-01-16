@@ -1,0 +1,468 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   '--save',
+1 verbose cli   'ifile' ]
+2 info using npm@2.15.5
+3 info using node@v4.4.5
+4 verbose install initial load of C:\Users\ff\Desktop\nodePro\mnode\mnode\package.json
+5 warn package.json mnode@1.0.0 No README data
+6 verbose installManyTop reading scoped package data from C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\async\package.json
+7 verbose installManyTop reading scoped package data from C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\bearcat\package.json
+8 verbose installManyTop reading scoped package data from C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\body-parser\package.json
+9 verbose installManyTop reading scoped package data from C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\cookie-parser\package.json
+10 verbose installManyTop reading scoped package data from C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\dgram\package.json
+11 verbose installManyTop reading scoped package data from C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\ejs\package.json
+12 verbose installManyTop reading scoped package data from C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\express\package.json
+13 verbose installManyTop reading scoped package data from C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\express-session\package.json
+14 verbose installManyTop reading scoped package data from C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\ftp\package.json
+15 verbose installManyTop reading scoped package data from C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\generic-pool\package.json
+16 verbose installManyTop reading scoped package data from C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\lodash\package.json
+17 verbose installManyTop reading scoped package data from C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\mongoose\package.json
+18 verbose installManyTop reading scoped package data from C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\morgan\package.json
+19 verbose installManyTop reading scoped package data from C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\mysql\package.json
+20 verbose installManyTop reading scoped package data from C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\newbeely-nodejs\package.json
+21 verbose installManyTop reading scoped package data from C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\node-gyp\package.json
+22 verbose installManyTop reading scoped package data from C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\node-uuid\package.json
+23 verbose installManyTop reading scoped package data from C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\pomelo-logger\package.json
+24 verbose installManyTop reading scoped package data from C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\rangedate\package.json
+25 verbose installManyTop reading scoped package data from C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\redis\package.json
+26 verbose installManyTop reading scoped package data from C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\serve-favicon\package.json
+27 verbose installManyTop reading scoped package data from C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\ws\package.json
+28 info package.json ftp@0.3.10 No license field.
+29 info package.json node-uuid@1.4.7 No license field.
+30 info package.json pomelo-logger@0.1.7 No repository field.
+31 info package.json pomelo-logger@0.1.7 No license field.
+32 info package.json generic-pool@2.0.0 No license field.
+33 info package.json dgram@1.0.1 dgram is also the name of a node core module.
+34 verbose readDependencies loading dependencies from C:\Users\ff\Desktop\nodePro\mnode\mnode\package.json
+35 silly cache add args [ 'ifile', null ]
+36 verbose cache add spec ifile
+37 silly cache add parsed spec Result {
+37 silly cache add   raw: 'ifile',
+37 silly cache add   scope: null,
+37 silly cache add   name: 'ifile',
+37 silly cache add   rawSpec: '',
+37 silly cache add   spec: 'latest',
+37 silly cache add   type: 'tag' }
+38 silly addNamed ifile@latest
+39 verbose addNamed "latest" is being treated as a dist-tag for ifile
+40 info addNameTag [ 'ifile', 'latest' ]
+41 silly mapToRegistry name ifile
+42 silly mapToRegistry using default registry
+43 silly mapToRegistry registry https://registry.npmjs.org/
+44 silly mapToRegistry data Result {
+44 silly mapToRegistry   raw: 'ifile',
+44 silly mapToRegistry   scope: null,
+44 silly mapToRegistry   name: 'ifile',
+44 silly mapToRegistry   rawSpec: '',
+44 silly mapToRegistry   spec: 'latest',
+44 silly mapToRegistry   type: 'tag' }
+45 silly mapToRegistry uri https://registry.npmjs.org/ifile
+46 verbose addNameTag registry:https://registry.npmjs.org/ifile not in flight; fetching
+47 verbose request uri https://registry.npmjs.org/ifile
+48 verbose request no auth needed
+49 info attempt registry request try #1 at 12:41:28
+50 verbose request id 163ed889f515d284
+51 verbose etag W/"57ffcb86-6d49"
+52 verbose lastModified Thu, 13 Oct 2016 17:59:34 GMT
+53 http request GET https://registry.npmjs.org/ifile
+54 http 304 https://registry.npmjs.org/ifile
+55 verbose headers { date: 'Mon, 16 Jan 2017 04:41:28 GMT',
+55 verbose headers   via: '1.1 varnish',
+55 verbose headers   'cache-control': 'max-age=300',
+55 verbose headers   etag: 'W/"57ffcb86-6d49"',
+55 verbose headers   age: '79',
+55 verbose headers   connection: 'keep-alive',
+55 verbose headers   'x-served-by': 'cache-nrt6129-NRT',
+55 verbose headers   'x-cache': 'HIT',
+55 verbose headers   'x-cache-hits': '1',
+55 verbose headers   'x-timer': 'S1484541688.994442,VS0,VE0',
+55 verbose headers   vary: 'Accept-Encoding' }
+56 silly get cb [ 304,
+56 silly get   { date: 'Mon, 16 Jan 2017 04:41:28 GMT',
+56 silly get     via: '1.1 varnish',
+56 silly get     'cache-control': 'max-age=300',
+56 silly get     etag: 'W/"57ffcb86-6d49"',
+56 silly get     age: '79',
+56 silly get     connection: 'keep-alive',
+56 silly get     'x-served-by': 'cache-nrt6129-NRT',
+56 silly get     'x-cache': 'HIT',
+56 silly get     'x-cache-hits': '1',
+56 silly get     'x-timer': 'S1484541688.994442,VS0,VE0',
+56 silly get     vary: 'Accept-Encoding' } ]
+57 verbose etag https://registry.npmjs.org/ifile from cache
+58 verbose get saving ifile to C:\Users\ff\AppData\Roaming\npm-cache\registry.npmjs.org\ifile\.cache.json
+59 verbose correctMkdir C:\Users\ff\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+60 silly addNameTag next cb for ifile with tag latest
+61 silly addNamed ifile@0.3.9
+62 verbose addNamed "0.3.9" is a plain semver version for ifile
+63 silly mapToRegistry name ifile
+64 silly mapToRegistry using default registry
+65 silly mapToRegistry registry https://registry.npmjs.org/
+66 silly mapToRegistry data Result {
+66 silly mapToRegistry   raw: 'ifile',
+66 silly mapToRegistry   scope: null,
+66 silly mapToRegistry   name: 'ifile',
+66 silly mapToRegistry   rawSpec: '',
+66 silly mapToRegistry   spec: 'latest',
+66 silly mapToRegistry   type: 'tag' }
+67 silly mapToRegistry uri https://registry.npmjs.org/ifile
+68 verbose addRemoteTarball https://registry.npmjs.org/ifile/-/ifile-0.3.9.tgz not in flight; adding
+69 verbose addRemoteTarball [ 'https://registry.npmjs.org/ifile/-/ifile-0.3.9.tgz',
+69 verbose addRemoteTarball   'ad95e0286a53379d0c94be52682a7661916b2acc' ]
+70 info retry fetch attempt 1 at 12:41:29
+71 info attempt registry request try #1 at 12:41:29
+72 http fetch GET https://registry.npmjs.org/ifile/-/ifile-0.3.9.tgz
+73 http fetch 200 https://registry.npmjs.org/ifile/-/ifile-0.3.9.tgz
+74 silly fetchAndShaCheck shasum ad95e0286a53379d0c94be52682a7661916b2acc
+75 verbose addTmpTarball C:\Users\ff\AppData\Local\Temp\npm-14552-1da879ee\registry.npmjs.org\ifile\-\ifile-0.3.9.tgz not in flight; adding
+76 verbose addTmpTarball already have metadata; skipping unpack for ifile@0.3.9
+77 verbose correctMkdir C:\Users\ff\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+78 silly cache afterAdd ifile@0.3.9
+79 verbose afterAdd C:\Users\ff\AppData\Roaming\npm-cache\ifile\0.3.9\package\package.json not in flight; writing
+80 verbose correctMkdir C:\Users\ff\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+81 verbose afterAdd C:\Users\ff\AppData\Roaming\npm-cache\ifile\0.3.9\package\package.json written
+82 silly install resolved [ { author:
+82 silly install resolved      { name: 'doublespout',
+82 silly install resolved        email: 'snoopyxdy@163.com',
+82 silly install resolved        url: 'http://snoopyxdy.blog.163.com' },
+82 silly install resolved     name: 'ifile',
+82 silly install resolved     description: 'High performance nodejs http/https static file handler,using c++ addon and libuv lib',
+82 silly install resolved     keywords: [ 'node', 'static', 'file', 'nodejs', 'libuv', 'c++', 'example' ],
+82 silly install resolved     version: '0.3.9',
+82 silly install resolved     url: 'https://github.com/DoubleSpout/ifile',
+82 silly install resolved     homepage: 'https://github.com/DoubleSpout/ifile',
+82 silly install resolved     repository: { type: 'git', url: 'https://github.com/DoubleSpout/ifile.git' },
+82 silly install resolved     main: 'index.js',
+82 silly install resolved     engines: { node: '>=0.10.0' },
+82 silly install resolved     dependencies: { mime: '1.2.6' },
+82 silly install resolved     scripts: { install: 'node-gyp rebuild', tset: 'node ./test/main.js' },
+82 silly install resolved     gypfile: true,
+82 silly install resolved     bugs: { url: 'https://github.com/DoubleSpout/ifile/issues' },
+82 silly install resolved     _id: 'ifile@0.3.9',
+82 silly install resolved     _shasum: 'ad95e0286a53379d0c94be52682a7661916b2acc',
+82 silly install resolved     _from: 'ifile@latest',
+82 silly install resolved     _npmVersion: '1.4.9',
+82 silly install resolved     _npmUser: { name: 'doublespout', email: 'snoopyxdy@gmail.com' },
+82 silly install resolved     maintainers: [ [Object] ],
+82 silly install resolved     dist:
+82 silly install resolved      { shasum: 'ad95e0286a53379d0c94be52682a7661916b2acc',
+82 silly install resolved        tarball: 'https://registry.npmjs.org/ifile/-/ifile-0.3.9.tgz' },
+82 silly install resolved     directories: {},
+82 silly install resolved     _resolved: 'https://registry.npmjs.org/ifile/-/ifile-0.3.9.tgz' } ]
+83 info install ifile@0.3.9 into C:\Users\ff\Desktop\nodePro\mnode\mnode
+84 info installOne ifile@0.3.9
+85 verbose installOne of ifile to C:\Users\ff\Desktop\nodePro\mnode\mnode not in flight; installing
+86 verbose correctMkdir C:\Users\ff\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+87 verbose lock using C:\Users\ff\AppData\Roaming\npm-cache\_locks\ifile-c087924721f1465f.lock for C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\ifile
+88 silly install write writing ifile 0.3.9 to C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\ifile
+89 verbose unbuild node_modules\ifile
+90 silly gentlyRm C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\ifile is being purged from base C:\Users\ff\Desktop\nodePro\mnode\mnode
+91 verbose gentlyRm don't care about contents; nuking C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\ifile
+92 verbose tar unpack C:\Users\ff\AppData\Roaming\npm-cache\ifile\0.3.9\package.tgz
+93 verbose tar unpacking to C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\ifile
+94 silly gentlyRm C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\ifile is being purged
+95 verbose gentlyRm don't care about contents; nuking C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\ifile
+96 silly gunzTarPerm modes [ '777', '666' ]
+97 silly gunzTarPerm extractEntry package.json
+98 silly gunzTarPerm extractEntry .npmignore
+99 silly gunzTarPerm extractEntry index.js
+100 silly gunzTarPerm extractEntry test.js
+101 silly gunzTarPerm extractEntry vendor.yml
+102 silly gunzTarPerm extractEntry lib/ifile.js
+103 silly gunzTarPerm extractEntry .travis.yml
+104 silly gunzTarPerm extractEntry benchmark/benchmark_ifile.js
+105 silly gunzTarPerm extractEntry benchmark/benchmark_ifile_gzip.js
+106 silly gunzTarPerm extractEntry benchmark/benchmark_node.js
+107 silly gunzTarPerm extractEntry benchmark/benchmark_node_gzip.js
+108 silly gunzTarPerm extractEntry benchmark/static/jquery.1.7.1.js
+109 silly gunzTarPerm extractEntry readme.md
+110 silly gunzTarPerm extractEntry src/gzip.cpp
+111 silly gunzTarPerm extractEntry src/gzip.h
+112 silly gunzTarPerm extractEntry src/ifile.cpp
+113 silly gunzTarPerm extractEntry src/ifile_class.cpp
+114 silly gunzTarPerm extractEntry src/ifile_class.h
+115 silly gunzTarPerm extractEntry src/ifile_handler.h
+116 silly gunzTarPerm extractEntry src/mime.h
+117 silly gunzTarPerm extractEntry src/request.h
+118 silly gunzTarPerm extractEntry src/zlib/LICENSE
+119 silly gunzTarPerm extractEntry src/zlib/zutil.h
+120 silly gunzTarPerm extractEntry src/zlib/adler32.c
+121 silly gunzTarPerm extractEntry src/zlib/compress.c
+122 silly gunzTarPerm extractEntry src/zlib/contrib/minizip/miniunz.c
+123 silly gunzTarPerm extractEntry src/zlib/contrib/minizip/ChangeLogUnzip
+124 silly gunzTarPerm extractEntry src/zlib/contrib/minizip/crypt.h
+125 silly gunzTarPerm extractEntry src/zlib/contrib/minizip/ioapi.c
+126 silly gunzTarPerm extractEntry src/zlib/contrib/minizip/ioapi.h
+127 silly gunzTarPerm extractEntry src/zlib/contrib/minizip/iowin32.c
+128 silly gunzTarPerm extractEntry src/zlib/contrib/minizip/iowin32.h
+129 silly gunzTarPerm extractEntry src/zlib/contrib/minizip/Makefile
+130 silly gunzTarPerm extractEntry src/zlib/contrib/minizip/minizip.c
+131 silly gunzTarPerm extractEntry src/zlib/contrib/minizip/mztools.c
+132 silly gunzTarPerm extractEntry src/zlib/contrib/minizip/mztools.h
+133 silly gunzTarPerm extractEntry src/zlib/contrib/minizip/unzip.c
+134 silly gunzTarPerm extractEntry src/zlib/contrib/minizip/unzip.h
+135 silly gunzTarPerm extractEntry src/zlib/contrib/minizip/zip.c
+136 silly gunzTarPerm extractEntry src/zlib/contrib/minizip/zip.h
+137 silly gunzTarPerm extractEntry src/zlib/crc32.c
+138 silly gunzTarPerm extractEntry src/zlib/crc32.h
+139 silly gunzTarPerm extractEntry src/zlib/deflate.c
+140 silly gunzTarPerm extractEntry src/zlib/deflate.h
+141 silly gunzTarPerm extractEntry src/zlib/gzio.c
+142 silly gunzTarPerm extractEntry src/zlib/infback.c
+143 silly gunzTarPerm extractEntry src/zlib/inffast.c
+144 silly gunzTarPerm extractEntry src/zlib/inffast.h
+145 silly gunzTarPerm extractEntry src/zlib/README.chromium
+146 silly gunzTarPerm extractEntry src/zlib/inflate.c
+147 silly gunzTarPerm extractEntry src/zlib/inflate.h
+148 silly gunzTarPerm extractEntry src/zlib/inftrees.c
+149 silly gunzTarPerm extractEntry src/zlib/inftrees.h
+150 silly gunzTarPerm extractEntry src/zlib/mozzconf.h
+151 silly gunzTarPerm extractEntry src/zlib/trees.c
+152 silly gunzTarPerm extractEntry src/zlib/trees.h
+153 silly gunzTarPerm extractEntry src/zlib/uncompr.c
+154 silly gunzTarPerm extractEntry src/zlib/zconf.h
+155 silly gunzTarPerm extractEntry src/zlib/zlib.gyp
+156 silly gunzTarPerm extractEntry src/zlib/zlib.h
+157 silly gunzTarPerm extractEntry src/zlib/zutil.c
+158 silly gunzTarPerm extractEntry src/zlib/inffixed.h
+159 silly gunzTarPerm extractEntry test/main.js
+160 silly gunzTarPerm extractEntry test/pipe.js
+161 silly gunzTarPerm extractEntry test/Static/Mount_Huangshan.jpg
+162 silly gunzTarPerm extractEntry test/Static/Mount_Huangshan2.jpg
+163 silly gunzTarPerm extractEntry test/static2/static2/aaa.js
+164 silly gunzTarPerm extractEntry test/static2/static2/test.js
+165 silly gunzTarPerm extractEntry test/static2/static2/test.css
+166 silly gunzTarPerm extractEntry test/static2/static3/static3/test.css
+167 silly gunzTarPerm extractEntry test/static2/static3/static3/test.txt
+168 silly gunzTarPerm extractEntry test/static2/static3/static3/test.xml
+169 silly gunzTarPerm extractEntry test/static2/static3/static3/test2.css
+170 silly gunzTarPerm extractEntry test/static2/static3/static3/test2.xml
+171 silly gunzTarPerm extractEntry test/static2/static3/static3/test3.xml
+172 silly gunzTarPerm extractEntry binding.gyp
+173 verbose write writing to C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\ifile\package.json
+174 info preinstall ifile@0.3.9
+175 verbose readDependencies loading dependencies from C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\ifile\package.json
+176 silly prepareForInstallMany adding mime@1.2.6 from ifile dependencies
+177 verbose readDependencies loading dependencies from C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\ifile\package.json
+178 silly cache add args [ 'mime@1.2.6', null ]
+179 verbose cache add spec mime@1.2.6
+180 silly cache add parsed spec Result {
+180 silly cache add   raw: 'mime@1.2.6',
+180 silly cache add   scope: null,
+180 silly cache add   name: 'mime',
+180 silly cache add   rawSpec: '1.2.6',
+180 silly cache add   spec: '1.2.6',
+180 silly cache add   type: 'version' }
+181 silly addNamed mime@1.2.6
+182 verbose addNamed "1.2.6" is a plain semver version for mime
+183 silly mapToRegistry name mime
+184 silly mapToRegistry using default registry
+185 silly mapToRegistry registry https://registry.npmjs.org/
+186 silly mapToRegistry data Result {
+186 silly mapToRegistry   raw: 'mime',
+186 silly mapToRegistry   scope: null,
+186 silly mapToRegistry   name: 'mime',
+186 silly mapToRegistry   rawSpec: '',
+186 silly mapToRegistry   spec: 'latest',
+186 silly mapToRegistry   type: 'tag' }
+187 silly mapToRegistry uri https://registry.npmjs.org/mime
+188 verbose addNameVersion registry:https://registry.npmjs.org/mime not in flight; fetching
+189 verbose request uri https://registry.npmjs.org/mime
+190 verbose request no auth needed
+191 info attempt registry request try #1 at 12:42:34
+192 verbose etag W/"584a1941-50be"
+193 verbose lastModified Fri, 09 Dec 2016 02:38:57 GMT
+194 http request GET https://registry.npmjs.org/mime
+195 http 200 https://registry.npmjs.org/mime
+196 verbose headers { server: 'nginx/1.10.1',
+196 verbose headers   'content-type': 'application/json',
+196 verbose headers   'last-modified': 'Wed, 28 Dec 2016 03:52:38 GMT',
+196 verbose headers   etag: 'W/"58633706-50be"',
+196 verbose headers   'content-encoding': 'gzip',
+196 verbose headers   'cache-control': 'max-age=300',
+196 verbose headers   'content-length': '3916',
+196 verbose headers   'accept-ranges': 'bytes',
+196 verbose headers   date: 'Mon, 16 Jan 2017 04:42:33 GMT',
+196 verbose headers   via: '1.1 varnish',
+196 verbose headers   age: '210',
+196 verbose headers   connection: 'keep-alive',
+196 verbose headers   'x-served-by': 'cache-nrt6129-NRT',
+196 verbose headers   'x-cache': 'HIT',
+196 verbose headers   'x-cache-hits': '7',
+196 verbose headers   'x-timer': 'S1484541753.949022,VS0,VE0',
+196 verbose headers   vary: 'Accept-Encoding' }
+197 silly get cb [ 200,
+197 silly get   { server: 'nginx/1.10.1',
+197 silly get     'content-type': 'application/json',
+197 silly get     'last-modified': 'Wed, 28 Dec 2016 03:52:38 GMT',
+197 silly get     etag: 'W/"58633706-50be"',
+197 silly get     'content-encoding': 'gzip',
+197 silly get     'cache-control': 'max-age=300',
+197 silly get     'content-length': '3916',
+197 silly get     'accept-ranges': 'bytes',
+197 silly get     date: 'Mon, 16 Jan 2017 04:42:33 GMT',
+197 silly get     via: '1.1 varnish',
+197 silly get     age: '210',
+197 silly get     connection: 'keep-alive',
+197 silly get     'x-served-by': 'cache-nrt6129-NRT',
+197 silly get     'x-cache': 'HIT',
+197 silly get     'x-cache-hits': '7',
+197 silly get     'x-timer': 'S1484541753.949022,VS0,VE0',
+197 silly get     vary: 'Accept-Encoding' } ]
+198 verbose get saving mime to C:\Users\ff\AppData\Roaming\npm-cache\registry.npmjs.org\mime\.cache.json
+199 verbose correctMkdir C:\Users\ff\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+200 silly mapToRegistry name mime
+201 silly mapToRegistry using default registry
+202 silly mapToRegistry registry https://registry.npmjs.org/
+203 silly mapToRegistry data Result {
+203 silly mapToRegistry   raw: 'mime',
+203 silly mapToRegistry   scope: null,
+203 silly mapToRegistry   name: 'mime',
+203 silly mapToRegistry   rawSpec: '',
+203 silly mapToRegistry   spec: 'latest',
+203 silly mapToRegistry   type: 'tag' }
+204 silly mapToRegistry uri https://registry.npmjs.org/mime
+205 verbose addRemoteTarball https://registry.npmjs.org/mime/-/mime-1.2.6.tgz not in flight; adding
+206 verbose addRemoteTarball [ 'https://registry.npmjs.org/mime/-/mime-1.2.6.tgz',
+206 verbose addRemoteTarball   'b1f86c768c025fa87b48075f1709f28aeaf20365' ]
+207 info retry fetch attempt 1 at 12:42:34
+208 info attempt registry request try #1 at 12:42:34
+209 http fetch GET https://registry.npmjs.org/mime/-/mime-1.2.6.tgz
+210 http fetch 200 https://registry.npmjs.org/mime/-/mime-1.2.6.tgz
+211 silly fetchAndShaCheck shasum b1f86c768c025fa87b48075f1709f28aeaf20365
+212 verbose addTmpTarball C:\Users\ff\AppData\Local\Temp\npm-14552-1da879ee\registry.npmjs.org\mime\-\mime-1.2.6.tgz not in flight; adding
+213 verbose addTmpTarball already have metadata; skipping unpack for mime@1.2.6
+214 verbose correctMkdir C:\Users\ff\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+215 silly cache afterAdd mime@1.2.6
+216 verbose afterAdd C:\Users\ff\AppData\Roaming\npm-cache\mime\1.2.6\package\package.json not in flight; writing
+217 verbose correctMkdir C:\Users\ff\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+218 verbose afterAdd C:\Users\ff\AppData\Roaming\npm-cache\mime\1.2.6\package\package.json written
+219 silly install resolved [ { author:
+219 silly install resolved      { name: 'Robert Kieffer',
+219 silly install resolved        email: 'robert@broofa.com',
+219 silly install resolved        url: 'http://github.com/broofa' },
+219 silly install resolved     contributors: [ [Object] ],
+219 silly install resolved     dependencies: {},
+219 silly install resolved     description: 'A comprehensive library for mime-type mapping',
+219 silly install resolved     devDependencies: {},
+219 silly install resolved     keywords: [ 'util', 'mime' ],
+219 silly install resolved     main: 'mime.js',
+219 silly install resolved     name: 'mime',
+219 silly install resolved     repository: { url: 'git://github.com/broofa/node-mime.git', type: 'git' },
+219 silly install resolved     version: '1.2.6',
+219 silly install resolved     _npmUser: { name: 'bentomas', email: 'benjamin@benjaminthomas.org' },
+219 silly install resolved     _id: 'mime@1.2.6',
+219 silly install resolved     optionalDependencies: {},
+219 silly install resolved     engines: { node: '*' },
+219 silly install resolved     _engineSupported: true,
+219 silly install resolved     _npmVersion: '1.1.12',
+219 silly install resolved     _nodeVersion: 'v0.6.14',
+219 silly install resolved     _defaultsLoaded: true,
+219 silly install resolved     dist:
+219 silly install resolved      { shasum: 'b1f86c768c025fa87b48075f1709f28aeaf20365',
+219 silly install resolved        tarball: 'https://registry.npmjs.org/mime/-/mime-1.2.6.tgz' },
+219 silly install resolved     maintainers: [ [Object], [Object] ],
+219 silly install resolved     directories: {},
+219 silly install resolved     _shasum: 'b1f86c768c025fa87b48075f1709f28aeaf20365',
+219 silly install resolved     _resolved: 'https://registry.npmjs.org/mime/-/mime-1.2.6.tgz',
+219 silly install resolved     _from: 'mime@1.2.6' } ]
+220 info install mime@1.2.6 into C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\ifile
+221 info installOne mime@1.2.6
+222 verbose installOne of mime to C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\ifile not in flight; installing
+223 verbose correctMkdir C:\Users\ff\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+224 verbose lock using C:\Users\ff\AppData\Roaming\npm-cache\_locks\mime-c9653f5266a0d725.lock for C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\ifile\node_modules\mime
+225 silly install write writing mime 1.2.6 to C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\ifile\node_modules\mime
+226 verbose unbuild node_modules\ifile\node_modules\mime
+227 silly gentlyRm C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\ifile\node_modules\mime is being purged from base C:\Users\ff\Desktop\nodePro\mnode\mnode
+228 verbose gentlyRm don't care about contents; nuking C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\ifile\node_modules\mime
+229 verbose tar unpack C:\Users\ff\AppData\Roaming\npm-cache\mime\1.2.6\package.tgz
+230 verbose tar unpacking to C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\ifile\node_modules\mime
+231 silly gentlyRm C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\ifile\node_modules\mime is being purged
+232 verbose gentlyRm don't care about contents; nuking C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\ifile\node_modules\mime
+233 silly gunzTarPerm modes [ '777', '666' ]
+234 silly gunzTarPerm extractEntry package.json
+235 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+236 silly gunzTarPerm extractEntry README.md
+237 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+238 silly gunzTarPerm extractEntry types/
+239 silly gunzTarPerm modified mode [ 'types/', 493, 511 ]
+240 silly gunzTarPerm extractEntry types/mime.types
+241 silly gunzTarPerm modified mode [ 'types/mime.types', 420, 438 ]
+242 silly gunzTarPerm extractEntry types/node.types
+243 silly gunzTarPerm modified mode [ 'types/node.types', 420, 438 ]
+244 silly gunzTarPerm extractEntry test.js
+245 silly gunzTarPerm modified mode [ 'test.js', 420, 438 ]
+246 silly gunzTarPerm extractEntry LICENSE
+247 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+248 silly gunzTarPerm extractEntry mime.js
+249 silly gunzTarPerm modified mode [ 'mime.js', 420, 438 ]
+250 verbose write writing to C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\ifile\node_modules\mime\package.json
+251 info preinstall mime@1.2.6
+252 verbose readDependencies loading dependencies from C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\ifile\node_modules\mime\package.json
+253 verbose readDependencies loading dependencies from C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\ifile\node_modules\mime\package.json
+254 silly install resolved []
+255 verbose about to build C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\ifile\node_modules\mime
+256 info build C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\ifile\node_modules\mime
+257 info linkStuff mime@1.2.6
+258 silly linkStuff mime@1.2.6 has C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\ifile\node_modules as its parent node_modules
+259 verbose linkBins mime@1.2.6
+260 verbose linkMans mime@1.2.6
+261 verbose rebuildBundles mime@1.2.6
+262 info install mime@1.2.6
+263 info postinstall mime@1.2.6
+264 verbose unlock done using C:\Users\ff\AppData\Roaming\npm-cache\_locks\mime-c9653f5266a0d725.lock for C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\ifile\node_modules\mime
+265 verbose about to build C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\ifile
+266 info build C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\ifile
+267 info linkStuff ifile@0.3.9
+268 silly linkStuff ifile@0.3.9 has C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules as its parent node_modules
+269 verbose linkBins ifile@0.3.9
+270 verbose linkMans ifile@0.3.9
+271 verbose rebuildBundles ifile@0.3.9
+272 verbose rebuildBundles [ 'mime' ]
+273 info install ifile@0.3.9
+274 verbose unsafe-perm in lifecycle true
+275 info ifile@0.3.9 Failed to exec install script
+276 verbose unlock done using C:\Users\ff\AppData\Roaming\npm-cache\_locks\ifile-c087924721f1465f.lock for C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\ifile
+277 verbose stack Error: ifile@0.3.9 install: `node-gyp rebuild`
+277 verbose stack Exit status 1
+277 verbose stack     at EventEmitter.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\lifecycle.js:217:16)
+277 verbose stack     at emitTwo (events.js:87:13)
+277 verbose stack     at EventEmitter.emit (events.js:172:7)
+277 verbose stack     at ChildProcess.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\spawn.js:24:14)
+277 verbose stack     at emitTwo (events.js:87:13)
+277 verbose stack     at ChildProcess.emit (events.js:172:7)
+277 verbose stack     at maybeClose (internal/child_process.js:827:16)
+277 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+278 verbose pkgid ifile@0.3.9
+279 verbose cwd C:\Users\ff\Desktop\nodePro\mnode\mnode
+280 error Windows_NT 6.1.7601
+281 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "--save" "ifile"
+282 error node v4.4.5
+283 error npm  v2.15.5
+284 error code ELIFECYCLE
+285 error ifile@0.3.9 install: `node-gyp rebuild`
+285 error Exit status 1
+286 error Failed at the ifile@0.3.9 install script 'node-gyp rebuild'.
+286 error This is most likely a problem with the ifile package,
+286 error not with npm itself.
+286 error Tell the author that this fails on your system:
+286 error     node-gyp rebuild
+286 error You can get information on how to open an issue for this project with:
+286 error     npm bugs ifile
+286 error Or if that isn't available, you can get their info via:
+286 error
+286 error     npm owner ls ifile
+286 error There is likely additional logging output above.
+287 verbose exit [ 1, true ]
+288 verbose unbuild node_modules\ifile
+289 info preuninstall ifile@0.3.9
+290 info uninstall ifile@0.3.9
+291 verbose unbuild rmStuff ifile@0.3.9 from C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules
+292 info postuninstall ifile@0.3.9
+293 silly gentlyRm C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\ifile is being purged from base C:\Users\ff\Desktop\nodePro\mnode\mnode
+294 verbose gentlyRm don't care about contents; nuking C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\ifile
+295 silly vacuum-fs purging C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules\ifile
+296 silly vacuum-fs quitting because other entries in C:\Users\ff\Desktop\nodePro\mnode\mnode\node_modules
