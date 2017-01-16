@@ -20,6 +20,7 @@ module.exports = {
     "Mongoose": require("./db-mongodb/app"),
     "Queue": require("./queue-utils/app"),
     "Buffer": require("./buffer-utils/app"),
-    "TcpClient": require("./tcp-utils/app")
+    "TcpClient": require("./tcp-utils/app"),
+    "MyLogger": require("./logger/app")
 };
 

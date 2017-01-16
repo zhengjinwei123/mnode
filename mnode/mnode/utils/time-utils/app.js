@@ -190,6 +190,23 @@ timeUtils.prototype.init = function () {
         }
         return false;
     };
+
+    function fix2num(n) {
+        return [0, n].join('').slice(-2);
+    }
+
+    Date.prototype.timeFormat = function (format, time) {
+        var curdate = (time > 0) ? new Date(time) : this;
+        if (format == undefined) return curdate;
+        format = format.replace(/Y/i, curdate.getFullYear());
+        format = format.replace(/m/i, fix2num(curdate.getMonth() + 1));
+        format = format.replace(/d/i, fix2num(curdate.getDate()));
+        format = format.replace(/H/i, fix2num(curdate.getHours()));
+        format = format.replace(/i/i, fix2num(curdate.getMinutes()));
+        format = format.replace(/s/i, fix2num(curdate.getSeconds()));
+        format = format.replace(/ms/i, curdate.getMilliseconds());
+        return format;
+    };
 };
 
 module.exports = timeUtils.getInstance();
