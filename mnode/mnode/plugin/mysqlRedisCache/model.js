@@ -121,22 +121,23 @@ Model.prototype.check = function () {
 
 Model.prototype.find = function (pKV) {
     var argsCnt = _.keys(arguments).length;
-    var columns,expire,callback = null;
+    var columns, expire, callback = null;
     if (argsCnt == 2) {
         columns = "*";
         expire = 86400;
         callback = arguments[1];
     } else if (argsCnt == 3) {
         columns = "*";
-        expire =  86400;
+        expire = 86400;
         callback = arguments[2];
     } else {
         columns = arguments[1];
-        expire =  arguments[2];
+        expire = arguments[2];
         callback = arguments[3];
     }
 
     var self = this;
+
 
     if (!this.check()) {
         callback("please init connection")
@@ -145,7 +146,7 @@ Model.prototype.find = function (pKV) {
             var results = null;
             Async.waterfall([
                 function (cb) {
-                    self.redis.exists(self.getCK(pKV), function (err,exists) {
+                    self.redis.exists(self.getCK(pKV), function (err, exists) {
                         if (!exists) {
                             cb("key:" + self.getCK(pKV) + " not exists");
                         } else {
@@ -183,7 +184,14 @@ Model.prototype.find = function (pKV) {
                     self.query(sql, [], function (err, results, fields) {
                         if (!err && (!_.isEmpty(results))) {
                             self.initFields(results[0]);
-                            callback(err, self);
+                            var temp = [];
+                            _.forEach(self.getFields(), function (v, k) {
+                                temp.push(k);
+                                temp.push(v);
+                            });
+                            self.redis.hmSet(self.getCK(pKV), temp, function (err, resp) {
+                                callback(err, self);
+                            });
                         } else {
                             callback(err, null);
                         }
@@ -215,15 +223,113 @@ Model.prototype.find = function (pKV) {
 };
 
 Model.prototype.insert = function (callback) {
-    
+    var fields = [], temp = [], values = [];
+    _.forEach(this.fields, function (v, k) {
+        fields.push(k);
+        values.push(v);
+        temp.push("?");
+    });
+
+    var self = this;
+    var sql = Util.format("insert into %s (%s) values(%s)", this.getFullTableName(), fields.join(","), temp.join(","));
+
+    this.query(sql, values, function (err, resp) {
+        if (!err) {
+            if (self.mode === "c") {
+                var temp = [];
+                _.forEach(self.getFields(), function (v, k) {
+                    temp.push(k);
+                    temp.push(v);
+                });
+                self.redis.hmSet(self.getCK(), temp, function (err, resp) {
+                    callback(err, self);
+                });
+            } else {
+                callback(err);
+            }
+        } else {
+            callback(err);
+        }
+    });
 };
 
 Model.prototype.update = function (callback) {
+    var keys = _.keys(this.updateFields);
+    if (keys.length == 0) {
+        callback(null);
+        return 0;
+    }
 
+    if (this.pk == '') {
+        callback(null);
+        return 0;
+    }
+
+    if (this.mode === "c") {
+        var self = this;
+
+        self.redis.ttl(self.getCK(), function (err, ttl) {
+            if (ttl != -1 && ttl < 3) {
+                callback("data not exists ttl:" + ttl + self.getCK());
+            } else {
+                if (err) {
+                    callback(err);
+                } else {
+                    self.redis.multi(function (multi, release) {
+                        var temp = [];
+                        _.forEach(self.getFieldChanged(), function (v, k) {
+                            temp.push(k);
+                            temp.push(v);
+                        });
+                        multi.hmset(self.getCK(), temp);
+                        multi.expire(self.getCK(), 68400);
+                        self.redis.exec(multi, release, function (err) {
+                            if (!err) {
+                                self.init_field_changed();
+                            }
+                            callback(err);
+                        })
+                    });
+                }
+            }
+        });
+    } else {
+        var temp = [];
+        _.forEach(this.getFieldChanged(), function (v, k) {
+            temp.push(k + "=" + v);
+        });
+
+        var sql = Util.format("update %s set %s where %s=`%s`", this.getFullTableName(), temp.join(","), this.pk, this.getPKV());
+        this.query(sql, [], function (err, resp) {
+            callback(err);
+        });
+    }
 };
 
 Model.prototype.delete = function (callback) {
+    if (this.pk == '') {
+        callback(null);
+        return 0;
+    }
 
+    if (this.mode === "c") {
+        var self = this;
+        this.redis.del(this.getCK(), function (err, resp) {
+            if (!err) {
+                var sql = Util.format("delete from %s where %s=%s", self.getFullTableName(), self.pk, self.getPKV());
+                self.query(sql, [], function (err, resp) {
+                    callback(err);
+                })
+            } else {
+                callback(err);
+            }
+        });
+    } else {
+        var sql = Util.format("delete from %s where %s=`%s`", this.getFullTableName(), this.pk, this.getPKV());
+        this.query(sql, [], function (err, resp) {
+            callback(err);
+        })
+    }
 };
 
 

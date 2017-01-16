@@ -247,6 +247,15 @@ RedisUtil.prototype.zRevRangeByScore = function (key, minScore, maxScore, withsc
     });
 };
 
+RedisUtil.prototype.ttl = function (key, callback) {
+    var poolName = this.default_pool;
+    this.execute(poolName, function (client, release) {
+        client.ttl(key, function (err, res) {
+            callback(err, res);
+            release();
+        })
+    });
+};
 
 //支持事务
 RedisUtil.prototype.multi = function (callback) {
