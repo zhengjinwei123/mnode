@@ -1,5 +1,6 @@
 /**
- * Created by zhengjinwei on 2017/1/17.
+ * Created by zhengjinwei on genTime.
+ * model代码基于工具自动生成,不要进行修改
  */
 var Model = require("../model");
 var Util = require("util");

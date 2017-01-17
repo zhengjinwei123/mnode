@@ -42,7 +42,9 @@ function genModels(ModelPath,dataList,callback) {
         temp = temp.replace(/\{\}/,JSON.stringify(v['fields']));
         temp = temp.replace(/t_/,v['tablePrefix']);
         temp = temp.replace(/pkv/,v['pk']);
+        temp = temp.replace(/genTime/,new Date().toLocaleString());
 
+        //console.log(temp)
         FileUtil.writeSync(Path.join(ModelPath,"/"+tableName+".js"), temp);
     });
     callback(null);
