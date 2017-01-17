@@ -8,16 +8,45 @@ var FileUtil = require("../../utils/file-utils/app");
 var _ = require("lodash");
 var Util = require("util");
 
-var MysqlRedisCache = function (xmlPath, callback) {
+var MysqlRedisCache = function (xmlPath,ModelPath, callback) {
     if (!FileUtil.isFile(xmlPath)) {
         throw new Error(xmlPath + " file not exits");
     }
 
-    genDBCode(xmlPath, function (err, result) {
-        var fileName = xmlPath.replace(".xml",".sql");
-        FileUtil.writeSync(fileName,result);
+    genDBCode(xmlPath, function (err, result, modeList) {
+        if (!err && result) {
+            var fileName = xmlPath.replace(".xml", ".sql");
+            FileUtil.writeSync(fileName, result);
+
+            if (modeList) {
+                genModels(ModelPath,modeList,callback);
+            }
+        }
     });
 };
+
+function firstUppercase(str){ // 正则法
+    str = str.toLowerCase();
+    var reg = /\b(\w)|\s(\w)/g; //  \b判断边界\s判断空格
+    return str.replace(reg,function(m){
+        return m.toUpperCase()
+    });
+}
+
+function genModels(ModelPath,dataList,callback) {
+    var template = FileUtil.readSync(Path.join(__dirname,"./template/model.js"));
+
+    _.forEach(dataList,function(v,tableName){
+        var temp = template.replace(/MODELNAME/g,firstUppercase(tableName));
+        temp = temp.replace(/tablename/,tableName);
+        temp = temp.replace(/\{\}/,JSON.stringify(v['fields']));
+        temp = temp.replace(/t_/,v['tablePrefix']);
+        temp = temp.replace(/pk/,v['pk']);
+
+        FileUtil.writeSync(Path.join(ModelPath,"/"+tableName+".js"), temp);
+    });
+    callback(null);
+}
 
 var genDBCode = function (xmlPath, callback) {
     XmlParser(xmlPath, function (err, results) {
@@ -53,6 +82,8 @@ var genDBCode = function (xmlPath, callback) {
 
 function genSql(databaseObj, callback) {
     if (databaseObj['dbName']) {
+        var modelList = {};//用于记录数据模型，之后用这份数据自动生成数据库模型脚本文件
+
         var sql = Util.format("CREATE DATABASE IF NOT EXISTS `%s` character set %s collate %s;", databaseObj['dbName'], databaseObj['dbCharacter'] || 'utf8', databaseObj['dbCollate'] || 'utf8_general_ci');
         sql += Util.format('\r\nUSE `%s`', databaseObj['dbName']);
 
@@ -63,8 +94,15 @@ function genSql(databaseObj, callback) {
                 if (!t['table']['fields']) {
                     return 0;
                 }
+
+                modelList[t['table']['name']] = modelList[t['table']['name']] || {};
+                modelList[t['table']['name']].tablePrefix = t['tablePrefix'];
+
                 var auto = null;
                 var fieldsSql = [];
+
+                modelList[t['table']['name']].fields = {};
+
                 _.forEach(t['table']['fields'], function (f, k) {
                     var tempSql = "";
                     if (f['autoincr']) {
@@ -88,6 +126,16 @@ function genSql(databaseObj, callback) {
                             tempSql += ' COMMENT ' + "'" + f['comment'] + "'";
                         }
                         fieldsSql.push(tempSql);
+
+                        if (f['default']) {
+                            modelList[t['table']['name']].fields[f['name']] = f['default'];
+                        } else {
+                            if (f['type'].toLowerCase() == 'varchar' || f['type'].toLowerCase() == 'char') {
+                                modelList[t['table']['name']].fields[f['name']] = '';
+                            } else {
+                                modelList[t['table']['name']].fields[f['name']] = 0;
+                            }
+                        }
                     }
                 });
 
@@ -101,6 +149,9 @@ function genSql(databaseObj, callback) {
                         var tempSql = "";
                         var type = i['type'].toUpperCase();
                         if (type == 'PRIMARY KEY') {
+
+                            modelList[t['table']['name']].pk = i['field'];//记录唯一索引
+
                             tempSql += '\tPRIMARY KEY (' + i['field'] + ')'
                         } else if (type == 'KEY' || type == 'UNIQUE KEY') {
                             var keyFields = i['field'].split(",");
@@ -142,11 +193,13 @@ function genSql(databaseObj, callback) {
                 sql += ";\r\n\r\n";
             });
         }
-        callback(null,sql);
+
+        callback(null, sql, modelList);
     } else {
         callback("xml format error");
     }
 }
+
 
 function parseTables(tables, databaseObj) {
     _.forEach(tables, function (t, k) {
@@ -236,7 +289,7 @@ module.exports = MysqlRedisCache;
 
 
 var Path = require("path");
-var m = new MysqlRedisCache(Path.join(__dirname, "/template/db.xml"), function () {
+var m = new MysqlRedisCache(Path.join(__dirname, "/template/db.xml"), Path.join(__dirname, "/template"),function () {
 
 });
 
