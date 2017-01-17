@@ -3,6 +3,7 @@
  */
 var ParseString = require('xml2js').parseString;
 var Iconv = require('iconv-lite');
+var FileUtil = require("../file-utils/app");
 
 
 //用于解决xml中的注释不合法导致解析出错的bug
