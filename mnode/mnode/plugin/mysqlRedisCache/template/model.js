@@ -9,7 +9,7 @@ function MODELNAME(){
     this.tableName = 'tablename';
     this.fields = {};
     this.tablePrefix = 't_';
-    this.pk = 'pk';
+    this.pk = 'pkv';
 }
 Util.inherits(MODELNAME,Model);
 

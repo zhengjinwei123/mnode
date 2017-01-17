@@ -41,7 +41,7 @@ function genModels(ModelPath,dataList,callback) {
         temp = temp.replace(/tablename/,tableName);
         temp = temp.replace(/\{\}/,JSON.stringify(v['fields']));
         temp = temp.replace(/t_/,v['tablePrefix']);
-        temp = temp.replace(/pk/,v['pk']);
+        temp = temp.replace(/pkv/,v['pk']);
 
         FileUtil.writeSync(Path.join(ModelPath,"/"+tableName+".js"), temp);
     });
@@ -288,10 +288,10 @@ function parseField(tt, fields) {
 module.exports = MysqlRedisCache;
 
 
-var Path = require("path");
-var m = new MysqlRedisCache(Path.join(__dirname, "/template/db.xml"), Path.join(__dirname, "/template"),function () {
-
-});
+//var Path = require("path");
+//var m = new MysqlRedisCache(Path.join(__dirname, "/template/db.xml"), Path.join(__dirname, "/template"),function () {
+//
+//});
 
 
 

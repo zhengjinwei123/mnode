@@ -9,7 +9,7 @@ function User(){
     this.tableName = 'user';
     this.fields = {"roleid":0,"rolename":"","create_tm":"0","serverid":"0","channelid":"0","lastupdate":"CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP"};
     this.tablePrefix = 't1_';
-    this.roleid = 'pk';
+    this.pk = 'roleid';
 }
 Util.inherits(User,Model);
 

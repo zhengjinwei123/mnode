@@ -4,20 +4,13 @@
 var Model = require("../model");
 var Util = require("util");
 
-function User1() {
+function User1(){
     Model.call(this);
     this.tableName = 'user1';
-    this.fields = {
-        "roleid": 0,
-        "rolename": "",
-        "create_tm": "0",
-        "serverid": "0",
-        "channelid": "0",
-        "lastupdate": "CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP"
-    };
+    this.fields = {"roleid":0,"rolename":"","create_tm":"0","serverid":"0","channelid":"0","lastupdate":"CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP"};
     this.tablePrefix = 't1_';
-    this.roleid = 'pk';
+    this.pk = 'roleid';
 }
-Util.inherits(User1, Model);
+Util.inherits(User1,Model);
 
 module.exports = User1;
