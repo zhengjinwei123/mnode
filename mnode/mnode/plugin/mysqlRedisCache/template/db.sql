@@ -1,5 +1,6 @@
 CREATE DATABASE IF NOT EXISTS `jade_db` character set utf8 collate utf8_general_ci;
-USE `jade_db`-- ------------------ 
+USE `jade_db`
+-- ------------------ 
 -- 用户表
 -- ------------------
 CREATE TABLE IF NOT EXISTS `t_user` (

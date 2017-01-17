@@ -6,5 +6,6 @@ module.exports = {
     "HttpServer": require("./http/app"),
     "WSServer": require("./websocket/app"),
     "UdpServer": require("./udp/app"),
-    "TcpServer": require("./tcp/app")
+    "TcpServer": require("./tcp/app"),
+    "MysqlRedisCache": require("./mysqlRedisCache/app")
 };

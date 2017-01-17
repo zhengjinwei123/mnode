@@ -87,7 +87,7 @@ function genSql(databaseObj, callback) {
         var modelList = {};//用于记录数据模型，之后用这份数据自动生成数据库模型脚本文件
 
         var sql = Util.format("CREATE DATABASE IF NOT EXISTS `%s` character set %s collate %s;", databaseObj['dbName'], databaseObj['dbCharacter'] || 'utf8', databaseObj['dbCollate'] || 'utf8_general_ci');
-        sql += Util.format('\r\nUSE `%s`', databaseObj['dbName']);
+        sql += Util.format('\r\nUSE `%s`\r\n', databaseObj['dbName']);
 
         if (databaseObj['tables']) {
             _.forEach(databaseObj['tables'], function (t, k) {
