@@ -109,9 +109,13 @@ Cache2DB.prototype.cache = function (key, callback) {
                         });
                     }, function (err, resp) {
                         if (!err) {
-                            self.execSql(sqlArray, callback);
+                            self.execSql(sqlArray, function (err) {
+                                self.redis.lTrim(key, list.length, -1, function (err, resp) {
+                                    callback(null);
+                                })
+                            });
                         } else {
-                            callback(err);
+                            callback(null);
                         }
                     });
                 }

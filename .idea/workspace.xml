@@ -39,8 +39,8 @@
       <file leaf-file-name="cache.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/cache.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.56401384" vertical-offset="430" max-vertical-offset="3906">
-              <caret line="36" column="38" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
+            <state vertical-scroll-proportion="1.9809688" vertical-offset="1312" max-vertical-offset="3990">
+              <caret line="117" column="43" selection-start-line="117" selection-start-column="43" selection-end-line="117" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -110,7 +110,7 @@
         <entry file="file://$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/test.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="567" max-vertical-offset="1638">
-              <caret line="64" column="22" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
+              <caret line="35" column="33" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -854,14 +854,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="567" max-vertical-offset="1638">
-          <caret line="64" column="22" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="693" max-vertical-offset="6405">
@@ -886,10 +878,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="567" max-vertical-offset="1638">
+          <caret line="35" column="33" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/cache.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56401384" vertical-offset="430" max-vertical-offset="3906">
-          <caret line="36" column="38" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
+        <state vertical-scroll-proportion="1.9809688" vertical-offset="1312" max-vertical-offset="3990">
+          <caret line="117" column="43" selection-start-line="117" selection-start-column="43" selection-end-line="117" selection-end-column="43" />
           <folding />
         </state>
       </provider>
