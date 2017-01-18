@@ -18,6 +18,7 @@ function Cache2DB(redisCfg, mysqlCfg, cacheInterval) {
         _.isUndefined(redisCfg.auth)) {
         throw new TypeError("redis cfg error");
     }
+    this.stat = false;
     this.redis = new Redis(parseInt(redisCfg.poolCnt), redisCfg.namePrefix, redisCfg.host, parseInt(redisCfg.port), redisCfg.db, redisCfg.auth);
     this.startCache(cacheInterval || (3 * 1000 * 60));
 }
@@ -30,15 +31,20 @@ Cache2DB.prototype.getCKS = function (callback) {
 Cache2DB.prototype.startCache = function (cacheInterval) {
     if (cacheInterval) {
         var self = this;
-        setTimeout(function () {
-            self.cacheRun();
+        setInterval(function () {
+            if (self.stat == false) {
+                self.cacheRun(function (err) {
+                    self.stat = false;
+                });
+            }
         }, cacheInterval);
     } else {
         throw new Error("cacheInterval undefined");
     }
 };
 
-Cache2DB.prototype.cacheRun = function () {
+Cache2DB.prototype.cacheRun = function (callback) {
+    this.stat = true;
     var self = this;
     this.getCKS(function (err, cacheKeys) {
         if (!err && cacheKeys) {
@@ -50,8 +56,11 @@ Cache2DB.prototype.cacheRun = function () {
             Async.each(cacheKeys, function (cacheKey, cb) {
                 self.cache(cacheKey, cb);
             }, function (err, resp) {
+                callback(err);
                 console.timeEnd("cache", "redis2db cost " + (new Date() - s) + " milliseconds");
             });
+        } else {
+            callback(err);
         }
     });
 };
