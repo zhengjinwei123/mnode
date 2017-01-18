@@ -6,13 +6,9 @@ var _ = require("lodash");
 var Async = require("async");
 var Util = require("util");
 
-function Model(fields, primaryKey) {
-    if (!_.isObject(fields)) {
-        throw new TypeError("fields is error");
-    }
-    this.fields = fields;//字段
+function Model() {
     this.updateFields = {};
-    this.pk = primaryKey || null;//主键
+    this.pk = null;//主键
     this.tableName = "";
     this.tablePrefix = "t_";
 

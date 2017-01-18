@@ -2,9 +2,9 @@
  * Created by zhengjinwei on 2017/1/16.
  */
 
-var Model = require("./model");
+var UserModel = require("./template/user");
 
-var m = new Model({}, "id");
+var m = new UserModel();
 
 m.setMysql({
     host: "127.0.0.1",
@@ -23,7 +23,6 @@ m.setRedis({
     auth: null
 });
 
-m.setTableName("regist");
 
 console.log(m.getFullTableName());
 
@@ -38,33 +37,24 @@ process.on("uncaughtException", function (err) {
 //    }
 //});
 
+
 m.initFields({
-    id: 999999991,
-    account: 'a',
-    mode: '1',
-    source: 'source',
-    device: 'd',
-    deviceuuid: 'dd',
-    os: 'o',
-    osvers: 's',
-    time: '1111',
-    savetime: '2017-01-18 17:11:54'
+    roleid:104,
+    rolename: "中文",
+    create_tm: new Date().getTime() / 1000,
+    serverid: 1000033,
+    channelid: 10000
 });
 
-//m.insert(function(err){
-//    console.log("insert",err);
-//    m.setField("account","ZHENGJINWEI");
-//    m.update(function(ERR){
-//        console.log("update",ERR)
-//    });
-//})
+m.insert(function(err){
+    console.log("insert",err);
+    //m.setField("rolename","ROLENAME2");
+    //m.update(function(ERR){
+    //    console.log("update",ERR)
+    //});
+});
 
-m.setField("account","zhengjinwei1666");
-m.setField("deviceuuid","111111111111111111");
 
-m.update(function(ERR){
-    console.log(ERR)
-})
 
 //m.delete(function(err){
 //    console.log(err);
