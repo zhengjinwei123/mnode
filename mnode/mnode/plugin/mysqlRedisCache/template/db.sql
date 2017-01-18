@@ -4,8 +4,8 @@ USE `jade_db`
 -- 用户表
 -- ------------------
 CREATE TABLE IF NOT EXISTS `t_user` (
-	`roleid` bigint(20) AUTO_INCREMENT COMMENT '唯一ID',
-	`rolename` varchar(32) COMMENT '玩家名',
+	`roleid` bigint(20) NOT NULL DEFAULT 0 AUTO_INCREMENT COMMENT '唯一ID',
+	`rolename` varchar(32) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT '玩家名',
 	`create_tm` int(10) NOT NULL DEFAULT 0 COMMENT '创建时间',
 	`serverid` int(10) NOT NULL DEFAULT 0 COMMENT '服ID',
 	`channelid` int(8) NOT NULL DEFAULT 0 COMMENT '渠道ID',
@@ -19,8 +19,8 @@ CREATE TABLE IF NOT EXISTS `t_user` (
 -- 用户表1
 -- ------------------
 CREATE TABLE IF NOT EXISTS `t_user1` (
-	`roleid` bigint(20) COMMENT '唯一ID',
-	`rolename` varchar(32) COMMENT '玩家名',
+	`roleid` bigint(20) NOT NULL DEFAULT 0 COMMENT '唯一ID',
+	`rolename` varchar(32) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT '玩家名',
 	`create_tm` int(10) NOT NULL DEFAULT 0 COMMENT '创建时间',
 	`serverid` int(10) NOT NULL DEFAULT 0 COMMENT '服ID',
 	`channelid` int(8) NOT NULL DEFAULT 0 COMMENT '渠道ID',
@@ -34,8 +34,8 @@ CREATE TABLE IF NOT EXISTS `t_user1` (
 -- 用户表
 -- ------------------
 CREATE TABLE IF NOT EXISTS `t1_user` (
-	`roleid` bigint(20) COMMENT '唯一ID',
-	`rolename` varchar(32) COMMENT '玩家名',
+	`roleid` bigint(20) NOT NULL DEFAULT 0 COMMENT '唯一ID',
+	`rolename` varchar(32) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT '玩家名',
 	`create_tm` int(10) NOT NULL DEFAULT 0 COMMENT '创建时间',
 	`serverid` int(10) NOT NULL DEFAULT 0 COMMENT '服ID',
 	`channelid` int(8) NOT NULL DEFAULT 0 COMMENT '渠道ID',
@@ -49,8 +49,8 @@ CREATE TABLE IF NOT EXISTS `t1_user` (
 -- 用户表1
 -- ------------------
 CREATE TABLE IF NOT EXISTS `t1_user1` (
-	`roleid` bigint(20) COMMENT '唯一ID',
-	`rolename` varchar(32) COMMENT '玩家名',
+	`roleid` bigint(20) NOT NULL DEFAULT 0 COMMENT '唯一ID',
+	`rolename` varchar(32) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT '玩家名',
 	`create_tm` int(10) NOT NULL DEFAULT 0 COMMENT '创建时间',
 	`serverid` int(10) NOT NULL DEFAULT 0 COMMENT '服ID',
 	`channelid` int(8) NOT NULL DEFAULT 0 COMMENT '渠道ID',

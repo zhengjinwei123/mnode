@@ -1,5 +1,5 @@
 /**
- * Created by zhengjinwei on 2017-01-17 15:29:13.
+ * Created by zhengjinwei on 2017-01-18 16:53:55.
  * model代码基于工具自动生成,不要进行修改
  */
 var Model = require("../model");

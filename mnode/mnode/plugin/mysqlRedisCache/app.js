@@ -117,9 +117,26 @@ function genSql(databaseObj, callback) {
                             tempSql += Util.format("\t`%s` %s(%s)", f['name'], f['type'], f['length']);
                         }
 
+                        if(f['character']){
+                            tempSql += ' CHARACTER SET '+f['character'];
+                        }
+                        if(f['collate']){
+                            tempSql += ' COLLATE '+f['collate'];
+                        }
+
                         if (f['default']) {
                             tempSql += " NOT NULL";
                             tempSql += " DEFAULT " + f['default'];
+                        }else{
+                            if(f['null'] && f['null'] == 'false'){
+                                tempSql += " NOT NULL";
+
+                                if(f['type'] == 'char' || f['type'] == 'varchar'){
+                                    tempSql += " DEFAULT ''";
+                                }else{
+                                    tempSql += " DEFAULT 0";
+                                }
+                            }
                         }
                         if (f['autoincr']) {
                             tempSql += ' AUTO_INCREMENT';
