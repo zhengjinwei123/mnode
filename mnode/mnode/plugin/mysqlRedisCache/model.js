@@ -376,7 +376,7 @@ Model.prototype.setCacheListKey = function ($keyNum) {
 Model.prototype.updateCacheList = function (multi, fields, callback) {
     var data = {
         'ck': this.getCK(),
-        'tbn': this.tableName,
+        'tbn': this.getFullTableName(),
         'pk': this.pk,
         'pkv': this.getPKV(),
         'fields': fields

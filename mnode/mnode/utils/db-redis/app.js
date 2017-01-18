@@ -335,20 +335,20 @@ RedisUtil.prototype.lTrim = function (key, s, e, callback) {
 };
 
 
-RedisUtil.prototype.lRange = function (key, value, callback) {
+RedisUtil.prototype.lRange = function (key, S,E, callback) {
     var poolName = this.default_pool;
     this.execute(poolName, function (client, release) {
-        client.lrange(key, value, function (err, res) {
+        client.lrange(key, S,E, function (err, res) {
             callback(err, res);
             release();
         })
     });
 };
 
-RedisUtil.prototype.rRange = function (key, value, callback) {
+RedisUtil.prototype.rRange = function (key, S,E, callback) {
     var poolName = this.default_pool;
     this.execute(poolName, function (client, release) {
-        client.rrange(key, value, function (err, res) {
+        client.rrange(key, S,E, function (err, res) {
             callback(err, res);
             release();
         })

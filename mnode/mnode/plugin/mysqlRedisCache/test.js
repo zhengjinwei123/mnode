@@ -51,22 +51,40 @@ m.initFields({
     savetime: '2017-01-18 17:11:54'
 });
 
-m.insert(function(err){
-    console.log("insert",err);
-    m.setField("account","ZHENGJINWEI");
-    m.update(function(ERR){
-        console.log("update",ERR)
-    });
-})
-
-
-
-//m.update(function(ERR){
-//    console.log(ERR)
+//m.insert(function(err){
+//    console.log("insert",err);
+//    m.setField("account","ZHENGJINWEI");
+//    m.update(function(ERR){
+//        console.log("update",ERR)
+//    });
 //})
+
+m.setField("account","zhengjinwei1666");
+m.setField("deviceuuid","111111111111111111");
+
+m.update(function(ERR){
+    console.log(ERR)
+})
 
 //m.delete(function(err){
 //    console.log(err);
 //})
+
+var Cache = require("./cache");
+
+var c = new Cache({
+    poolCnt: 1,
+    namePrefix: "pool_",
+    host: "127.0.0.1",
+    port: 6379,
+    db: 1,
+    auth: null
+},{
+    host: "127.0.0.1",
+    port: 3306,
+    user: "root",
+    database: "lxh_reportdb",
+    password: "root"
+},1000);
 
 

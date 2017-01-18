@@ -100,7 +100,7 @@ Cache2DB.prototype.cache = function (key, callback) {
                                 var fields = updateList[key]['fields'];
                                 self.redis.hmGet(key, _.keys(fields), function (err, result) {
                                     if (!err && result) {
-                                        var sql = parseSql(updateList[key], result);
+                                        var sql = parseSql(updateList[key], _.keys(fields), result);
                                         sqlArray.push(sql);
                                     }
                                     cb(null);
@@ -143,6 +143,7 @@ Cache2DB.prototype.execSql = function (sqlArray, callback) {
 
         var self = this;
         Async.each(sqlGroup, function (sqls, cb) {
+            console.log(sqls);
             self.query(sqls, [], function (err, resp) {
                 if (err) {
                     console.error("execSql error:", err);
@@ -169,11 +170,15 @@ Cache2DB.prototype.query = function (sql, params, callback) {
     })
 };
 
-function parseSql(stru, data) {
+function parseSql(stru, fields, data) {
     if (data) {
         var updateFields = [];
         _.forEach(data, function (v, k) {
-            updateFields.push(k + "=" + v);
+            if (_.isNaN(parseFloat(v))) {
+                updateFields.push(fields[k] + "=" + "'" + v + "'");
+            } else {
+                updateFields.push(fields[k] + "=" + parseFloat(v));
+            }
         });
         if (updateFields) {
             return Util.format("update %s set %s where %s=%s", stru['tbn'], updateFields.join(","), stru['pk'], stru['pkv']);
