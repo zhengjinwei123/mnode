@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e1bba6a-f143-4311-a8c5-15494fad21be" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/template/user.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/template/user1.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mnode/mnode/plugin/app.js" afterPath="$PROJECT_DIR$/mnode/mnode/plugin/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/app.js" afterPath="$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/template/db.sql" afterPath="$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/template/db.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/cache.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mnode/mnode/utils/db-redis/app.js" afterPath="$PROJECT_DIR$/mnode/mnode/utils/db-redis/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/model.js" afterPath="$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/model.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/test.js" afterPath="$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/test.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="nodePro.iws" />
@@ -34,8 +33,18 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="5827" max-vertical-offset="6405">
-              <caret line="289" column="33" selection-start-line="289" selection-start-column="33" selection-end-line="289" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="693" max-vertical-offset="6405">
+              <caret line="47" column="60" selection-start-line="47" selection-start-column="51" selection-end-line="47" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cache.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/cache.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.2733564" vertical-offset="3139" max-vertical-offset="3717">
+              <caret line="157" column="0" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -44,28 +53,18 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mnode/mnode/plugin/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="336">
-              <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="336">
+              <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/test.js">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mnode/mnode/plugin/jadeLoader/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="231" max-vertical-offset="1554">
-              <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mnode/mnode/utils/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.71573603" vertical-offset="102" max-vertical-offset="693">
-              <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1764" max-vertical-offset="4830">
+              <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -74,7 +73,7 @@
       <file leaf-file-name="db.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/template/db.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1260">
+            <state vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="1260">
               <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
               <folding />
             </state>
@@ -91,21 +90,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user1.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/template/user1.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="462">
-              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="model.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/template/model.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="462">
-              <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -114,18 +103,28 @@
       <file leaf-file-name="model.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/model.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7560">
-              <caret line="14" column="12" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="12" />
+            <state vertical-scroll-proportion="-1.9655173" vertical-offset="7167" max-vertical-offset="8463">
+              <caret line="344" column="0" selection-start-line="344" selection-start-column="0" selection-end-line="357" selection-end-column="2" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="db.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/template/db.sql">
+      <file leaf-file-name="test.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1428">
-              <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="567" max-vertical-offset="1638">
+              <caret line="64" column="22" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mnode/mnode/utils/db-redis/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.448276" vertical-offset="2438" max-vertical-offset="8988">
+              <caret line="125" column="20" selection-start-line="125" selection-start-column="20" selection-end-line="125" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -150,9 +149,6 @@
         <option value="$PROJECT_DIR$/mnode/mnode/plugin/mysql/app.js" />
         <option value="$PROJECT_DIR$/mnode/mnode/plugin/mysql/model.js" />
         <option value="$PROJECT_DIR$/mnode/mnode/utils/db-mysql/test.js" />
-        <option value="$PROJECT_DIR$/mnode/mnode/utils/db-redis/app.js" />
-        <option value="$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/test.js" />
-        <option value="$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/model.js" />
         <option value="$PROJECT_DIR$/mnode/mnode/utils/app.js" />
         <option value="$PROJECT_DIR$/mnode/mnode/utils/xml-parser/app.js" />
         <option value="$PROJECT_DIR$/mnode/test/test2.js" />
@@ -163,6 +159,10 @@
         <option value="$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/template/model.js" />
         <option value="$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/app.js" />
         <option value="$PROJECT_DIR$/mnode/mnode/plugin/app.js" />
+        <option value="$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/test.js" />
+        <option value="$PROJECT_DIR$/mnode/mnode/utils/db-redis/app.js" />
+        <option value="$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/model.js" />
+        <option value="$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/cache.js" />
       </list>
     </option>
   </component>
@@ -198,7 +198,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -307,12 +306,65 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db-redis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodePro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodePro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mnode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mnode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="plugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodePro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodePro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mnode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mnode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mysqlRedisCache" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -331,12 +383,7 @@
       <recent name="C:\Users\ff\Desktop\nodePro\mnode\mnode\utils\db-mysql" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.app.js">
-    <configuration default="false" name="child_pool.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="child_pool.js" working-dir="$PROJECT_DIR$/mnode/node_modules/tagg2/example">
-      <RunnerSettings RunnerId="Basic" />
-      <ConfigurationWrapper RunnerId="Basic" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Node.js.cache.js">
     <configuration default="false" name="test.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="test.js" working-dir="$PROJECT_DIR$/mnode/mnode/utils/db-mysql">
       <RunnerSettings RunnerId="Basic" />
       <ConfigurationWrapper RunnerId="Basic" />
@@ -357,10 +404,19 @@
       <ConfigurationWrapper RunnerId="Basic" />
       <method />
     </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+    <configuration default="false" name="cache.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="cache.js" working-dir="$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache">
+      <RunnerSettings RunnerId="Basic" />
+      <ConfigurationWrapper RunnerId="Basic" />
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
@@ -368,10 +424,6 @@
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="Chrome" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -395,19 +447,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Node.js.child_pool.js" />
-      <item index="1" class="java.lang.String" itemvalue="Node.js.test.js" />
-      <item index="2" class="java.lang.String" itemvalue="Node.js.model.js" />
-      <item index="3" class="java.lang.String" itemvalue="Node.js.test.js (1)" />
-      <item index="4" class="java.lang.String" itemvalue="Node.js.app.js" />
+      <item index="0" class="java.lang.String" itemvalue="Node.js.test.js" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.model.js" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.test.js (1)" />
+      <item index="3" class="java.lang.String" itemvalue="Node.js.app.js" />
+      <item index="4" class="java.lang.String" itemvalue="Node.js.cache.js" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Node.js.app.js" />
+        <item index="0" class="java.lang.String" itemvalue="Node.js.cache.js" />
         <item index="1" class="java.lang.String" itemvalue="Node.js.test.js (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Node.js.test.js" />
-        <item index="3" class="java.lang.String" itemvalue="Node.js.model.js" />
-        <item index="4" class="java.lang.String" itemvalue="Node.js.child_pool.js" />
+        <item index="2" class="java.lang.String" itemvalue="Node.js.app.js" />
+        <item index="3" class="java.lang.String" itemvalue="Node.js.test.js" />
+        <item index="4" class="java.lang.String" itemvalue="Node.js.model.js" />
       </list>
     </recent_temporary>
   </component>
@@ -422,7 +474,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -466,13 +518,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mnode/mnode/utils/logger-utils/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2919">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mnode/mnode/utils/logger/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2777" max-vertical-offset="3591">
@@ -485,7 +530,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="483" max-vertical-offset="672">
           <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -501,7 +545,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3814" max-vertical-offset="4641">
           <caret line="197" column="57" selection-start-line="197" selection-start-column="57" selection-end-line="197" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -509,7 +552,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="531" max-vertical-offset="1638">
           <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -580,7 +622,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14213198" vertical-offset="0" max-vertical-offset="591">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -588,7 +629,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="531" max-vertical-offset="1638">
           <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -610,7 +650,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3814" max-vertical-offset="4641">
           <caret line="197" column="57" selection-start-line="197" selection-start-column="57" selection-end-line="197" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -634,7 +673,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="483">
           <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -642,7 +680,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2578125" vertical-offset="0" max-vertical-offset="1134">
           <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -650,7 +687,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="591">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -658,7 +694,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
           <caret line="9" column="19" selection-start-line="5" selection-start-column="3" selection-end-line="9" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -666,7 +701,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="777">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -674,7 +708,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1420" max-vertical-offset="9177">
           <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -702,19 +735,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mnode/mnode/utils/db-redis/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.620689" vertical-offset="7415" max-vertical-offset="8778">
-          <caret line="365" column="23" selection-start-line="365" selection-start-column="20" selection-end-line="365" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mnode/mnode/plugin/jadeContext.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.112299465" vertical-offset="0" max-vertical-offset="561">
           <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -722,15 +746,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1467" max-vertical-offset="4704">
           <caret line="78" column="37" selection-start-line="78" selection-start-column="37" selection-end-line="78" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mnode/mnode/plugin/jadeLoader/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4830">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -738,7 +753,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="591">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -746,7 +760,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="189">
           <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -782,14 +795,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7560">
-          <caret line="14" column="12" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/template/user1.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="462">
@@ -798,10 +803,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mnode/mnode/utils/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49746192" vertical-offset="0" max-vertical-offset="693">
+          <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mnode/mnode/plugin/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="336">
+          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mnode/mnode/plugin/jadeLoader/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1764" max-vertical-offset="4830">
+          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/template/db.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1260">
           <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/template/db.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3515625" vertical-offset="294" max-vertical-offset="1428">
+          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -817,47 +853,47 @@
     <entry file="file://$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/template/model.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="462">
-          <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/template/db.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1407">
-          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5827" max-vertical-offset="6405">
-          <caret line="289" column="33" selection-start-line="289" selection-start-column="33" selection-end-line="289" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mnode/mnode/plugin/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="336">
-          <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1554">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="567" max-vertical-offset="1638">
+          <caret line="64" column="22" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mnode/mnode/utils/app.js">
+    <entry file="file://$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.71573603" vertical-offset="102" max-vertical-offset="693">
-          <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="693" max-vertical-offset="6405">
+          <caret line="47" column="60" selection-start-line="47" selection-start-column="51" selection-end-line="47" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mnode/mnode/utils/db-redis/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.448276" vertical-offset="2438" max-vertical-offset="8988">
+          <caret line="125" column="20" selection-start-line="125" selection-start-column="20" selection-end-line="125" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.9655173" vertical-offset="7167" max-vertical-offset="8463">
+          <caret line="344" column="0" selection-start-line="344" selection-start-column="0" selection-end-line="357" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/cache.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2733564" vertical-offset="3139" max-vertical-offset="3717">
+          <caret line="157" column="0" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
           <folding />
         </state>
       </provider>

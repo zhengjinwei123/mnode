@@ -20,6 +20,8 @@ function Model(fields, primaryKey) {
     this.redis = null;
 
     this.mode = 'c';//d || c      查询类型 d:直接操作mysql  c:缓存
+
+    this.updateCListKey = null;//更新缓存列表键值
 }
 
 Model.prototype.setTableName = function (n) {
@@ -241,8 +243,11 @@ Model.prototype.insert = function (callback) {
                     temp.push(k);
                     temp.push(v);
                 });
+                //同步数据到redis
                 self.redis.hmSet(self.getCK(), temp, function (err, resp) {
-                    callback(err, self);
+                    self.redis.expire(self.getCK(), 68400, function (err, resp) {
+                        callback(err, self);
+                    });
                 });
             } else {
                 callback(err);
@@ -270,7 +275,7 @@ Model.prototype.update = function (callback) {
 
         self.redis.ttl(self.getCK(), function (err, ttl) {
             if (ttl != -1 && ttl < 3) {
-                callback("data not exists ttl:" + ttl + self.getCK());
+                callback("data not exists ttl:" + ttl + " ck:" + self.getCK());
             } else {
                 if (err) {
                     callback(err);
@@ -283,6 +288,9 @@ Model.prototype.update = function (callback) {
                         });
                         multi.hmset(self.getCK(), temp);
                         multi.expire(self.getCK(), 68400);
+                        //缓存更新列表，用于数据落地
+                        self.updateCacheList(multi, self.getFieldChanged());
+
                         self.redis.exec(multi, release, function (err) {
                             if (!err) {
                                 self.init_field_changed();
@@ -301,6 +309,7 @@ Model.prototype.update = function (callback) {
 
         var sql = Util.format("update %s set %s where %s=`%s`", this.getFullTableName(), temp.join(","), this.pk, this.getPKV());
         this.query(sql, [], function (err, resp) {
+            self.init_field_changed();
             callback(err);
         });
     }
@@ -346,6 +355,40 @@ Model.prototype.query = function (sql, params, callback) {
             callback(null, rows, fields);
         }
     })
+};
+
+
+// 数据更新缓存队列键名
+Model.prototype.getCacheListKey = function () {
+    if (null == this.updateCListKey) {
+        var pkV = this.getPKV();
+        this.setCacheListKey(pkV);
+    }
+
+    return this.updateCListKey;
+};
+
+Model.prototype.setCacheListKey = function ($keyNum) {
+    var key = $keyNum % 100;
+    this.updateCListKey = "updatecachelist:" + key;
+};
+
+Model.prototype.updateCacheList = function (multi, fields, callback) {
+    var data = {
+        'ck': this.getCK(),
+        'tbn': this.tableName,
+        'pk': this.pk,
+        'pkv': this.getPKV(),
+        'fields': fields
+    };
+
+    var ckey = this.getCacheListKey();
+
+    if (multi) {
+        multi.rpush(ckey, JSON.stringify(data));
+    } else {
+        this.redis.rPush(ckey, JSON.stringify(data), callback);
+    }
 };
 
 module.exports = Model;

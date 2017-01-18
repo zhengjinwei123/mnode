@@ -324,6 +324,16 @@ RedisUtil.prototype.rPush = function (key, value, callback) {
     });
 };
 
+RedisUtil.prototype.lTrim = function (key, s, e, callback) {
+    var poolName = this.default_pool;
+    this.execute(poolName, function (client, release) {
+        client.ltrim(key, s, e, function (err, res) {
+            callback(err, res);
+            release();
+        })
+    });
+};
+
 
 RedisUtil.prototype.lRange = function (key, value, callback) {
     var poolName = this.default_pool;

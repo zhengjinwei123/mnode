@@ -39,7 +39,7 @@ process.on("uncaughtException", function (err) {
 //});
 
 m.initFields({
-    id: 999999997,
+    id: 999999991,
     account: 'a',
     mode: '1',
     source: 'source',
@@ -48,21 +48,25 @@ m.initFields({
     os: 'o',
     osvers: 's',
     time: '1111',
-    savetime: '2017-01-16 17:11:54'
+    savetime: '2017-01-18 17:11:54'
 });
 
-//m.insert(function(err){
-//    console.log(err);
-//})
+m.insert(function(err){
+    console.log("insert",err);
+    m.setField("account","ZHENGJINWEI");
+    m.update(function(ERR){
+        console.log("update",ERR)
+    });
+})
 
-m.setField("account","ZHENGJINWEI");
+
 
 //m.update(function(ERR){
 //    console.log(ERR)
 //})
 
-m.delete(function(err){
-    console.log(err);
-})
+//m.delete(function(err){
+//    console.log(err);
+//})
 
 
