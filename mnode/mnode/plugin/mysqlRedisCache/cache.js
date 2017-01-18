@@ -123,7 +123,7 @@ Cache2DB.prototype.execSql = function (sqlArray, callback) {
 
         var sqlGroup = [];
         while (sqlArray.length) {
-            var sqls = sqlArray.splice(start, start + len);
+            var sqls = sqlArray.splice(start, len);
             sqls = sqls.join(";");
             sqlGroup.push(sqls);
         }
