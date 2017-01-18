@@ -51,13 +51,12 @@ Cache2DB.prototype.cacheRun = function (callback) {
             if (!_.isArray(cacheKeys)) {
                 cacheKeys = [cacheKeys];
             }
-            console.time("cache", "redis2db start running");
-            var s = new Date();
+            console.time("cache");
             Async.each(cacheKeys, function (cacheKey, cb) {
                 self.cache(cacheKey, cb);
             }, function (err, resp) {
                 callback(err);
-                console.timeEnd("cache", "redis2db cost " + (new Date() - s) + " milliseconds");
+                console.timeEnd("cache");
             });
         } else {
             callback(err);
