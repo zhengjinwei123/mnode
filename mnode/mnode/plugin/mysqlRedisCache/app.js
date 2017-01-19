@@ -7,8 +7,10 @@ var XmlParser = require("../../utils/xml-parser/app");
 var FileUtil = require("../../utils/file-utils/app");
 var _ = require("lodash");
 var Util = require("util");
+var Path = require("path");
+var OS = require("os");
 
-var MysqlRedisCache = function (xmlPath,ModelPath, callback) {
+var MysqlRedisCache = function (xmlPath, ModelPath, callback) {
     if (!FileUtil.isFile(xmlPath)) {
         throw new Error(xmlPath + " file not exits");
     }
@@ -17,35 +19,91 @@ var MysqlRedisCache = function (xmlPath,ModelPath, callback) {
         if (!err && result) {
             var fileName = xmlPath.replace(".xml", ".sql");
             FileUtil.writeSync(fileName, result);
+            var cPath = Path.resolve(__dirname);
+            var mPath = Path.resolve(ModelPath);
+            var platform = OS.platform();
+
+            var sp = "/";
+            if (platform.toLowerCase() == "win32") {
+                sp = "\\";
+            }
+
+            var cPathList = cPath.split(sp);
+            var mPathList = mPath.split(sp);
+
+            var lPathList = [];
+            var rPathList = [];
+            if (cPathList.length > mPathList.length) {
+                lPathList = cPathList;
+                rPathList = mPathList;
+            } else {
+                lPathList = mPathList;
+                rPathList = cPathList;
+            }
+
+            var ListPath = [];
+            for (var i = 0; i < lPathList.length; i++) {
+                if (rPathList[i] == lPathList[i]) {
+                    ListPath.push(lPathList[i])
+                } else {
+                    break;
+                }
+            }
+
+            var strPath = ListPath.join(sp);
+
+            var myPath = lPathList;
+            var nyPath = rPathList;
+            if(lPathList.indexOf('mysqlRedisCache') != -1){
+                myPath = rPathList;
+                nyPath = lPathList;
+            }
+
+            var cnt = myPath.length - ListPath.length;
+            var mcnt = nyPath.length- ListPath.length;
+
+            strPath += sp;
+            var c = nyPath.join(sp).replace(strPath,"");
+
+
+            var d = "";
+            for(var i=0;i<cnt;i++){
+                d+=".."+sp;
+            }
+
+            var d = d+c+sp+"model";
+
 
             if (modeList) {
-                genModels(ModelPath,modeList,callback);
+                genModels(ModelPath, modeList, callback,d);
             }
         }
     });
 };
 
-function firstUppercase(str){ // 正则法
+function firstUppercase(str) { // 正则法
     str = str.toLowerCase();
     var reg = /\b(\w)|\s(\w)/g; //  \b判断边界\s判断空格
-    return str.replace(reg,function(m){
+    return str.replace(reg, function (m) {
         return m.toUpperCase()
     });
 }
 
-function genModels(ModelPath,dataList,callback) {
-    var template = FileUtil.readSync(Path.join(__dirname,"./template/model.js"));
+function genModels(ModelPath, dataList, callback,modelPath) {
+    var template = FileUtil.readSync(Path.join(__dirname, "./template/model.js"));
 
-    _.forEach(dataList,function(v,tableName){
-        var temp = template.replace(/MODELNAME/g,firstUppercase(tableName));
-        temp = temp.replace(/tablename/,tableName);
-        temp = temp.replace(/\{\}/,JSON.stringify(v['fields']));
-        temp = temp.replace(/t_/,v['tablePrefix']);
-        temp = temp.replace(/pkv/,v['pk']);
-        temp = temp.replace(/genTime/,new Date().toLocaleString());
+    modelPath = modelPath.replace(/\\/g,"/");
+    _.forEach(dataList, function (v, tableName) {
+        var temp = template.replace(/MODELNAME/g, firstUppercase(tableName));
+        temp = temp.replace(/tablename/, tableName);
+        temp = temp.replace(/\{\}/, JSON.stringify(v['fields']));
+        temp = temp.replace(/t_/, v['tablePrefix']);
+        temp = temp.replace(/pkv/, v['pk']);
+        temp = temp.replace(/genTime/, new Date().toLocaleString());
+        temp = temp.replace("require(\"../model\")","require("+"'"+modelPath+"'"+")");
 
         //console.log(temp)
-        FileUtil.writeSync(Path.join(ModelPath,"/"+tableName+".js"), temp);
+        FileUtil.writeSync(Path.join(ModelPath, "/" + tableName + ".js"), temp);
     });
     callback(null);
 }
@@ -87,7 +145,7 @@ function genSql(databaseObj, callback) {
         var modelList = {};//用于记录数据模型，之后用这份数据自动生成数据库模型脚本文件
 
         var sql = Util.format("CREATE DATABASE IF NOT EXISTS `%s` character set %s collate %s;", databaseObj['dbName'], databaseObj['dbCharacter'] || 'utf8', databaseObj['dbCollate'] || 'utf8_general_ci');
-        sql += Util.format('\r\nUSE `%s`\r\n', databaseObj['dbName']);
+        sql += Util.format('\r\nUSE `%s`;\r\n', databaseObj['dbName']);
 
         if (databaseObj['tables']) {
             _.forEach(databaseObj['tables'], function (t, k) {
@@ -117,23 +175,23 @@ function genSql(databaseObj, callback) {
                             tempSql += Util.format("\t`%s` %s(%s)", f['name'], f['type'], f['length']);
                         }
 
-                        if(f['character']){
-                            tempSql += ' CHARACTER SET '+f['character'];
+                        if (f['character']) {
+                            tempSql += ' CHARACTER SET ' + f['character'];
                         }
-                        if(f['collate']){
-                            tempSql += ' COLLATE '+f['collate'];
+                        if (f['collate']) {
+                            tempSql += ' COLLATE ' + f['collate'];
                         }
 
                         if (f['default']) {
                             tempSql += " NOT NULL";
                             tempSql += " DEFAULT " + f['default'];
-                        }else{
-                            if(f['null'] && f['null'] == 'false'){
+                        } else {
+                            if (f['null'] && f['null'] == 'false') {
                                 tempSql += " NOT NULL";
 
-                                if(f['type'] == 'char' || f['type'] == 'varchar'){
+                                if (f['type'] == 'char' || f['type'] == 'varchar') {
                                     tempSql += " DEFAULT ''";
-                                }else{
+                                } else {
                                     tempSql += " DEFAULT 0";
                                 }
                             }
