@@ -126,4 +126,29 @@ var wss = Singleton.getDemon(WSocketServer, "127.0.0.1", 9091);
 
 > utils 工具包
 > 内部包括各种日常编码工具，协助快速开发，避免重复造轮子
-*
+[utils](https://github.com/zhengjinwei123/mnode/tree/master/mnode/mnode/utils)
+* buffer-utils                          buffer处理包
+* csv-utils                             csv转json
+* db-mongodb                            mongodb 模块化客户端，经过实际项目验证
+* db-mysql                              mysql客户端，经过实际项目验证
+* db_redis                              redis客户端
+* encrypt-utils                         加密包
+* exception                             异常处理
+* file-utils                            文件处理
+* ftp-utils                             ftp上传下载
+* httpclient-utils                      http客户端
+* ip-utils                              ip地址校验
+* logger                                日志处理
+* logger-utils                          基于pomelo-logger的日志处理
+* obj-utils                             对象方法
+* queue-utils                           队列
+* Singleton-utils                      单例生成器
+* stack-utils                          堆栈
+* tcp-utils                            tcp客户端
+* udp-utils                            udp客户端
+* time-utils                           时间处理
+* websocket-client-utils               ws客户端
+* xml-parser                           xml解析
+
+
+### 后续还会更新...
