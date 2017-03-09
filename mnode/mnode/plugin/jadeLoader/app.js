@@ -135,21 +135,23 @@ JadeLoader.prototype.hotLoad = function () {
             var _hot = item.hot;
             if (!_hot) {
                 cb(null);
-            }
-            var _path = item.path;
-            var _key = item.key;
-            var _pKey = item.parentKey;
+            }else{
+                var _path = item.path;
+                var _key = item.key;
+                var _pKey = item.parentKey;
 
-            if (_pKey == self.userKey) {
-                cb(null);
+                if (_pKey == self.userKey) {
+                    cb(null);
+                }else{
+                    if (!Fs.existsSync(_path)) {
+                        cb("JadeLoader::hotLoad," + _path + " is not exists");
+                    }else{
+                        delete require.cache[_path];
+                        self.mapList[_pKey][_key].app = require(_path);
+                        cb(null);
+                    }
+                }
             }
-
-            if (!Fs.existsSync(_path)) {
-                cb("JadeLoader::hotLoad," + _path + " is not exists");
-            }
-            delete require.cache[_path];
-            self.mapList[_pKey][_key].app = require(_path);
-            cb(null);
         }, function (err, resp) {
             callback(err);
         });
