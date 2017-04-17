@@ -14,20 +14,20 @@ var TcpClient = function (host, port) {
     var client = new Net.Socket();
     var self = this;
     client.connect(this.port, this.host, function () {
-        console.log('CONNECTED TO: ' + self.host + ':' + self.port);
+        //console.log('CONNECTED TO: ' + self.host + ':' + self.port);
         //client.write('I am Chuck Norris!');
         self.emit("connected", client);
     });
 
 
     client.on('data', function (data) {
-        console.log('DATA: ' + data);
-        self.emit("data", data);
+        //console.log('DATA: ' + data);
+        self.emit("data", this,data);
         //client.destroy();
     });
 
     client.on('close', function () {
-        console.log('Connection closed');
+        self.emit("close",this);
     });
 
 };

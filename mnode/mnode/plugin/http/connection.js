@@ -19,9 +19,9 @@ function HttpConnection(cid, socket, encrypts, server) {
 
     this.createTime = new Date();
 
-    this.init();
-
     this.server = server;
+
+    this.init();
 
     this.server.emit("connect-connect", socket.connection ? socket.connection.remoteAddress : "unknown address");
 }
@@ -52,7 +52,7 @@ HttpConnection.prototype.init = function () {
             } else {
                 self.send(resp, 200);
             }
-        });
+        },self.server);
     });
 
     this.state = STATE_INITED;

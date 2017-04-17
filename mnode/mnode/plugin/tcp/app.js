@@ -25,15 +25,19 @@ var TcpServer = function (host, port) {
         //关闭 Nagle 算法
         self.setNoDelay(socket);
         //保活连接，避免发送失败
-        self.setKeepAlive(socket, true);
+        self.setKeepAlive(socket, true, 3000);
 
         self.emit("newConnection", parseConnection(socket));
 
-        socket.on('data', function (data) {
-            self.emit("data", data);
+        var buffers = [];
+        socket.on('data', function (buffer) {
+            buffers.push(buffer);
+            checkPacket(buffers, socket, function (msg, connection) {
+                self.emit("data", connection, msg);
+            });
         });
         socket.on('close', function () {
-            self.emit("close", socket);
+            self.emit("close", parseConnection(socket));
             self.clear(socket);
         });
         socket.on('end', function () {
@@ -45,28 +49,95 @@ var TcpServer = function (host, port) {
 
     this.server.on("error", function (err) {
         self.emit("error", err);
-        console.log("server error", err);
     });
 
     this.server.on('listening', function () {
-        console.log("listening ", self.server.address());
+        self.emit("listening", self.server.address());
     });
-
-    //client connect
-    this.on('newConnection', function (sock) {
-        console.log("newConnection", parseConnection(sock))
-    });
-
-    //client data
-    this.on("data", function (data) {
-        console.log("receive data:", data);
-    });
-
 };
+Util.inherits(TcpServer, EventEmitter);
+
+function msgPack(msgId, data) {
+    var msgStr = JSON.stringify(data);
+
+    // datelen + route + msglen + msgStr
+    var headerlen = 2 + 2 + 2;
+    var msglen = Buffer.byteLength(msgStr);
+    var datalen = headerlen + msglen;
+
+    var buf = new Buffer(datalen);
+    var wirtePos = 0;
+    buf.writeUInt16BE(datalen, wirtePos);	// datalen
+    wirtePos += 2;
+    buf.writeUInt16BE(msgId, wirtePos);	// reqid
+    wirtePos += 2;
+    buf.writeUInt16BE(msglen, wirtePos);	// msglen
+    wirtePos += 2;
+    buf.write(msgStr, wirtePos);
+    return buf;
+}
+
+function checkPacket(buffers, connection, handler) {
+    if (buffers.length == 0) {
+        return false;
+    }
+    function mergeLeadingBuffersUntilLengthReach(n) {
+        var buf0 = buffers.shift();
+        while (buf0.length < n) {
+            if (buffers.length == 0) {
+                buffers.unshift(buf0);
+                return false;
+            }
+            var buf1 = buffers.shift();
+            var buf0_1 = new Buffer(buf0.length + buf1.length);
+            buf0.copy(buf0_1);
+            buf1.copy(buf0_1, buf0.length);
+            buf0 = buf0_1;
+        }
+        return buf0;
+    }
+
+    // merge leading buffers until it's length reach data length
+    var buf = mergeLeadingBuffersUntilLengthReach(2);
+    if (buf === false) {
+        return false;
+    }
+    // data len
+    var datalen = buf.readUInt16BE(0);
+    if (datalen == 0) {
+        return false;
+    }
+    buffers.unshift(buf);
+    buf = mergeLeadingBuffersUntilLengthReach(datalen);
+    if (buf === false) {
+        return false;
+    }
+
+    try {
+        var wirtePos = 0;
+        var datalen = buf.readUInt16BE(wirtePos);
+        wirtePos += 2;
+        var route = buf.readUInt16BE(wirtePos);
+        wirtePos += 2;
+        var msglen = buf.readUInt16BE(wirtePos);
+        wirtePos += 2;
+        var str = buf.toString("utf8", wirtePos, datalen);
+    } catch (e) {
+
+    }
+    if (buf.length > datalen) {
+        buffers.unshift(buf.slice(datalen));
+    }
+    handler({msgId: route, msg: str}, connection);
+    if (buffers.length > 0) {
+        checkPacket(buffers, connection, handler);
+    }
+    return;
+}
+
 TcpServer.prototype.clear = function (sock) {
     var index = this.connectionList.indexOf(sock);
     if (index != -1) {
-        console.log("closed", parseConnection(sock));
         this.connectionList.splice(index, 1);
     }
 };
@@ -148,16 +219,11 @@ TcpServer.prototype.address = function () {
     return this.server.address();
 };
 
-Util.inherits(TcpServer, EventEmitter);
-
-
 function parseConnection(sock) {
     return {
         socket: sock,
-        remoteAddress: sock.remoteAddress,
-        remotePort: sock.remotePort
+        host: sock.remoteAddress,
+        port: sock.remotePort
     }
 }
-
-
 module.exports = TcpServer;

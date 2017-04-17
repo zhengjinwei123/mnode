@@ -20,10 +20,11 @@ var Session = require("./session");
 var UUID = require("node-uuid");
 var Async = require("async");
 var IpUtil = require("../../utils/app").IP;
+var SyncTask = require("./SyncTask.js");
 
-
-function HttpServer(bindPort, bindHost, opts, serverRootPath, session) {
+function HttpServer(bindPort, bindHost, opts, serverRootPath, session, workerid) {
     EventEmitter.call(this);
+    SyncTask.call(this, workerid);
 
     this.host = bindHost;
     this.port = bindPort;
@@ -165,7 +166,7 @@ function HttpServer(bindPort, bindHost, opts, serverRootPath, session) {
 }
 
 Util.inherits(HttpServer, EventEmitter);
-
+Util.inherits(HttpServer, SyncTask);
 
 HttpServer.prototype.create = function (callback) {
     if (this.opts.key) {
@@ -183,7 +184,6 @@ HttpServer.prototype.create = function (callback) {
 HttpServer.prototype.createServer = function () {
     var self = this;
     this.create(function (request, response) {
-
         var bytes = [];
         request.on('data', function (chunk) {
             bytes.push(chunk);

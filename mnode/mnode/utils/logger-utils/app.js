@@ -79,6 +79,17 @@ var LoggerUtils = function (configPath, logPath) {
     }
 };
 
+LoggerUtils.getInstance = (function () {
+    var inst = null;
+    return function (configPath, logPath) {
+        if (inst instanceof LoggerUtils) {
+            return inst;
+        }
+        inst = new LoggerUtils(configPath, logPath);
+        return inst;
+    }
+})();
+
 LoggerUtils.prototype.exit = function (reason) {
     console.error(reason);
     process.exit(1);

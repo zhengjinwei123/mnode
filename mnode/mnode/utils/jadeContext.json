@@ -1,30 +1,110 @@
 {
-  "scan-dir": true,
+  "scan-dir": false,
   "scan-dir-list": [
     {
       "dir-name": "obj-utils",
       "app-name": "app.js",
-      "hot": true
+      "hot": false
     },
     {
       "dir-name": "singleton-utils",
       "app-name": "app.js",
-      "hot": true
+      "hot": false
     },
     {
       "dir-name": "time-utils",
       "app-name": "app.js",
-      "hot": true
-    },
-    {
-      "dir-name": "type-utils",
-      "app-name": "app.js",
-      "hot": true
+      "hot": false
     },
     {
       "dir-name": "timer-utils",
       "app-name": "app.js",
-      "hot": true
+      "hot": false
+    },
+    {
+      "dir-name": "xml-parser",
+      "app-name": "app.js",
+      "hot": false
+    },
+    {
+      "dir-name": "udp-utils",
+      "app-name": "app.js",
+      "hot": false
+    },
+    {
+      "dir-name": "tcp-utils",
+      "app-name": "app.js",
+      "hot": false
+    },
+    {
+      "dir-name": "stack-utils",
+      "app-name": "app.js",
+      "hot": false
+    },
+    {
+      "dir-name": "queue-utils",
+      "app-name": "app.js",
+      "hot": false
+    },
+    {
+      "dir-name": "logger-utils",
+      "app-name": "app.js",
+      "hot": false
+    },
+    {
+      "dir-name": "logger",
+      "app-name": "app.js",
+      "hot": false
+    },
+    {
+      "dir-name": "ip-utils",
+      "app-name": "app.js",
+      "hot": false
+    },
+    {
+      "dir-name": "httpclient-utils",
+      "app-name": "app.js",
+      "hot": false
+    },
+    {
+      "dir-name": "ftp-utils",
+      "app-name": "app.js",
+      "hot": false
+    },
+    {
+      "dir-name": "file-utils",
+      "app-name": "app.js",
+      "hot": false
+    },
+    {
+      "dir-name": "encrypt-utils",
+      "app-name": "app.js",
+      "hot": false
+    },
+    {
+      "dir-name": "db-redis",
+      "app-name": "app.js",
+      "hot": false
+    },
+    {
+      "dir-name": "db-mysql",
+      "app-name": "app.js",
+      "hot": false
+    },
+    {
+      "dir-name": "db-mongodb",
+      "app-name": "app.js",
+      "hot": false
+    },
+    {
+      "dir-name": "csv-utils",
+      "app-name": "app.js",
+      "hot": false
+    },
+    {
+      "dir-name": "buffer-utils",
+      "app-name": "app.js",
+      "hot": false
     }
   ]
 }

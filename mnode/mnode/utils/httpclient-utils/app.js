@@ -61,7 +61,7 @@ HttpUtils.prototype.Get = function (route, host, port, data, cb) {
         throw new Error("HttpUtils:Get parameters error");
     }
 
-    var _host = null, _port = null, _data, _callback;
+    var _host = host, _port = port, _data=data, _callback=cb;
     if (argCnt == 3) {
         _host = this.host;
         _port = this.port;
@@ -81,7 +81,7 @@ HttpUtils.prototype.Post = function (route, host, port, data, cb) {
         throw new Error("HttpUtils:post parameters error");
     }
 
-    var _host = null, _port = null, _data, _callback;
+    var _host = host, _port = port, _data=data, _callback=cb;
     if (argCnt == 3) {
         _host = this.host;
         _port = this.port;

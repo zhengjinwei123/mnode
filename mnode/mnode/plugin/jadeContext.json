@@ -1,4 +1,30 @@
 {
-  "scan-dir": true,
-  "scan-dir-list": []
+  "scan-dir": false,
+  "scan-dir-list": [
+    {
+      "dir-name": "express",
+      "app-name": "app.js",
+      "hot": false
+    },
+    {
+      "dir-name": "http",
+      "app-name": "app.js",
+      "hot": false
+    },
+    {
+      "dir-name": "tcp",
+      "app-name": "app.js",
+      "hot": false
+    },
+    {
+      "dir-name": "udp",
+      "app-name": "app.js",
+      "hot": false
+    },
+    {
+      "dir-name": "websocket",
+      "app-name": "app.js",
+      "hot": false
+    }
+  ]
 }

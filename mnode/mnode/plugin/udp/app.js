@@ -51,7 +51,7 @@ var UdpServer = function (host, port, memberShip) {
     this.server.bind({
         address: this.host,
         port: this.port,
-        exclusive: false //false:多进程模式共享一个端口 true:不共享
+        exclusive: true //false:多进程模式共享一个端口 true:不共享
     }, function () {
         if (memberShip && _.isString(memberShip) && IpUtil.ipIp(memberShip) && (memberShip != self.host)) {
             self.server.addMembership(memberShip);
@@ -69,7 +69,7 @@ var UdpServer = function (host, port, memberShip) {
         //console.log("server listening "+ address.address+":"+address.port);
     });
 
-    self.server.on('error', function (error) {
+    this.server.on('error', function (error) {
         self.server.close();
         self.emit("error", error);
     });
