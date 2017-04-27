@@ -14,6 +14,18 @@ var TimerUtils = require("../../utils/app").Timer;
 var Async = require("async");
 var _ = require("lodash");
 
+/***
+此模块可用来托管项目环境
+在项目中使用JadeLoader 时只要不将其放到全局环境中（例如上面所有的模块定义），此模块的热加载机制可实现定时热加载或者您所定制的加载机制
+例如 JadeLoader 托管了一个模块 A，A所在的父目录名为 ParentA
+我们可以通过 JadeLoader.Jader("ParentA").get("A") 获取 模块
+在非全局环境中，我们应这样调用 A中的方法(假设 A 中有方法:add(a,b){return a+b;})
+JadeLoader.Jader("ParentA").get("A").add(1,2);
+或者
+var A = JadeLoader.Jader("ParentA").get("A"); // 注意 这行代码不在全局环境中，例如可以在某个函数中，我们动态的调用这个函数
+A.add(1,2)
+***/
+
 function JadeLoader() {
     EventEmitter.call(this);
     this.userKey = "user-doc-" + (new Date().getTime());
@@ -225,7 +237,25 @@ JadeLoader.prototype.get = function (key) {
             if (tKey == this.userKey) {
                 return this.mapList[tKey][key];
             } else {
-                return this.mapList[tKey][key].app;
+				//防止 缓存更新的那一刻刚好并发到执行到该模块，此时可能出现缓存为空的情况，需要重新加载一次
+                var _module = this.mapList[tKey][key].app;
+				if(_module){
+					return _module;
+				}else{
+					var _error = null;
+					try {
+						//尝试重新加载缓存
+						_module = require(this.mapList[tKey][key].path);
+					} catch(e){
+						_error = e.message;
+					} finally{
+						if(_error){
+							return null;
+						}else{
+							return _module;
+						}
+					}
+				}
             }
         }
     } else {
