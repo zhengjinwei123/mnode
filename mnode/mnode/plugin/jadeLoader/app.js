@@ -97,6 +97,7 @@ JadeLoader.prototype.init = function (rootPath, hot, hotSecond, callback) {
                         var _appName = o['app-name'];
                         var _isHot = o['hot'];
 
+
                         if (_hot == false && _isHot) {
                             _hot = _isHot;
                         }
@@ -120,11 +121,12 @@ JadeLoader.prototype.init = function (rootPath, hot, hotSecond, callback) {
                         }
 
                         var _m = require(_cache);
-                        self.mapList[$pK][_dirName] = {
+                        var _mK = o['key'] || _dirName;//模块名
+                        self.mapList[$pK][_mK] = {
                             'hot': _isHot,
                             'app': _m,
                             'path': _cache,
-                            'key': _dirName,
+                            'key': _mK,
                             'parentKey': $pK
                         };
 

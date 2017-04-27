@@ -4,26 +4,31 @@
     {
       "dir-name": "express",
       "app-name": "app.js",
+      "key": "express",
       "hot": false
     },
     {
       "dir-name": "http",
       "app-name": "app.js",
+      "key": "http",
       "hot": false
     },
     {
       "dir-name": "tcp",
       "app-name": "app.js",
+      "key": "tcp",
       "hot": false
     },
     {
       "dir-name": "udp",
       "app-name": "app.js",
+      "key": "udp",
       "hot": false
     },
     {
       "dir-name": "websocket",
       "app-name": "app.js",
+      "key": "websocket",
       "hot": false
     }
   ]
