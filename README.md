@@ -1,7 +1,14 @@
 # mnode
-> mutiple utils for nodejs
+> Node.js 服务组件和各种工具包，包括各类服务组件:</br>
+> express,http,websocket,tcp,udp,热加载器等。</br>
+> 包括各种日常工具包和算法库:</br>
+> 日期操作,文件处理，数据库连接池(redis,mysql,mongodb),xml文件解析，csv文件解析，xml生成sql脚本，各类协议通信客户端(tcp,udp,http,websocket,ftp),</br>
+> buffer,日志处理，单例生成器等。
 
-# 包含各种服务组件
+### `所有组件和工具都经过实例测试通过`
+
+
+## 服务组件
 #### Express：封装Express web组件，实现快速创建web服务，支持原生路由规则，自动加载所有路由，支持session、cookie、静态文件请求，支持过滤器函数中间件，实现请求拦截。支持模块化，route和view分离,详细参考: [ExpressPlugin](https://github.com/zhengjinwei123/mnode/tree/master/mnode/mnode/plugin/express)
 ``` javascript
 var ExpressPlugin = require("../app");
@@ -124,9 +131,12 @@ var wss = Singleton.getDemon(WSocketServer, "127.0.0.1", 9091);
     }, 1000);
 ```
 
-> utils 工具包
-> 内部包括各种日常编码工具，协助快速开发，避免重复造轮子
+## utils 工具包
+> 内部包括各种日常编码工具，协助快速开发，避免重复造轮子 </br>
+
 [utils](https://github.com/zhengjinwei123/mnode/tree/master/mnode/mnode/utils)
+
+
 * buffer-utils                          buffer处理包
 * csv-utils                             csv转json
 * db-mongodb                            mongodb 模块化客户端，经过实际项目验证
@@ -151,4 +161,3 @@ var wss = Singleton.getDemon(WSocketServer, "127.0.0.1", 9091);
 * xml-parser                           xml解析
 
 
-### 后续还会更新...
