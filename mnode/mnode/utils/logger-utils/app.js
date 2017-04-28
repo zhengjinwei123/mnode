@@ -114,6 +114,10 @@ LoggerUtils.prototype.log = function (args) {
     return str;
 };
 
+LoggerUtils.prototype.logger = function(category){
+	return this.loggers[category];
+};
+
 LoggerUtils.prototype.debug = function (category) {
     if (this.openList.debug) {
         this.loggers[category] && this.loggers[category].debug(this.log(arguments));
