@@ -31,7 +31,7 @@ EmailUtil.prototype.sendQQ = function (account, password, callback) {
         }
     }));
 
-    this.transport.sendMail(this.mailOptions, function (error, response) {
+    transport.sendMail(this.mailOptions, function (error, response) {
         transport.close(); // 如果没用，关闭连接池
         callback(error, response);
     });
