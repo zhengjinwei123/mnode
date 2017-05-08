@@ -1,7 +1,1110 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e1bba6a-f143-4311-a8c5-15494fad21be" name="Default" comment="" />
+    <list default="true" id="4e1bba6a-f143-4311-a8c5-15494fad21be" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mnode/mnode/utils/email/app.js" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_DataView.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_Hash.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_LazyWrapper.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_ListCache.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_LodashWrapper.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_Map.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_MapCache.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_Promise.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_Set.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_SetCache.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_Stack.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_Symbol.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_Uint8Array.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_WeakMap.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_addMapEntry.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_addSetEntry.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_apply.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_arrayAggregator.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_arrayEach.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_arrayEachRight.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_arrayEvery.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_arrayFilter.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_arrayIncludes.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_arrayIncludesWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_arrayLikeKeys.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_arrayMap.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_arrayPush.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_arrayReduce.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_arrayReduceRight.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_arraySample.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_arraySampleSize.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_arrayShuffle.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_arraySome.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_asciiSize.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_asciiToArray.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_asciiWords.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_assignInDefaults.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_assignMergeValue.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_assignValue.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_assocIndexOf.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseAggregator.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseAssign.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseAssignIn.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseAssignValue.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseAt.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseClamp.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseClone.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseConforms.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseConformsTo.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseCreate.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseDelay.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseDifference.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseEach.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseEachRight.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseEvery.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseExtremum.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseFill.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseFilter.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseFindIndex.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseFindKey.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseFlatten.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseFor.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseForOwn.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseForOwnRight.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseForRight.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseFunctions.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseGet.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseGetAllKeys.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseGetTag.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseGt.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseHas.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseHasIn.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseInRange.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseIndexOf.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseIndexOfWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseIntersection.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseInverter.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseInvoke.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseIsArguments.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseIsArrayBuffer.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseIsDate.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseIsEqual.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseIsEqualDeep.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseIsMap.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseIsMatch.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseIsNaN.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseIsNative.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseIsRegExp.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseIsSet.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseIsTypedArray.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseIteratee.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseKeys.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseKeysIn.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseLodash.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseLt.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseMap.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseMatches.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseMatchesProperty.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseMean.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseMerge.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseMergeDeep.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseNth.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseOrderBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_basePick.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_basePickBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseProperty.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_basePropertyDeep.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_basePropertyOf.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_basePullAll.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_basePullAt.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseRandom.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseRange.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseReduce.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseRepeat.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseRest.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseSample.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseSampleSize.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseSet.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseSetData.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseSetToString.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseShuffle.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseSlice.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseSome.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseSortBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseSortedIndex.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseSortedIndexBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseSortedUniq.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseSum.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseTimes.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseToNumber.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseToPairs.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseToString.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseUnary.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseUniq.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseUnset.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseUpdate.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseValues.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseWhile.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseWrapperValue.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseXor.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_baseZipObject.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_cacheHas.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_castArrayLikeObject.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_castFunction.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_castPath.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_castRest.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_castSlice.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_charsEndIndex.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_charsStartIndex.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_cloneArrayBuffer.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_cloneBuffer.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_cloneDataView.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_cloneMap.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_cloneRegExp.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_cloneSet.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_cloneSymbol.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_cloneTypedArray.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_compareAscending.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_compareMultiple.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_composeArgs.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_composeArgsRight.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_copyArray.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_copyObject.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_copySymbols.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_copySymbolsIn.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_coreJsData.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_countHolders.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_createAggregator.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_createAssigner.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_createBaseEach.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_createBaseFor.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_createBind.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_createCaseFirst.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_createCompounder.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_createCtor.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_createCurry.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_createFind.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_createFlow.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_createHybrid.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_createInverter.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_createMathOperation.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_createOver.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_createPadding.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_createPartial.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_createRange.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_createRecurry.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_createRelationalOperation.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_createRound.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_createSet.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_createToPairs.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_createWrap.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_deburrLetter.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_defineProperty.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_equalArrays.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_equalByTag.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_equalObjects.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_escapeHtmlChar.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_escapeStringChar.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_flatRest.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_freeGlobal.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_getAllKeys.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_getAllKeysIn.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_getData.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_getFuncName.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_getHolder.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_getMapData.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_getMatchData.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_getNative.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_getPrototype.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_getRawTag.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_getSymbols.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_getSymbolsIn.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_getTag.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_getValue.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_getView.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_getWrapDetails.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_hasPath.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_hasUnicode.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_hasUnicodeWord.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_hashClear.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_hashDelete.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_hashGet.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_hashHas.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_hashSet.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_initCloneArray.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_initCloneByTag.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_initCloneObject.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_insertWrapDetails.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_isFlattenable.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_isIndex.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_isIterateeCall.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_isKey.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_isKeyable.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_isLaziable.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_isMaskable.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_isMasked.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_isPrototype.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_isStrictComparable.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_iteratorToArray.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_lazyClone.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_lazyReverse.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_lazyValue.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_listCacheClear.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_listCacheDelete.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_listCacheGet.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_listCacheHas.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_listCacheSet.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_mapCacheClear.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_mapCacheDelete.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_mapCacheGet.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_mapCacheHas.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_mapCacheSet.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_mapToArray.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_matchesStrictComparable.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_memoizeCapped.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_mergeData.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_mergeDefaults.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_metaMap.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_nativeCreate.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_nativeKeys.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_nativeKeysIn.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_nodeUtil.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_objectToString.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_overArg.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_overRest.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_parent.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_reEscape.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_reEvaluate.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_reInterpolate.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_realNames.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_reorder.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_replaceHolders.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_root.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_setCacheAdd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_setCacheHas.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_setData.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_setToArray.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_setToPairs.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_setToString.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_setWrapToString.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_shortOut.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_shuffleSelf.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_stackClear.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_stackDelete.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_stackGet.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_stackHas.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_stackSet.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_strictIndexOf.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_strictLastIndexOf.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_stringSize.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_stringToArray.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_stringToPath.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_toKey.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_toSource.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_unescapeHtmlChar.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_unicodeSize.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_unicodeToArray.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_unicodeWords.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_updateWrapDetails.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\_wrapperClone.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\add.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\after.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\ary.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\assign.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\assignIn.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\assignInWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\assignWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\at.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\attempt.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\before.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\bind.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\bindAll.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\bindKey.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\camelCase.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\capitalize.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\castArray.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\ceil.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\chunk.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\clamp.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\clone.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\cloneDeep.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\cloneDeepWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\cloneWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\commit.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\compact.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\concat.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\cond.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\conforms.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\conformsTo.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\constant.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\core.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\core.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\countBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\create.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\curry.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\curryRight.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\debounce.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\deburr.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\defaultTo.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\defaults.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\defaultsDeep.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\defer.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\delay.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\difference.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\differenceBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\differenceWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\divide.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\drop.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\dropRight.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\dropRightWhile.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\dropWhile.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\each.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\eachRight.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\endsWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\entries.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\entriesIn.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\eq.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\escape.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\escapeRegExp.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\every.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\extend.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\extendWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fill.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\filter.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\find.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\findIndex.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\findKey.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\findLast.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\findLastIndex.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\findLastKey.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\first.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\flatMap.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\flatMapDeep.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\flatMapDepth.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\flatten.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\flattenDeep.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\flattenDepth.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\flip.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\floor.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\flow.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\flowRight.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\forEach.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\forEachRight.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\forIn.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\forInRight.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\forOwn.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\forOwnRight.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\F.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\T.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\__.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\_baseConvert.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\_convertBrowser.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\_falseOptions.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\_mapping.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\_util.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\add.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\after.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\all.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\allPass.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\always.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\any.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\anyPass.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\apply.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\array.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\ary.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\assign.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\assignAll.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\assignAllWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\assignIn.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\assignInAll.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\assignInAllWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\assignInWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\assignWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\assoc.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\assocPath.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\at.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\attempt.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\before.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\bind.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\bindAll.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\bindKey.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\camelCase.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\capitalize.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\castArray.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\ceil.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\chain.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\chunk.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\clamp.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\clone.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\cloneDeep.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\cloneDeepWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\cloneWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\collection.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\commit.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\compact.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\complement.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\compose.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\concat.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\cond.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\conforms.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\conformsTo.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\constant.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\contains.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\convert.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\countBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\create.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\curry.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\curryN.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\curryRight.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\curryRightN.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\date.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\debounce.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\deburr.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\defaultTo.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\defaults.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\defaultsAll.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\defaultsDeep.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\defaultsDeepAll.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\defer.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\delay.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\difference.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\differenceBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\differenceWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\dissoc.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\dissocPath.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\divide.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\drop.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\dropLast.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\dropLastWhile.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\dropRight.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\dropRightWhile.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\dropWhile.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\each.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\eachRight.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\endsWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\entries.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\entriesIn.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\eq.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\equals.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\escape.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\escapeRegExp.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\every.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\extend.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\extendAll.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\extendAllWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\extendWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\fill.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\filter.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\find.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\findFrom.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\findIndex.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\findIndexFrom.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\findKey.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\findLast.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\findLastFrom.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\findLastIndex.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\findLastIndexFrom.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\findLastKey.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\first.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\flatMap.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\flatMapDeep.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\flatMapDepth.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\flatten.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\flattenDeep.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\flattenDepth.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\flip.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\floor.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\flow.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\flowRight.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\forEach.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\forEachRight.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\forIn.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\forInRight.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\forOwn.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\forOwnRight.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\fromPairs.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\function.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\functions.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\functionsIn.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\get.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\getOr.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\groupBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\gt.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\gte.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\has.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\hasIn.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\head.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\identical.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\identity.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\inRange.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\includes.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\includesFrom.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\indexBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\indexOf.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\indexOfFrom.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\init.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\initial.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\intersection.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\intersectionBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\intersectionWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\invert.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\invertBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\invertObj.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\invoke.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\invokeArgs.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\invokeArgsMap.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\invokeMap.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\isArguments.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\isArray.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\isArrayBuffer.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\isArrayLike.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\isArrayLikeObject.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\isBoolean.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\isBuffer.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\isDate.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\isElement.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\isEmpty.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\isEqual.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\isEqualWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\isError.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\isFinite.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\isFunction.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\isInteger.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\isLength.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\isMap.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\isMatch.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\isMatchWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\isNaN.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\isNative.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\isNil.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\isNull.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\isNumber.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\isObject.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\isObjectLike.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\isPlainObject.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\isRegExp.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\isSafeInteger.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\isSet.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\isString.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\isSymbol.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\isTypedArray.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\isUndefined.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\isWeakMap.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\isWeakSet.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\iteratee.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\join.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\juxt.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\kebabCase.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\keyBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\keys.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\keysIn.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\lang.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\last.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\lastIndexOf.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\lastIndexOfFrom.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\lowerCase.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\lowerFirst.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\lt.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\lte.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\map.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\mapKeys.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\mapValues.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\matches.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\matchesProperty.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\math.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\max.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\maxBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\mean.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\meanBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\memoize.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\merge.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\mergeAll.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\mergeAllWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\mergeWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\method.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\methodOf.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\minBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\mixin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\multiply.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\nAry.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\negate.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\next.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\noop.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\now.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\nth.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\nthArg.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\number.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\object.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\omit.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\omitAll.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\omitBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\once.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\orderBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\over.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\overArgs.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\overEvery.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\overSome.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\pad.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\padChars.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\padCharsEnd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\padCharsStart.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\padEnd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\padStart.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\parseInt.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\partial.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\partialRight.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\partition.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\path.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\pathEq.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\pathOr.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\paths.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\pick.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\pickAll.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\pickBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\pipe.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\placeholder.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\plant.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\pluck.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\prop.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\propEq.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\propOr.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\property.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\propertyOf.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\props.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\pull.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\pullAll.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\pullAllBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\pullAllWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\pullAt.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\random.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\range.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\rangeRight.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\rangeStep.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\rangeStepRight.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\rearg.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\reduce.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\reduceRight.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\reject.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\remove.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\repeat.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\replace.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\rest.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\restFrom.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\result.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\reverse.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\round.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\sample.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\sampleSize.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\seq.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\set.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\setWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\shuffle.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\size.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\slice.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\snakeCase.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\some.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\sortBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\sortedIndex.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\sortedIndexBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\sortedIndexOf.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\sortedLastIndex.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\sortedLastIndexBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\sortedLastIndexOf.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\sortedUniq.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\sortedUniqBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\split.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\spread.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\spreadFrom.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\startCase.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\startsWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\string.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\stubArray.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\stubFalse.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\stubObject.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\stubString.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\stubTrue.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\subtract.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\sum.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\sumBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\symmetricDifference.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\symmetricDifferenceBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\symmetricDifferenceWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\tail.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\take.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\takeLast.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\takeLastWhile.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\takeRight.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\takeRightWhile.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\takeWhile.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\tap.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\template.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\templateSettings.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\throttle.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\thru.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\times.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\toArray.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\toFinite.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\toInteger.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\toIterator.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\toJSON.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\toLength.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\toLower.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\toNumber.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\toPairs.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\toPairsIn.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\toPath.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\toPlainObject.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\toSafeInteger.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\toString.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\toUpper.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\transform.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\trim.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\trimChars.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\trimCharsEnd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\trimCharsStart.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\trimEnd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\trimStart.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\truncate.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\unapply.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\unary.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\unescape.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\union.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\unionBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\unionWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\uniq.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\uniqBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\uniqWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\uniqueId.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\unnest.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\unset.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\unzip.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\unzipWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\update.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\updateWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\upperCase.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\upperFirst.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\useWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\util.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\value.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\valueOf.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\values.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\valuesIn.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\where.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\whereEq.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\without.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\words.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\wrap.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\wrapperAt.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\wrapperChain.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\wrapperLodash.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\wrapperReverse.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\wrapperValue.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\xor.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\xorBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\xorWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\zip.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\zipAll.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\zipObj.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\zipObject.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\zipObjectDeep.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fp\zipWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\fromPairs.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\functions.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\functionsIn.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\get.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\groupBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\gt.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\gte.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\has.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\hasIn.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\head.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\identity.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\inRange.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\includes.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\indexOf.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\initial.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\intersection.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\intersectionBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\intersectionWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\invert.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\invertBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\invoke.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\invokeMap.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\isArguments.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\isArray.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\isArrayBuffer.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\isArrayLike.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\isArrayLikeObject.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\isBoolean.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\isBuffer.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\isDate.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\isElement.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\isEmpty.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\isEqual.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\isEqualWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\isError.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\isFinite.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\isFunction.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\isInteger.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\isLength.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\isMap.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\isMatch.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\isMatchWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\isNaN.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\isNative.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\isNil.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\isNull.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\isNumber.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\isObject.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\isObjectLike.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\isPlainObject.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\isRegExp.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\isSafeInteger.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\isSet.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\isString.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\isSymbol.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\isTypedArray.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\isUndefined.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\isWeakMap.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\isWeakSet.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\iteratee.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\join.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\kebabCase.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\keyBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\keys.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\keysIn.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\last.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\lastIndexOf.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\lodash.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\lodash.min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\lowerCase.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\lowerFirst.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\lt.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\lte.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\map.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\mapKeys.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\mapValues.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\matches.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\matchesProperty.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\max.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\maxBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\mean.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\meanBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\memoize.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\merge.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\mergeWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\method.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\methodOf.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\min.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\minBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\mixin.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\multiply.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\negate.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\next.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\noop.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\now.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\nth.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\nthArg.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\omit.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\omitBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\once.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\orderBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\over.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\overArgs.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\overEvery.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\overSome.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\pad.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\padEnd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\padStart.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\parseInt.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\partial.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\partialRight.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\partition.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\pick.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\pickBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\plant.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\property.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\propertyOf.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\pull.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\pullAll.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\pullAllBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\pullAllWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\pullAt.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\random.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\range.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\rangeRight.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\rearg.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\reduce.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\reduceRight.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\reject.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\remove.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\repeat.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\replace.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\rest.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\result.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\reverse.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\round.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\sample.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\sampleSize.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\seq.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\set.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\setWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\shuffle.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\size.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\slice.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\snakeCase.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\some.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\sortBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\sortedIndex.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\sortedIndexBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\sortedIndexOf.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\sortedLastIndex.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\sortedLastIndexBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\sortedLastIndexOf.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\sortedUniq.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\sortedUniqBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\split.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\spread.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\startCase.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\startsWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\stubArray.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\stubFalse.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\stubObject.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\stubString.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\stubTrue.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\subtract.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\sum.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\sumBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\tail.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\take.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\takeRight.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\takeRightWhile.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\takeWhile.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\tap.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\template.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\templateSettings.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\throttle.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\thru.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\times.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\toArray.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\toFinite.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\toInteger.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\toIterator.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\toJSON.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\toLength.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\toLower.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\toNumber.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\toPairs.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\toPairsIn.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\toPath.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\toPlainObject.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\toSafeInteger.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\toString.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\toUpper.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\transform.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\trim.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\trimEnd.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\trimStart.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\truncate.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\unary.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\unescape.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\union.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\unionBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\unionWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\uniq.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\uniqBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\uniqWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\uniqueId.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\unset.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\unzip.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\unzipWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\update.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\updateWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\upperCase.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\upperFirst.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\util.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\value.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\valueOf.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\values.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\valuesIn.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\without.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\words.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\wrap.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\wrapperAt.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\wrapperChain.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\wrapperLodash.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\wrapperReverse.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\wrapperValue.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\xor.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\xorBy.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\xorWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\zip.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\zipObject.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\zipObjectDeep.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\lodash\zipWith.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\.eslintignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\.eslintrc" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\.github\ISSUE_TEMPLATE.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\.github\PULL_REQUEST_TEMPLATE.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\changelog.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\lib\command.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\lib\createClient.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\lib\customErrors.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\lib\debug.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\lib\extendedApi.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\lib\individualCommands.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\lib\multi.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\lib\utils.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\node_modules\double-ended-queue\.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\node_modules\double-ended-queue\Gruntfile.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\node_modules\double-ended-queue\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\node_modules\double-ended-queue\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\node_modules\double-ended-queue\js\deque.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\node_modules\double-ended-queue\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\node_modules\redis-commands\.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\node_modules\redis-commands\.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\node_modules\redis-commands\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\node_modules\redis-commands\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\node_modules\redis-commands\changelog.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\node_modules\redis-commands\commands.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\node_modules\redis-commands\index.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\node_modules\redis-commands\package.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\node_modules\redis-commands\test\index.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\node_modules\redis-commands\tools\build.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\node_modules\redis-parser\.codeclimate.yml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\node_modules\redis-parser\.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\node_modules\redis-parser\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\node_modules\redis-parser\README.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\node_modules\redis-parser\changelog.md" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\node_modules\redis-parser\index.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\node_modules\redis-parser\isolate-0x28e7b50-v8.log" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\node_modules\redis-parser\isolate-0x3615b50-v8.log" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\node_modules\redis-parser\lib\hiredis.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\node_modules\redis-parser\lib\parser.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\node_modules\redis-parser\lib\replyError.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\ff\Desktop\git_pro\nodePro\mnode\mnode\node_modules\redis\node_modules\redis-parser\package.json" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mnode/mnode/node_modules/redis/.npmignore" afterPath="$PROJECT_DIR$/mnode/mnode/node_modules/redis/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mnode/mnode/node_modules/lodash/LICENSE" afterPath="$PROJECT_DIR$/mnode/mnode/node_modules/lodash/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mnode/mnode/node_modules/lodash/README.md" afterPath="$PROJECT_DIR$/mnode/mnode/node_modules/lodash/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mnode/mnode/node_modules/redis/README.md" afterPath="$PROJECT_DIR$/mnode/mnode/node_modules/redis/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mnode/mnode/utils/app.js" afterPath="$PROJECT_DIR$/mnode/mnode/utils/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mnode/mnode/node_modules/lodash/array.js" afterPath="$PROJECT_DIR$/mnode/mnode/node_modules/lodash/array.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mnode/mnode/node_modules/lodash/chain.js" afterPath="$PROJECT_DIR$/mnode/mnode/node_modules/lodash/chain.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mnode/mnode/node_modules/lodash/collection.js" afterPath="$PROJECT_DIR$/mnode/mnode/node_modules/lodash/collection.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mnode/mnode/node_modules/redis/lib/commands.js" afterPath="$PROJECT_DIR$/mnode/mnode/node_modules/redis/lib/commands.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mnode/mnode/node_modules/lodash/date.js" afterPath="$PROJECT_DIR$/mnode/mnode/node_modules/lodash/date.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mnode/mnode/node_modules/lodash/function.js" afterPath="$PROJECT_DIR$/mnode/mnode/node_modules/lodash/function.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mnode/mnode/node_modules/lodash/index.js" afterPath="$PROJECT_DIR$/mnode/mnode/node_modules/lodash/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mnode/mnode/node_modules/redis/index.js" afterPath="$PROJECT_DIR$/mnode/mnode/node_modules/redis/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mnode/mnode/node_modules/lodash/lang.js" afterPath="$PROJECT_DIR$/mnode/mnode/node_modules/lodash/lang.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mnode/mnode/node_modules/lodash/math.js" afterPath="$PROJECT_DIR$/mnode/mnode/node_modules/lodash/math.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mnode/mnode/node_modules/lodash/number.js" afterPath="$PROJECT_DIR$/mnode/mnode/node_modules/lodash/number.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mnode/mnode/node_modules/lodash/object.js" afterPath="$PROJECT_DIR$/mnode/mnode/node_modules/lodash/object.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mnode/mnode/package.json" afterPath="$PROJECT_DIR$/mnode/mnode/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mnode/mnode/node_modules/lodash/package.json" afterPath="$PROJECT_DIR$/mnode/mnode/node_modules/lodash/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mnode/mnode/node_modules/redis/package.json" afterPath="$PROJECT_DIR$/mnode/mnode/node_modules/redis/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mnode/mnode/node_modules/lodash/string.js" afterPath="$PROJECT_DIR$/mnode/mnode/node_modules/lodash/string.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="nodePro.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,11 +1127,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mnode/mnode/utils/db-redis/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6086956" vertical-offset="7245" max-vertical-offset="8988">
-              <caret line="371" column="7" selection-start-line="371" selection-start-column="7" selection-end-line="371" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="7245" max-vertical-offset="8988">
+              <caret line="357" column="4" selection-start-line="357" selection-start-column="4" selection-end-line="357" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mnode/mnode/utils/email/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.4256757" vertical-offset="0" max-vertical-offset="945">
+              <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mnode/mnode/utils/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
+              <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mnode/mnode/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.0" vertical-offset="693" max-vertical-offset="1701">
+              <caret line="53" column="26" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -42,7 +1175,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/mnode/mnode/package.json" />
         <option value="$PROJECT_DIR$/mnode/mnode/plugin/process2/app.js" />
         <option value="$PROJECT_DIR$/mnode/mnode/utils/time-utils/app.js" />
         <option value="$PROJECT_DIR$/mnode/mnode/utils/logger/app.js" />
@@ -53,7 +1185,6 @@
         <option value="$PROJECT_DIR$/mnode/mnode/plugin/mysql/app.js" />
         <option value="$PROJECT_DIR$/mnode/mnode/plugin/mysql/model.js" />
         <option value="$PROJECT_DIR$/mnode/mnode/utils/db-mysql/test.js" />
-        <option value="$PROJECT_DIR$/mnode/mnode/utils/app.js" />
         <option value="$PROJECT_DIR$/mnode/mnode/utils/xml-parser/app.js" />
         <option value="$PROJECT_DIR$/mnode/test/test2.js" />
         <option value="$PROJECT_DIR$/mnode/mnode/plugin/mysqlRedisCache/template/db.xml" />
@@ -70,6 +1201,9 @@
         <option value="$PROJECT_DIR$/mnode/mnode/plugin/jadeLoader/app.js" />
         <option value="$PROJECT_DIR$/mnode/mnode/plugin/jadeContext.json" />
         <option value="$PROJECT_DIR$/mnode/mnode/utils/db-redis/app.js" />
+        <option value="$PROJECT_DIR$/mnode/mnode/package.json" />
+        <option value="$PROJECT_DIR$/mnode/mnode/utils/app.js" />
+        <option value="$PROJECT_DIR$/mnode/mnode/utils/email/app.js" />
       </list>
     </option>
   </component>
@@ -77,8 +1211,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-73" />
-    <option name="y" value="72" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -135,6 +1269,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="mnode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodePro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodePro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mnode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mnode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodePro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodePro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mnode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mnode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -253,11 +1427,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-73" y="72" width="1936" height="1056" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32937366" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -297,27 +1471,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mnode/mnode/plugin/http/mime.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="897">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mnode/mnode/plugin/http/protocol.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2688">
-          <caret line="101" column="27" selection-start-line="101" selection-start-column="27" selection-end-line="101" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mnode/mnode/plugin/http/connection.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="441" max-vertical-offset="2142">
-          <caret line="47" column="42" selection-start-line="47" selection-start-column="39" selection-end-line="47" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mnode/mnode/plugin/http/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7602">
@@ -637,7 +1790,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.70242214" vertical-offset="0" max-vertical-offset="867">
           <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -645,14 +1797,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5463801" vertical-offset="2100" max-vertical-offset="6006">
           <caret line="123" column="60" selection-start-line="123" selection-start-column="60" selection-end-line="123" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mnode/mnode/utils/db-redis/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6086956" vertical-offset="7245" max-vertical-offset="8988">
-          <caret line="371" column="7" selection-start-line="371" selection-start-column="7" selection-end-line="371" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="7245" max-vertical-offset="8988">
+          <caret line="357" column="4" selection-start-line="357" selection-start-column="4" selection-end-line="357" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mnode/mnode/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.0" vertical-offset="693" max-vertical-offset="1701">
+          <caret line="53" column="26" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mnode/mnode/utils/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
+          <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mnode/mnode/utils/email/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4256757" vertical-offset="0" max-vertical-offset="945">
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
           <folding />
         </state>
       </provider>

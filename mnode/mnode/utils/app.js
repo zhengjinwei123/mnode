@@ -22,6 +22,7 @@ module.exports = {
     "Buffer": require("./buffer-utils/app"),
     "TcpClient": require("./tcp-utils/app"),
     "MyLogger": require("./logger/app"),
-    "XmlParser": require("./xml-parser/app")
+    "XmlParser": require("./xml-parser/app"),
+    "Email": require("./email/app")
 };
 

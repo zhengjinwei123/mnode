@@ -49,7 +49,9 @@
     "utility": "*",
     "uuid": "*",
     "ws": "1.1.1",
-    "xml2js": "^0.4.17"
+    "xml2js": "^0.4.17",
+    "nodemailer": "^2.7.0",
+    "nodemailer-smtp-transport": "^2.7.2"
   },
   "scripts": {
     "test": "grunt mocha"
