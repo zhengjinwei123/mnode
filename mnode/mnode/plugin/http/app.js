@@ -184,6 +184,11 @@ HttpServer.prototype.create = function (callback) {
 HttpServer.prototype.createServer = function () {
     var self = this;
     this.create(function (request, response) {
+		
+		response.setTimeout(60*1000,function(){
+            response.end();
+        });
+		
         var bytes = [];
         request.on('data', function (chunk) {
             bytes.push(chunk);
