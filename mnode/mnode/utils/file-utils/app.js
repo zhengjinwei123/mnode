@@ -1,9 +1,10 @@
-/**
+﻿/**
  * Created by 郑金玮 on 2016/12/1.
  */
 var Fs = require("fs");
 var Path = require("path");
 var _ = require("lodash");
+var iconv = require('iconv-lite');
 
 function FileUtils() {
 
@@ -20,15 +21,23 @@ FileUtils.getInstance = (function () {
     }
 })();
 
-FileUtils.prototype.readSync = function (filePath, code) {
+FileUtils.prototype.readSync = function (filePath, code,isCN) {
     var _content = null;
     var _code = (code == undefined) ? "utf-8" : code;
-    try {
-        _content = Fs.readFileSync(filePath, _code);
-    } catch (e) {
-        throw new Error(__filename, e.message);
+
+    if(isCN){
+        var fileStr = Fs.readFileSync(filePath, {encoding:'binary'});
+        var buf = new Buffer(fileStr, 'binary');
+        var content = iconv.decode(buf, 'GBK');
+        return content;
+    }else{
+        try {
+            _content = Fs.readFileSync(filePath, _code);
+        } catch (e) {
+            throw new Error(__filename, e.message);
+        }
+        return _content;
     }
-    return _content;
 };
 FileUtils.prototype.readAsync = function (filePath, code, cb) {
     var _code = null;
