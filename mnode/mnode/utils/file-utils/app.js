@@ -1,6 +1,4 @@
-/**
- * Created by 郑金玮 on 2016/12/1.
- */
+﻿
 var Fs = require("fs");
 var Path = require("path");
 var _ = require("lodash");
@@ -43,8 +41,9 @@ FileUtils.prototype.readAsync = function (filePath, code, cb) {
     });
 };
 
-FileUtils.prototype.writeAsync = function (filePath, text, cb) {
-    Fs.writeFile(filePath, text, function (err) {
+FileUtils.prototype.writeAsync = function (filePath, text, cb,code) {
+    code = code || 'utf-8';
+    Fs.writeFile(filePath, text, code,function (err) {
         cb(err);
     });
 };
@@ -59,9 +58,13 @@ FileUtils.prototype.writeSync = function (filePath, text) {
     return err;
 };
 
-FileUtils.prototype.isDirectory = function (path) {
+FileUtils.prototype.isDirectory = function (path,exception) {
     if (!this.isExists(path)) {
-        throw new Error(path + " not exists");
+        if(exception){
+            throw new Error(path + " not exists");
+        }else{
+            return false;
+        }
     }
     var states = Fs.statSync(path);
     return states.isDirectory();
@@ -137,5 +140,35 @@ FileUtils.prototype.traverseSync = function (dirPath) {
     //console.log(filesList);
     return filesList;
 };
+FileUtils.prototype.deleteFolderRecursive = function(path,clearSelf){
+    var files = [];
+    var self = this;
+    if(Fs.existsSync(path)) {
+        files = Fs.readdirSync(path);
+        files.forEach(function(file, index) {
+            var curPath = path + "/" + file;
+            if(Fs.statSync(curPath).isDirectory()) { // recurse
+                self.deleteFolderRecursive(curPath);
+            } else { // delete file
+                Fs.unlinkSync(curPath);
+            }
+        });
+        if(clearSelf){
+            Fs.rmdirSync(path);
+        }
+    }
+};
+FileUtils.prototype.isAssets = function(path){
+    var reg = /\.(png|gif|ico|jpeg|bmp|eot|svg|ttf|woff)$/;
+    if(reg.test(path)){
+        return true;
+    }
+    return false;
+};
+
+FileUtils.prototype.copy = function(src,dst){
+    Fs.createReadStream(src).pipe(Fs.createWriteStream(dst));
+};
+
 
 module.exports = FileUtils.getInstance();
