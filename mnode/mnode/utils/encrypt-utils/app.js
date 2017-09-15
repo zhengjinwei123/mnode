@@ -140,28 +140,63 @@ function Base64Decode(str) {
 }
 
 
-Encrypt.prototype.AesEncode = function (str, key) {
-    var cipher = Crypto.createCipheriv('aes-128-cbc', key.crypt_key, key.iv);
-    cipher.setAutoPadding(true);
-    var bytes = [];
-    bytes.push(cipher.update(str));
-    bytes.push(cipher.final());
-    return Buffer.concat(bytes);
+Encrypt.prototype.AesEncode = function (str, key, autoPadding) {
+    var cipher = Crypto.createCipheriv('aes-128-cbc', key.key, key.iv);
+    if (autoPadding) {
+        cipher.setAutoPadding(true);
+        var bytes = [];
+        bytes.push(cipher.update(str));
+        bytes.push(cipher.final());
+        return Buffer.concat(bytes);
+    } else {
+        function autoPaddingZero(data) {
+            var error = null;
+            var crypted = "";
+            try {
+                var cipher = Crypto.createCipheriv('aes-128-cbc', key.key, key.iv);
+                cipher.setAutoPadding(false);
+                crypted = cipher.update(data, 'utf8', 'binary');
+                crypted += cipher.final('binary');
+            } catch (ex) {
+                error = ex.message;
+            }
+            return {
+                error: error,
+                data: Buffer.from(crypted, 'binary')
+            }
+        }
+
+        var result = null;
+        while (true) {
+            var ret = autoPaddingZero(data);
+            if (ret.error) {
+                data += "\0";
+            } else {
+                result = ret.data;
+                break;
+            }
+        }
+
+        return result;
+    }
 };
 
 
 Encrypt.prototype.AesDecode = function (str, key) {
-    var decipher = Crypto.createDecipheriv('aes-128-cbc', key.crypt_key, key.iv);
+    var decipher = Crypto.createDecipheriv('aes-128-cbc', key.key, key.iv);
     decipher.setAutoPadding(true);
+
+    var retData = null;
     try {
         var bytes = [];
         bytes.push(decipher.update(str));
         bytes.push(decipher.final());
-        return Buffer.concat(bytes);
+        retData = Buffer.concat(bytes);
     } catch (e) {
         console.error(e.message);
-        return null;
     }
+    return retData;
 };
+
 
 module.exports = Encrypt.getInstance();
