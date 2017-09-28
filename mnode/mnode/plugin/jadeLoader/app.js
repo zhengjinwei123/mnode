@@ -14,25 +14,9 @@ var TimerUtils = require("../../utils/app").Timer;
 var Async = require("async");
 var _ = require("lodash");
 
-/***
- 此模块可用来托管项目环境
- 在项目中使用JadeLoader 时只要不将其放到全局环境中（例如上面所有的模块定义），此模块的热加载机制可实现定时热加载或者您所定制的加载机制
- 例如 JadeLoader 托管了一个模块 A，A所在的父目录名为 ParentA
- 我们可以通过 JadeLoader.Jader("ParentA").get("A") 获取 模块
- 在非全局环境中，我们应这样调用 A中的方法(假设 A 中有方法:add(a,b){return a+b;})
- JadeLoader.Jader("ParentA").get("A").add(1,2);
- 或者
- var A = JadeLoader.Jader("ParentA").get("A"); // 注意 这行代码不在全局环境中，例如可以在某个函数中，我们动态的调用这个函数
- A.add(1,2)
- ***/
-
 function JadeLoader() {
     EventEmitter.call(this);
     this.userKey = "user-doc-" + (new Date().getTime());
-    process.on("uncaughtException", function (err) {
-        console.error("hehe:", err.stack);
-        //process.exit(1);
-    });
 }
 
 Util.inherits(JadeLoader, EventEmitter);
@@ -49,27 +33,27 @@ JadeLoader.prototype.init = function (rootPath, hot, hotSecond, callback) {
     var fileList = FileUtils.traverseSync(rootPath);
     var self = this;
     for (var i in fileList) {
-        if (fileList[i].ext && fileList[i].name.toLowerCase() == "jadecontext.json") {
+        if (fileList[i].ext && fileList[i].name.toLowerCase() === "jadecontext.json") {
             try {
                 var fileName = fileList[i].path;
                 var content = JSON.parse(FileUtils.readSync(fileName));
-                if (content['scan-dir'] == undefined) {
+                if (content['scan-dir'] === undefined) {
                     continue;
                 }
-                if (content['scan-dir'] == true) {
+                if (content['scan-dir'] === true) {
                     var dirName = Path.join(fileName, "../");
                     var _dirFileList = FileUtils.traverseSync(dirName);
 
                     var _pList = dirName.split(/[/|\\]/);
                     var $pK = _pList[_pList.length - 2];//获取 父文件夹名称
                     _dirFileList.forEach(function (f) {
-                        if (f.name.toLowerCase() == "app.js") {
+                        if (f.name.toLowerCase() === "app.js") {
                             var _p = f.path;
                             var _T = _p.split("/");
                             var _lastDirName = _T[_T.length - 2];
                             var _lastDirPath = Path.join(_p, "../");
 
-                            if (dirName != _lastDirPath) {
+                            if (dirName !== _lastDirPath) {
                                 var cacheName = Path.resolve(_p);
                                 cacheName = cacheName.replace(/\\/g, '/');
 
@@ -97,8 +81,7 @@ JadeLoader.prototype.init = function (rootPath, hot, hotSecond, callback) {
                         var _appName = o['app-name'];
                         var _isHot = o['hot'];
 
-
-                        if (_hot == false && _isHot) {
+                        if (_hot === false && _isHot) {
                             _hot = _isHot;
                         }
 
@@ -121,12 +104,11 @@ JadeLoader.prototype.init = function (rootPath, hot, hotSecond, callback) {
                         }
 
                         var _m = require(_cache);
-                        var _mK = o['key'] || _dirName;//模块名
-                        self.mapList[$pK][_mK] = {
+                        self.mapList[$pK][_dirName] = {
                             'hot': _isHot,
                             'app': _m,
                             'path': _cache,
-                            'key': _mK,
+                            'key': _dirName,
                             'parentKey': $pK
                         };
 
@@ -160,7 +142,7 @@ JadeLoader.prototype.hotLoad = function (callback) {
                 var _key = item.key;
                 var _pKey = item.parentKey;
 
-                if (_pKey == self.userKey) {
+                if (_pKey === self.userKey) {
                     cb(null);
                 } else {
                     if (!Fs.existsSync(_path)) {
@@ -236,27 +218,29 @@ JadeLoader.prototype.get = function (key) {
         if (this.mapList[this.pKey][key]) {
             var tKey = this.pKey;
             this.pKey = null;
-            if (tKey == this.userKey) {
+            if (tKey === this.userKey) {
                 return this.mapList[tKey][key];
             } else {
-                //防止 缓存更新的那一刻刚好并发到执行到该模块，此时可能出现缓存为空的情况，需要重新加载一次
-                var _module = this.mapList[tKey][key].app;
-                if (_module) {
-                    return _module;
-                } else {
-                    var _error = null;
-                    try {
-                        //尝试重新加载缓存
-                        _module = require(this.mapList[tKey][key].path);
-                    } catch (e) {
-                        _error = e.message;
-                    } finally {
-                        if (_error) {
-                            return null;
+                if (!_.isEmpty(this.mapList[tKey][key]) && !_.isEmpty(this.mapList[tKey][key].app)) {
+                    if (!_.isEmpty(this.mapList[tKey][key].app)) {
+                        return this.mapList[tKey][key].app;
+                    } else {
+                        // 防止在热加载的零界点 出现缓存被删除的bug,因为js对象传的是引用，delete require.cache 时，也会删除掉自定义的缓存
+                        var _error = null;
+                        try {
+                            this.mapList[tKey][key].app = require(this.mapList[tKey][key].path);
+                        } catch (ex) {
+                            _error = ex.message;
+                        }
+
+                        if (!_error) {
+                            return this.mapList[tKey][key].app;
                         } else {
-                            return _module;
+                            this.emit("error", "JadeLoader::Jader get data error,may be some bug exists of plugin:" + _error);
                         }
                     }
+                } else {
+                    this.emit("error", "JadeLoader::Jader get data error,may be some bug exists of plugin");
                 }
             }
         }
